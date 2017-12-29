@@ -1,6 +1,11 @@
 package com.chaoxing.test.model;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable{
+
+    private static final long serialVersionUID = 1L;
+
     private Integer id;
 
     private String name;
@@ -9,6 +14,22 @@ public class Student {
 
     private String introduce;
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", introduce='" + introduce + '\'' +
+                '}';
+    }
+
+    public Student(Integer id, String name, Integer age, String introduce) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.introduce = introduce;
+    }
 
     public Student(String name, Integer age, String introduce) {
         this.name = name;
