@@ -40,7 +40,6 @@ public class DemoApplicationTests {
         ArrayList<Student> list1 = (ArrayList)redisService.get("list");
 		System.out.println(list1);
 		System.out.println("=============================================================");
-
 	}
 
 }
