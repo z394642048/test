@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chaoxing.test.mapper.MenuMapper">
+    <select id="getMenuByUid" parameterType="java.lang.Long" resultMap="menuTree">
+        SELECT
+            pm.id,
+            pm.`name`,
+            m.id mid,
+            m.`name` mname,
+            m.url
+        FROM
+            t_employee_role er
+            JOIN t_role r ON er.role_id = r.id
+            JOIN t_role_permission rp ON r.id = rp.role_id
+            JOIN t_permission p ON rp.permission_id = p.id
+            JOIN t_menu m ON p.menu_id = m.id
+            JOIN t_menu pm ON m.parent_id = pm.id
+        WHERE
+            employee_id = #{uid}#
+    </select>
+    <resultMap id="menuTree" type="Menu">
+        <id property="id" column="id"></id>
+        <id property="name" column="name"></id>
+        <collection property="children" javaType="arrayList" ofType="Menu">
+            <id property="id" column="mid"></id>
+            <result property="name" column="mname"></result>
+            <result property="url" column="url"></result>
+        </collection>
+    </resultMap>
+</mapper>

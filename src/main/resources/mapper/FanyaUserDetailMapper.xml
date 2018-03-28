@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chaoxing.test.mapper.FanyaUserDetailMapper">
+
+
+    <!--
+     UPDATE xy_fanya_user_detail x
+     SET aid = ( SELECT id FROM plt_open_aca WHERE x.fid = fid )
+     WHERE
+     x.fid IN ( SELECT y.fid FROM ( SELECT DISTINCT fid FROM plt_open_aca ) y )
+     -->
+
+    <update id="updateAid"  parameterType="java.util.List">
+        UPDATE xy_fanya_user_detail x set aid=(SELECT id from plt_open_aca WHERE x.fid=fid) where x.fid in
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.fid,jdbcType=VARCHAR})
+        </foreach>
+    </update>
+
+    <update id="updateAllAid">
+        UPDATE xy_fanya_user_detail x
+    SET aid = ( SELECT id FROM plt_open_aca WHERE x.fid = fid )
+    WHERE
+    x.fid IN ( SELECT y.fid FROM ( SELECT DISTINCT fid FROM plt_open_aca ) y )
+    </update>
+
+</mapper>

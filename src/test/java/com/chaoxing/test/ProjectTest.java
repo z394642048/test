@@ -1,5 +1,7 @@
 package com.chaoxing.test;
 
+import com.chaoxing.test.mapper.EmployeeMapper;
+import com.chaoxing.test.model.Employee;
 import com.chaoxing.test.model.Menu;
 import com.chaoxing.test.service.IFanyaUserDetailService;
 import com.chaoxing.test.service.IMenuService;
@@ -20,12 +22,18 @@ public class ProjectTest {
     @Autowired
     private IMenuService menuService;
 
+    @Autowired
+    private EmployeeMapper employeeMapper;
 
     @Test
     public void index() {
 
         List<Menu> menuByUid = menuService.getMenuByUid((long) 1);
         System.out.println(menuByUid);
-
+        List<Employee> employees = employeeMapper.getAll();
+        System.out.println(employees);
     }
+
+
+
 }
