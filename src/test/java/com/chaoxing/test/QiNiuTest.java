@@ -8,15 +8,21 @@ import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.storage.model.DefaultPutRet;
 import com.qiniu.util.Auth;
+import com.sun.deploy.net.URLEncoder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.UnsupportedEncodingException;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class QiNiuTest {
 
+    /**
+     * 图片上传
+     */
     @Test
     public void test1() {
         //构造一个带指定Zone对象的配置类
@@ -51,4 +57,27 @@ public class QiNiuTest {
             }
         }
     }
+
+    /**
+     * 图片下载
+     */
+    @Test
+    public void test2() throws UnsupportedEncodingException {
+        String fileName = "FtJ1ZOKwCDZ9BOkOP6Hl74ZIGaRK";
+        String domainOfBucket = "http://oz78h8r3j.bkt.clouddn.com";
+        String encodedFileName = URLEncoder.encode(fileName, "utf-8");
+        String publicUrl = String.format("%s/%s", domainOfBucket, encodedFileName);
+
+        String accessKey = "EN9A5uCDBEK6RhJJJMRtNcqAOtktxWFEO6oC8ftc";
+        String secretKey = "XabWVs1pvjSXGRjlvWUIxP1_12S6crUW0W3QPWdM";
+        Auth auth = Auth.create(accessKey, secretKey);
+        long expireInSeconds = 3600;//1小时，可以自定义链接过期时间
+        //图片路径
+        String finalUrl = auth.privateDownloadUrl(publicUrl, expireInSeconds);
+
+        System.out.println(finalUrl);
+
+    }
+
+
 }
