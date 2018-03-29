@@ -124,6 +124,17 @@ public class UpdateTest {
     public void xx3() {
         User user;
 //        System.out.println(user);
+
+
+        String x="11";
+        Integer yy=11;
+        String zz1="111";
+        String zz2="1";
+        System.out.println(x==yy.toString());
+        StringBuilder sb = new StringBuilder();
+        sb.append(x).append(zz2);
+        System.out.println(zz1==x+zz2);
+
     }
 
 }

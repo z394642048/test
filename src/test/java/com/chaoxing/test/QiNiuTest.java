@@ -36,7 +36,7 @@ public class QiNiuTest {
         //如果是Windows情况下，格式是 D:\\qiniu\\test.png
         String localFilePath = "C:\\Users\\Public\\Pictures\\Sample Pictures\\20180108170925222.png";
         //默认不指定key的情况下，以文件内容的hash值作为文件名
-        String key = null;
+        String key = "999";
         Auth auth = Auth.create(accessKey, secretKey);
         String upToken = auth.uploadToken(bucket);
 
@@ -44,8 +44,9 @@ public class QiNiuTest {
             Response response = uploadManager.put(localFilePath, key, upToken);
             //解析上传成功的结果
             DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
-            //该文件在七牛云中的名字
+            //上面设置的key值，不设置的情况下，以文件内容的hash值作为文件名
             System.out.println(putRet.key);
+            //该文件在七牛云中的名字，是文件内容的hash值作为文件名
             System.out.println(putRet.hash);
         } catch (QiniuException ex) {
             Response r = ex.response;
