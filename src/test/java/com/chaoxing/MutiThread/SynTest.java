@@ -1,4 +1,4 @@
-package com.chaoxing.test;
+package com.chaoxing.MutiThread;
 
 public class SynTest {
 
