@@ -9,7 +9,7 @@ public class FutureTest {
     @Test
     public void index() {
         Client client = new Client();
-        Data futureData = client.request("真实操作");
+        Data futureData = client.request("真实");
         System.out.println("请求完毕");
         try {
             Thread.sleep(2000);
