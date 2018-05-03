@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<style>
+    .pop-bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 201; /*遮盖层的高度*/
+    }
+</style>
+<body>
+<span class="message">Hi mate, how is everything?</span>
+<div class="pop-bg">定位</div>
+<input type="button" name="xx" value="xxx" onclick="show()"/>
+</body>
+<script>
+    function show() {
+        alert("1111111111");
+    }
+</script>
+</html>

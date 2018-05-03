@@ -27,6 +27,7 @@ public class CountTask extends RecursiveTask<Long> {
 
             }
         }else {
+            //分成100个小任务
             long step = (start + end) / 100;
             ArrayList<CountTask> subTasks = new ArrayList<>();
             long pos=start;
@@ -59,12 +60,33 @@ public class CountTask extends RecursiveTask<Long> {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+    }
 
 
+    public void syncMethod(){
+        othercode1();
+        synchronized(this){
+            mutexMethod();
+        }
+        othercode2();
     }
 
 
 
+    public  void othercode1(){
+        othercode1();
+        mutexMethod();
+        othercode2();
+    }
+    public  void othercode2(){
+        othercode1();
+        mutexMethod();
+        othercode2();
+    }    public  void mutexMethod(){
+        othercode1();
+        mutexMethod();
+        othercode2();
+    }
 
 
 
