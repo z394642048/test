@@ -9,7 +9,6 @@ public class WebTestController {
 
     @RequestMapping("test1")
     public String test1(){
-
         return "test/test1";
     }
 }
