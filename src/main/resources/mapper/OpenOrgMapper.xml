@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chaoxing.test.mapper.OpenOrgMapper" >
+
+    <select id="getFid" parameterType="java.lang.Integer" resultType="java.lang.String">
+        select DISTINCT fid from plt_open_org
+    </select>
+
+    <insert id="insertAll" parameterType="java.lang.String">
+        INSERT INTO plt_org_city (fid, city_code, STATUS )
+        SELECT fid, #{cityCode}, 1
+        FROM plt_open_org
+        WHERE org_name
+        IN (${orgNames})
+        AND fid NOT IN ( SELECT fid FROM plt_org_city );
+    </insert>
+
+    <insert id="insertCity" parameterType="java.lang.String">
+        INSERT INTO plt_org_city (fid, city_code, STATUS )
+        SELECT fid, #{cityCode}, 1
+        FROM plt_open_org
+        WHERE org_name
+        IN (${orgNames})
+        AND fid NOT IN ( SELECT fid FROM plt_org_city );
+    </insert>
+
+</mapper>
