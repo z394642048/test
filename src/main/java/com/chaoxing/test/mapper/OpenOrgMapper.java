@@ -14,4 +14,5 @@ public interface OpenOrgMapper {
 
     void insertCity(@Param("orgNames")String orgNames, @Param("cityCode")String cityCode);
 
+    List<String> getAll();
 }

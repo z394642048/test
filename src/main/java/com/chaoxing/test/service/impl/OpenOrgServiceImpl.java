@@ -35,4 +35,9 @@ public class OpenOrgServiceImpl implements IOpenOrgService {
     public void insertCity(String orgNames, String cityCode) {
         openOrgMapper.insertCity(orgNames,cityCode);
     }
+
+    @Override
+    public List<String> getAll() {
+        return openOrgMapper.getAll();
+    }
 }

@@ -8,20 +8,24 @@
 
     <insert id="insertAll" parameterType="java.lang.String">
         INSERT INTO plt_org_city (fid, city_code, STATUS )
-        SELECT fid, #{cityCode}, 1
+        SELECT fid, #{cityCode}, 2
         FROM plt_open_org
         WHERE org_name
         IN (${orgNames})
-        AND fid NOT IN ( SELECT fid FROM plt_org_city );
+        AND fid NOT IN ( SELECT fid FROM plt_org_city WHERE city_code!=350300);
     </insert>
 
     <insert id="insertCity" parameterType="java.lang.String">
         INSERT INTO plt_org_city (fid, city_code, STATUS )
-        SELECT fid, #{cityCode}, 1
+        SELECT fid, #{cityCode}, 2
         FROM plt_open_org
         WHERE org_name
         IN (${orgNames})
-        AND fid NOT IN ( SELECT fid FROM plt_org_city );
+        AND fid NOT IN ( SELECT fid FROM plt_org_city WHERE city_code=350300);
     </insert>
+
+    <select id="getAll" resultType="java.lang.String">
+        SELECT org_name from plt_open_org
+    </select>
 
 </mapper>

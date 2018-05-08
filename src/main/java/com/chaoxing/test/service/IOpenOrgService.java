@@ -16,4 +16,6 @@ public interface IOpenOrgService {
     public void insertAll(String orgNames, String cityCode);
 
     void insertCity(String orgNames, String cityCode);
+
+    List<String> getAll();
 }
