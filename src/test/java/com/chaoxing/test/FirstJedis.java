@@ -38,8 +38,9 @@ public class FirstJedis {
 
     @Test
     public void test3() throws InterruptedException {
-        ExecutorService executorService = Executors.newFixedThreadPool(20);
-        for (int i = 0; i < 20; i++) {
+//        JedisConnection jedisConnection = new JedisConnection();
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        for (int i = 0; i < 5; i++) {
             executorService.execute(new Runnable() {
                 @Override
                 public void run() {
@@ -47,19 +48,21 @@ public class FirstJedis {
 //                    Student stu = studentService.selectByPrimaryKey(2);
 //                    System.out.println(stu);
 //                    System.out.println("=============="+Thread.currentThread().getId());
-                    RedisLock lock = new RedisLock(redisTemplate, "lock_" + 1);
+                    RedisLock lock = new RedisLock(redisTemplate, "lock_" + 3);
                     try {
                         if (lock.lock()) {
-                            System.out.println("------------进锁");
+                            System.out.println("------------进锁"+ Thread.currentThread().getId());
                             Student student = studentService.selectByPrimaryKey(1);
-                            System.out.println(student);
-                            Thread.sleep(1000);
-                            System.out.println("------------"+Thread.currentThread().getId());
+//                            System.out.println(student);
+//                            Thread.sleep(10000);
+//                            System.out.println("------------" + Thread.currentThread().getId());
+                        } else {
+                            System.out.println("==========没有进锁：" + Thread.currentThread().getId());
                         }
-                    } catch (InterruptedException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     } finally {
-                        System.out.println("-----------关锁");
+                        System.out.println("-----------关锁"+ Thread.currentThread().getId());
                         lock.unlock();
                     }
                 }
