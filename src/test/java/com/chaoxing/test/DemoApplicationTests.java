@@ -1,16 +1,13 @@
 package com.chaoxing.test;
 
-import com.chaoxing.test.config.SerializeUtil;
 import com.chaoxing.test.model.Student;
 import com.chaoxing.test.service.RedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 
 @RunWith(SpringRunner.class)
@@ -40,6 +37,10 @@ public class DemoApplicationTests {
         ArrayList<Student> list1 = (ArrayList)redisService.get("list");
 		System.out.println(list1);
 		System.out.println("=============================================================");
+		redisService.setNX("miaosha","1");
+		if (redisService.setNX("miaosha","1")){
+
+        }
 	}
 
 }

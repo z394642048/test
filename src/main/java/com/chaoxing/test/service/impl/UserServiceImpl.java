@@ -35,7 +35,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User selectByLogin(User user) {
         User login = userMapper.selectByLogin(user);
-        if(login!=null){
+        if (login != null) {
             return login;
         }
         return null;

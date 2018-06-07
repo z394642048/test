@@ -1,10 +1,11 @@
 package com.chaoxing.test.mapper;
 
 import com.chaoxing.test.model.Student;
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
-@Mapper
+@Repository
 public interface StudentMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(Student record);

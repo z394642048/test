@@ -28,8 +28,8 @@ public class IndexController {
     @RequestMapping("login")
     public String login(User user,Model model){
         User loginUser = userService.selectByLogin(user);
-        System.out.println(loginUser);
         List<Menu> menus = menuService.getMenuByUid((long)loginUser.getId());
+        System.out.println(menus);
         model.addAttribute("menus",menus);
         model.addAttribute("loginUser",loginUser);
         return "index";

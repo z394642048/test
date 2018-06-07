@@ -23,7 +23,7 @@ public class PuTianDataInsert {
     @Test
     public void test3() {
         //城厢区
-        String path="C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\城厢区";
+//        String path="C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\城厢区";
         //荔城区
 //        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\荔城区\\荔城区";
         //秀屿区
@@ -31,7 +31,7 @@ public class PuTianDataInsert {
         //仙游县
 //        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\仙游县";
         //涵江区
-//        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\涵江区";
+        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\涵江区";
 
 //        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\北岸";
         //市直
@@ -69,7 +69,7 @@ public class PuTianDataInsert {
         openOrgService.insertCity(orgNames, "350300");
 
         //城厢区
-        openOrgService.insertAll(orgNames,"350302");
+//        openOrgService.insertAll(orgNames,"350302");
 
         //荔城区
 //        openOrgService.insertAll(orgNames, "350304");
@@ -81,7 +81,7 @@ public class PuTianDataInsert {
 //        openOrgService.insertAll(orgNames, "350322");
 
         //涵江区
-//        openOrgService.insertAll(orgNames, "350303");
+        openOrgService.insertAll(orgNames, "350303");
 
         // 北岸
 //        openOrgService.insertAll(orgNames, "350306");
@@ -110,9 +110,9 @@ public class PuTianDataInsert {
         //仙游县
 //        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\仙游县";
         //涵江区
-//        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\涵江区";
+        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\涵江区";
         //北岸
-        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\北岸";
+//        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\北岸";
         //市直
 //        String path = "C:\\Users\\Administrator\\Desktop\\超星工作相关\\莆田区域平台\\数据导入\\市直";
 
