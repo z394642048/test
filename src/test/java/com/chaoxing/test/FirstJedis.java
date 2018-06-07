@@ -48,12 +48,12 @@ public class FirstJedis {
 //                    Student stu = studentService.selectByPrimaryKey(2);
 //                    System.out.println(stu);
 //                    System.out.println("=============="+Thread.currentThread().getId());
-                    RedisLock lock = new RedisLock(redisTemplate, "lock_" + 3);
+                    RedisLock lock = new RedisLock(redisTemplate, "lock_" + 5);
                     try {
                         if (lock.lock()) {
                             System.out.println("------------进锁"+ Thread.currentThread().getId());
                             Student student = studentService.selectByPrimaryKey(1);
-//                            System.out.println(student);
+                            System.out.println(student);
 //                            Thread.sleep(10000);
 //                            System.out.println("------------" + Thread.currentThread().getId());
                         } else {

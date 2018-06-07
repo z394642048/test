@@ -1,92 +1,147 @@
 package com.chaoxing.test.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
 
-import java.util.Random;
-import java.util.concurrent.TimeUnit;
+import javax.annotation.Resource;
 
-public class RedisLock implements AutoCloseable {
-    private static final Logger LOGGER = (Logger) LoggerFactory.getLogger(RedisLock.class);
-    public static final String REDIS_LOCK = "RedisLock:";
+public class RedisLock {
 
-
-    private static final long DEFAULT_WAIT_LOCK_TIME_OUT = 60;//60s 有慢sql，超时时间设置长一点
-    private static final long DEFAULT_EXPIRE = 80;//80s 有慢sql，超时时间设置长一点
-    private String key;
+    @Resource
     private RedisTemplate redisTemplate;
+    /**
+     * 重试时间
+     */
+    private static final int DEFAULT_ACQUIRY_RETRY_MILLIS = 100;
+    /**
+     * 锁的后缀
+     */
+    private static final String LOCK_SUFFIX = "_redis_lock";
+    /**
+     * 锁的key
+     */
+    private String lockKey;
+    /**
+     * 锁超时时间，防止线程在入锁以后，防止阻塞后面的线程无法获取锁
+     */
+    private int expireMsecs = 60 * 1000;
+    /**
+     * 线程获取锁的等待时间
+     */
+    private int timeoutMsecs = 10 * 1000;
+    /**
+     * 是否锁定标志
+     */
+    private volatile boolean locked = false;
 
-    public RedisLock(RedisTemplate redisTemplate,String key) {
+    /**
+     * 构造器
+     * @param redisTemplate
+     * @param lockKey 锁的key
+     */
+    public RedisLock(RedisTemplate redisTemplate, String lockKey) {
         this.redisTemplate = redisTemplate;
-        this.key = key;
+        this.lockKey = lockKey + LOCK_SUFFIX;
     }
 
     /**
-     * 等待锁的时间,单位为s
-     *
-     * @param key
-     * @param timeout s
-     * @param seconds
+     * 构造器
+     * @param redisTemplate
+     * @param lockKey 锁的key
+     * @param timeoutMsecs 获取锁的超时时间
      */
-    public boolean lock(String key, long timeout, TimeUnit seconds) {
-        String lockKey = generateLockKey(key);
-        long nanoWaitForLock = seconds.toNanos(timeout);
-        long start = System.nanoTime();
+    public RedisLock(RedisTemplate redisTemplate, String lockKey, int timeoutMsecs) {
+        this(redisTemplate, lockKey);
+        this.timeoutMsecs = timeoutMsecs;
+    }
 
-        try {
-            while ((System.nanoTime() - start) < nanoWaitForLock) {
-                if (redisTemplate.getConnectionFactory().getConnection().setNX(lockKey.getBytes(), new byte[0])) {
-                    //暂设置为80s过期，防止异常中断锁未释放
-                    redisTemplate.expire(lockKey, DEFAULT_EXPIRE, TimeUnit.SECONDS);
-                    if (LOGGER.isDebugEnabled()) {
-                        LOGGER.debug("add RedisLock[{}].{}", key, Thread.currentThread());
-                    }
+    /**
+     * 构造器
+     * @param redisTemplate
+     * @param lockKey 锁的key
+     * @param timeoutMsecs 获取锁的超时时间
+     * @param expireMsecs 锁的有效期
+     */
+    public RedisLock(RedisTemplate redisTemplate, String lockKey, int timeoutMsecs, int expireMsecs) {
+        this(redisTemplate, lockKey, timeoutMsecs);
+        this.expireMsecs = expireMsecs;
+    }
+
+    public String getLockKey() {
+        return lockKey;
+    }
+
+    /**
+     * 封装和jedis方法
+     * @param key
+     * @return
+     */
+    private String get(final String key) {
+        Object obj = redisTemplate.opsForValue().get(key);
+        return obj != null ? obj.toString() : null;
+    }
+
+    /**
+     * 封装和jedis方法
+     * @param key
+     * @param value
+     * @return
+     */
+    private boolean setNX(final String key, final String value) {
+        return redisTemplate.getConnectionFactory().getConnection().setNX(key.getBytes(),value.getBytes());
+//        return redisTemplate.opsForValue().setIfAbsent(key,value);
+    }
+
+    /**
+     * 封装和jedis方法
+     * @param key
+     * @param value
+     * @return
+     */
+    private String getSet(final String key, final String value) {
+        Object obj = redisTemplate.opsForValue().getAndSet(key,value);
+        return obj != null ? (String) obj : null;
+    }
+
+    /**
+     * 获取锁
+     * @return 获取锁成功返回ture，超时返回false
+     * @throws InterruptedException
+     */
+    public synchronized boolean lock() throws InterruptedException {
+        int timeout = timeoutMsecs;
+        while (timeout >= 0) {
+            long expires = System.nanoTime() + expireMsecs + 1;
+            String expiresStr = String.valueOf(expires); //锁到期时间
+            if (this.setNX(lockKey, expiresStr)) {
+                locked = true;
+                return true;
+            }
+            //redis里key的时间
+            String currentValue = this.get(lockKey);
+            //判断锁是否已经过期，过期则重新设置并获取
+            if (currentValue != null && Long.parseLong(currentValue) < System.nanoTime()) {
+                //设置锁并返回旧值
+                String oldValue = this.getSet(lockKey, expiresStr);
+                //比较锁的时间，如果不一致则可能是其他锁已经修改了值并获取
+                if (oldValue != null && oldValue.equals(currentValue)) {
+                    locked = true;
                     return true;
                 }
-                //加随机时间防止活锁
-                TimeUnit.MILLISECONDS.sleep(1000 + new Random().nextInt(100));
             }
-        } catch (Exception e) {
-            LOGGER.error("{}", e.getMessage(), e);
-            unlock();
+            timeout -= DEFAULT_ACQUIRY_RETRY_MILLIS;
+            //延时
+            Thread.sleep(DEFAULT_ACQUIRY_RETRY_MILLIS);
         }
         return false;
     }
-
-    public void unlock() {
-        try {
-            String lockKey = generateLockKey(key);
-            RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();
-            connection.del(lockKey.getBytes());
-            connection.del(key.getBytes());
-            connection.close();
-        } catch (Exception e) {
-            LOGGER.error("{}", e.getMessage(), e);
+    /**
+     * 释放获取到的锁
+     */
+    public synchronized void unlock() {
+        if (locked) {
+            redisTemplate.delete(lockKey);
+            locked = false;
         }
     }
 
-    private String generateLockKey(String key) {
-        return String.format(REDIS_LOCK + "%s", key);
-    }
-
-    public boolean lock() {
-        return lock(key, DEFAULT_WAIT_LOCK_TIME_OUT, TimeUnit.SECONDS);
-    }
-
-    @Override
-    public void close(){
-        try {
-            String lockKey = generateLockKey(key);
-            if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("release RedisLock[" + lockKey + "].");
-            }
-            RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();
-            connection.del(lockKey.getBytes());
-            connection.close();
-        } catch (Exception e) {
-            LOGGER.error("{}", e.getMessage(), e);
-        }
-    }
 }
