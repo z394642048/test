@@ -11,7 +11,7 @@ public class RedisLock {
     /**
      * 重试时间
      */
-    private static final int DEFAULT_ACQUIRY_RETRY_MILLIS = 100;
+    private static final int DEFAULT_ACQUIRY_RETRY_MILLIS = 1000;
     /**
      * 锁的后缀
      */
@@ -111,7 +111,8 @@ public class RedisLock {
         int timeout = timeoutMsecs;
         while (timeout >= 0) {
             long expires = System.nanoTime() + expireMsecs + 1;
-            String expiresStr = String.valueOf(expires); //锁到期时间
+            //锁到期时间
+            String expiresStr = String.valueOf(expires);
             if (this.setNX(lockKey, expiresStr)) {
                 locked = true;
                 return true;
