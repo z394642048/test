@@ -1,6 +1,7 @@
 package com.chaoxing.test.model;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Employee {
 
@@ -16,6 +17,7 @@ public class Employee {
 
     public Employee() {
     }
+
 
     public Long getId() {
         return id;
@@ -102,5 +104,19 @@ public class Employee {
                 ", state=" + state +
                 ", dept=" + dept +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(tel, employee.tel);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, username, password, realName, tel, email, inputTime, state, dept);
     }
 }
