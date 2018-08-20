@@ -4,6 +4,8 @@ import com.chaoxing.test.model.Employee;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class AlgorithmTest {
 
@@ -71,6 +73,15 @@ public class AlgorithmTest {
 
     @Test
     public void test2(){
+        long time = System.currentTimeMillis();
+        System.out.println(time);
+        Date d = new Date(time);
+        Calendar c = Calendar.getInstance();
+        c.setTime(d);
+        c.add(Calendar.MONTH, 1);
+        c.add(Calendar.DAY_OF_MONTH, 1);
+
+        System.out.println(c.getTimeInMillis());
 
     }
 }
