@@ -11,4 +11,12 @@
     <select id="getListName" resultType="java.lang.String">
         SELECT file_name from edu_video_url WHERE folder_name=#{fileName}
     </select>
+
+    <select id="getNullUrl" resultType="java.util.HashMap">
+        SELECT id,object_id objectId FROM edu_video_url WHERE url is null
+    </select>
+
+    <update id="updateByUrl">
+        UPDATE edu_video_url set url=#{url} WHERE id=#{id}
+    </update>
 </mapper>

@@ -101,16 +101,17 @@ public class FileUploadTest {
     }
 
     @Test
-    public void test2(){
-        File file = new File("E:\\新教育\\小学晨诵\\五年级");
+    public void test2() {
+        File file = new File("E:\\新教育\\幼儿园整本书");
         System.out.println(file.getName());
         List<String> listName = fileUploadService.getListName(file.getName());
         File[] files = file.listFiles();
-        int i=0;
+        int i = 0;
         for (File file1 : files) {
-            if (listName.contains(file1.getName())){
+            if (listName.contains(file1.getName())) {
 //                System.out.println(file1.getName());
-            }else {
+//                i++;
+            } else {
                 i++;
                 System.out.println(file1.getName());
             }
@@ -119,5 +120,65 @@ public class FileUploadTest {
 
     }
 
+    @Test
+    public void test3() {
+        ExecutorService pool = Executors.newFixedThreadPool(4);
+        List<HashMap<String, Object>> objects = fileUploadService.getNullUrl();
+        for (HashMap<String, Object> object : objects) {
+            pool.execute(new Runnable() {
+                @Override
+                public void run() {
+                    String objectId = (String) object.get("objectId");
+                    String resultStr = null;
+                    try {
+                        resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + objectId, true, null).getResult();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    JSONObject json = JSON.parseObject(resultStr);
+                    String url = json.getString("http");
+                    System.out.println(url);
+                    fileUploadService.updateByUrl((Integer) object.get("id"), url);
+                    System.out.println(Thread.currentThread().getName()+":"+Thread.currentThread().getId());
+                }
+            });
+        }
+        pool.shutdown();
+        while (true) {
+            //判断线程池是否关闭
+            if (pool.isTerminated()) {
+                System.out.println("所有的子线程都结束了！");
+                break;
+            }
+        }
+
+    }
+
+    @Test
+    public void test4() throws IOException {
+        String resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + "5f186316e19d6d1e4aebd6b152cd4eed", true, null).getResult();
+        JSONObject json = JSON.parseObject(resultStr);
+        String url = json.getString("http");
+        fileUploadService.updateByUrl(18, url);
+        System.out.println(url);
+    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
