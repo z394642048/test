@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -97,6 +98,25 @@ public class FileUploadTest {
         }
         System.out.println("成功上传视频数量：" + integer);
         System.out.println("上传视频总时间：" + (System.currentTimeMillis() - begin) / 1000);
+    }
+
+    @Test
+    public void test2(){
+        File file = new File("E:\\新教育\\小学晨诵\\五年级");
+        System.out.println(file.getName());
+        List<String> listName = fileUploadService.getListName(file.getName());
+        File[] files = file.listFiles();
+        int i=0;
+        for (File file1 : files) {
+            if (listName.contains(file1.getName())){
+//                System.out.println(file1.getName());
+            }else {
+                i++;
+                System.out.println(file1.getName());
+            }
+        }
+        System.out.println(i);
+
     }
 
 

@@ -5,6 +5,8 @@ import com.chaoxing.test.service.IFileUploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -16,5 +18,10 @@ public class FileUploadServiceImpl implements IFileUploadService {
     @Override
     public void addVideo(Map<String,String> map) {
         fileUploadMapper.addVideo(map);
+    }
+
+    @Override
+    public LinkedList<String> getListName(String fileName) {
+        return fileUploadMapper.getListName(fileName);
     }
 }

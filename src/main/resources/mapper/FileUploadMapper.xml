@@ -8,4 +8,7 @@
         values (#{folderName,jdbcType=VARCHAR},#{fileName,jdbcType=VARCHAR},#{objectid,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR})
     </insert>
 
+    <select id="getListName" resultType="java.lang.String">
+        SELECT file_name from edu_video_url WHERE folder_name=#{fileName}
+    </select>
 </mapper>
