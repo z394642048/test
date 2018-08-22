@@ -31,7 +31,7 @@ public class HttpClientUtils {
     }
 
     private HttpClientUtils() {
-        okHttpClient = new OkHttpClient().newBuilder().connectTimeout(60 * 10, TimeUnit.SECONDS).build();
+        okHttpClient = new OkHttpClient().newBuilder().connectTimeout(60 * 20, TimeUnit.SECONDS).build();
     }
 
     private static class InnerClass {
