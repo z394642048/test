@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.chaoxing.test.mapper.FileUploadMapper" >
+<mapper namespace="com.chaoxing.test.mapper.FileUploadMapper">
 
     <insert id="addVideo">
         insert into
         edu_video_url(folder_name,file_name,object_id,url)
         values (#{folderName,jdbcType=VARCHAR},#{fileName,jdbcType=VARCHAR},#{objectid,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR})
+    </insert>
+
+    <insert id="addPltVideo">
+        insert into
+        plt_pltvideo(name,author,url,time,create_time,object_id,status)
+        values (#{name,jdbcType=VARCHAR},'超星校园阅读系统',#{url,jdbcType=VARCHAR},#{time,jdbcType=INTEGER},now(),#{objectid,jdbcType=VARCHAR},#{status,jdbcType=INTEGER})
     </insert>
 
     <select id="getListName" resultType="java.lang.String">
@@ -18,5 +24,17 @@
 
     <update id="updateByUrl">
         UPDATE edu_video_url set url=#{url} WHERE id=#{id}
+    </update>
+
+    <select id="getVideoName" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT 分集名称 from zzzz1 WHERE 分集编号=#{number}
+    </select>
+
+    <select id="getNoPass" resultType="java.util.HashMap">
+        SELECT id,object_id objectId FROM plt_pltvideo WHERE url is null
+    </select>
+
+    <update id="updateVideo">
+         UPDATE plt_pltvideo set url=#{url},time=#{time},status=#{status} WHERE id=#{id}
     </update>
 </mapper>

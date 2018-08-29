@@ -22,6 +22,11 @@ public class FileUploadServiceImpl implements IFileUploadService {
     }
 
     @Override
+    public void addPltVideo(Map<String, Object> map) {
+        fileUploadMapper.addPltVideo(map);
+    }
+
+    @Override
     public LinkedList<String> getListName(String fileName) {
         return fileUploadMapper.getListName(fileName);
     }
@@ -34,5 +39,20 @@ public class FileUploadServiceImpl implements IFileUploadService {
     @Override
     public void updateByUrl(Integer id, String url) {
         fileUploadMapper.updateByUrl(id, url);
+    }
+
+    @Override
+    public String getVideoName(String number) {
+        return fileUploadMapper.getVideoName(number);
+    }
+
+    @Override
+    public List<HashMap<String, Object>> getNoPass() {
+        return fileUploadMapper.getNoPass();
+    }
+
+    @Override
+    public void updateVideo(HashMap<String, Object> map) {
+        fileUploadMapper.updateVideo(map);
     }
 }
