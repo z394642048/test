@@ -6,19 +6,21 @@ import java.util.Map;
 
 public interface IFileUploadService {
 
-    void addVideo(Map<String,String> map);
+    void addVideo(Map<String, String> map);
 
-    void addPltVideo(Map<String,Object> map);
+    int addPltVideo(Map<String, Object> map);
 
     List<String> getListName(String fileName);
 
-    List<HashMap<String,Object>> getNullUrl();
+    List<HashMap<String, Object>> getNullUrl();
 
     void updateByUrl(Integer id, String url);
 
-    String getVideoName(String number);
+    Map<String, Object> getVideoName(String number);
 
-    List<HashMap<String,Object>> getNoPass();
+    List<HashMap<String, Object>> getNoPass();
 
     void updateVideo(HashMap<String, Object> map);
+
+    void addMiddleTable(int id, int seriesId, int sequence);
 }

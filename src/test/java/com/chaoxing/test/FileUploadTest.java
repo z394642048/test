@@ -47,7 +47,7 @@ public class FileUploadTest {
     public void test1() throws IOException {
         ExecutorService pool = Executors.newFixedThreadPool(4);
 //        上传部分
-        final File folder = new File("D:\\科普视频\\failure");
+        final File folder = new File("D:\\科普视频\\xx");
         System.out.println(folder.getName());
         long begin = System.currentTimeMillis();
         File[] files = folder.listFiles();
@@ -57,7 +57,7 @@ public class FileUploadTest {
             if (file.isDirectory()) {
                 long l = System.currentTimeMillis();
                 File[] files1 = file.listFiles();
-                for (File file1 : files1) {
+                for (File file1 : files1)
                     pool.execute(new Runnable() {
                         @Override
                         public void run() {
@@ -66,11 +66,10 @@ public class FileUploadTest {
                             String number = file1.getName();
                             if (number.contains("mp4")) {
                                 number = number.split("\\.")[0];
-                                String name = fileUploadService.getVideoName(number);
+                                Map<String, Object> videoName = fileUploadService.getVideoName(number);
+                                String name = (String) videoName.get("videoName");
                                 if (null != name && !"".equals(name)) {
                                     map.put("name", name);
-//                                map.put("folderName", file.getName());
-//                                map.put("fileName", file1.getName());
                                     String result = null;
                                     try {
                                         result = HttpClientUtils.upload(CLOUD_UPLOAD_URL, null, true, new HashMap<String, File>() {{
@@ -100,7 +99,10 @@ public class FileUploadTest {
                                     System.out.println(url);
                                     map.put("url", url);
                                     map.put("time", duration);
-                                    fileUploadService.addPltVideo(map);
+                                    int id = fileUploadService.addPltVideo(map);
+                                    int seriesId = (Integer) videoName.get("id");
+                                    String sequence = (String) videoName.get("sequence");
+                                    fileUploadService.addMiddleTable(id, seriesId, Integer.valueOf(sequence));
                                     integer.incrementAndGet();
                                     System.out.println("上传一个视频时间：" + (System.currentTimeMillis() - l1) / 1000);
                                 } else {
@@ -109,7 +111,6 @@ public class FileUploadTest {
                             }
                         }
                     });
-                }
                 System.out.println("上传" + file.getName() + "文件夹中视频时间：" + (System.currentTimeMillis() - l) / 1000);
             }
         }
@@ -247,21 +248,114 @@ public class FileUploadTest {
 
     @Test
     public void test6() throws IOException {
-        String resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + "6d6ff4ac0701801cff7f1411e20b3fce", true, null).getResult();
+        String resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + "08672b97be1bdea8e332714b2e92d3a7", true, null).getResult();
         JSONObject json = JSON.parseObject(resultStr);
         HashMap<String, Object> map = new HashMap<>();
         String url = json.getString("httphd");
         map.put("url", url);
         String time = json.getString("duration");
         map.put("time", time);
-        map.put("id", 351);
+        map.put("id", 756);
         if (url != null && !"".equals(url) && time != null && !"".equals(time)) {
             map.put("status", 1);
         }
         fileUploadService.updateVideo(map);
         System.out.println(url);
     }
+
+    @Test
+    public void test7() {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("name", "23434");
+        map.put("url", "333333333");
+        map.put("time", 5654);
+        map.put("status", 1);
+        map.put("objectid", "234234234");
+        map.put("id", null);
+        int id = fileUploadService.addPltVideo(map);
+        System.out.println(id);
+    }
+
+    /**
+     * 视频直播
+     *
+     * @throws IOException
+     */
+    @Test
+    public void test8() throws IOException {
+        ExecutorService pool = Executors.newFixedThreadPool(4);
+//        上传部分
+        final File folder = new File("D:\\直播新资源20180918\\xx");
+        System.out.println(folder.getName());
+        long begin = System.currentTimeMillis();
+        File[] files = folder.listFiles();
+        AtomicInteger integer = new AtomicInteger(0);
+        AtomicInteger count = new AtomicInteger(0);
+        for (File file : files) {
+            if (file.isDirectory()) {
+                File[] files1 = file.listFiles();
+                for (File file1 : files1)
+                    pool.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            String number = file1.getName();
+                            if (number.contains("mp4")) {
+                                number = number.split("\\.")[0];
+                                Map<String, Object> map = fileUploadService.getVideoName(number);
+                                String result = null;
+                                try {
+                                    result = HttpClientUtils.upload(CLOUD_UPLOAD_URL, null, true, new HashMap<String, File>() {{
+                                        put("file", file1);
+                                    }}).getResult();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                JSONObject jsonObject = JSON.parseObject(result);
+                                String objectid = jsonObject.getString("objectid");
+                                map.put("objectid", objectid);
+                                String resultStr = null;
+                                try {
+                                    resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + objectid, true, null).getResult();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                JSONObject json = JSON.parseObject(resultStr);
+                                String url = json.getString("httphd");
+                                map.put("url", url);
+                                String duration = json.getString("duration");
+                                map.put("time", duration);
+                                map.put("isRecommend", 0);
+                                String status = json.getString("status");
+                                if ("success".equals(status)) {
+                                    map.put("status", 1);
+                                } else {
+                                    map.put("status", 0);
+                                }
+                                System.out.println(url);
+                                fileUploadService.addPltVideo(map);
+                                integer.incrementAndGet();
+                            }
+                        }
+                    });
+            }
+        }
+        //防止程序提前结束
+        //关闭线程池
+        pool.shutdown();
+        while (true) {
+            //判断线程池是否关闭
+            if (pool.isTerminated()) {
+                System.out.println("所有的子线程都结束了！");
+                break;
+            }
+        }
+        System.out.println("没得到名字的数量：" + count);
+        System.out.println("成功上传视频数量：" + integer);
+        System.out.println("上传视频总时间：" + (System.currentTimeMillis() - begin) / 1000);
+    }
+
 }
+
 
 
 

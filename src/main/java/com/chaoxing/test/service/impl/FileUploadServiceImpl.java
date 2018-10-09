@@ -22,8 +22,9 @@ public class FileUploadServiceImpl implements IFileUploadService {
     }
 
     @Override
-    public void addPltVideo(Map<String, Object> map) {
+    public int addPltVideo(Map<String, Object> map) {
         fileUploadMapper.addPltVideo(map);
+        return Integer.parseInt(map.get("id").toString());
     }
 
     @Override
@@ -42,7 +43,7 @@ public class FileUploadServiceImpl implements IFileUploadService {
     }
 
     @Override
-    public String getVideoName(String number) {
+    public Map<String, Object> getVideoName(String number) {
         return fileUploadMapper.getVideoName(number);
     }
 
@@ -54,5 +55,10 @@ public class FileUploadServiceImpl implements IFileUploadService {
     @Override
     public void updateVideo(HashMap<String, Object> map) {
         fileUploadMapper.updateVideo(map);
+    }
+
+    @Override
+    public void addMiddleTable(int id, int seriesId, int sequence) {
+        fileUploadMapper.addMiddleTable(id, seriesId, sequence);
     }
 }

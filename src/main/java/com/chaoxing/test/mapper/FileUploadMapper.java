@@ -15,7 +15,7 @@ public interface FileUploadMapper {
 
     void addVideo(Map<String, String> map);
 
-    void addPltVideo(Map<String, Object> map);
+    int addPltVideo(Map<String, Object> map);
 
     LinkedList<String> getListName(String fileName);
 
@@ -23,9 +23,11 @@ public interface FileUploadMapper {
 
     void updateByUrl(@Param("id") Integer id, @Param("url") String url);
 
-    String getVideoName(String number);
+    Map<String, Object> getVideoName(String number);
 
-    List<HashMap<String,Object>> getNoPass();
+    List<HashMap<String, Object>> getNoPass();
 
     void updateVideo(HashMap<String, Object> map);
+
+    void addMiddleTable(@Param("id") int id, @Param("seriesId") int seriesId, @Param("sequence") int sequence);
 }

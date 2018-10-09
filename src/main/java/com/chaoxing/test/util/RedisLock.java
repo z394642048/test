@@ -1,6 +1,12 @@
 package com.chaoxing.test.util;
 
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
+import redis.clients.jedis.JedisCommands;
 
 import javax.annotation.Resource;
 
@@ -143,6 +149,44 @@ public class RedisLock {
             redisTemplate.delete(lockKey);
             locked = false;
         }
+    }
+
+
+    /**
+     * 重写redisTemplate的set方法
+     * <p>
+     * 命令 SET resource-name anystring NX EX max-lock-time 是一种在 Redis 中实现锁的简单方法。
+     * <p>
+     * 客户端执行以上的命令：
+     * <p>
+     * 如果服务器返回 OK ，那么这个客户端获得锁。
+     * 如果服务器返回 NIL ，那么客户端获取锁失败，可以在稍后再重试。
+     *
+     * @param key     锁的Key
+     * @param value   锁里面的值
+     * @param seconds 过去时间（秒）
+     * @return
+     */
+    private String set(final String key, final String value, final long seconds) {
+        Assert.isTrue(!StringUtils.isEmpty(key), "key不能为空");
+
+
+        return (String) redisTemplate.execute(new RedisCallback<String>() {
+            @Override
+            public String doInRedis(RedisConnection connection) throws DataAccessException {
+                Object nativeConnection = connection.getNativeConnection();
+                String result = null;
+                if (nativeConnection instanceof JedisCommands) {
+                    result = ((JedisCommands) nativeConnection).set(key, value, "NX", "EX", seconds);
+                }
+
+//                if (!StringUtils.isEmpty(lockKeyLog) && !StringUtils.isEmpty(result)) {
+//                    logger.info("获取锁{}的时间：{}", lockKeyLog, System.currentTimeMillis());
+//                }
+
+                return result;
+            }
+        });
     }
 
 }

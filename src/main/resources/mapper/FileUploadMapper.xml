@@ -8,11 +8,16 @@
         values (#{folderName,jdbcType=VARCHAR},#{fileName,jdbcType=VARCHAR},#{objectid,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR})
     </insert>
 
-    <insert id="addPltVideo">
+    <insert id="addPltVideo" parameterType="java.util.HashMap">
         insert into
-        plt_pltvideo(name,author,url,time,create_time,object_id,status)
-        values (#{name,jdbcType=VARCHAR},'超星校园阅读系统',#{url,jdbcType=VARCHAR},#{time,jdbcType=INTEGER},now(),#{objectid,jdbcType=VARCHAR},#{status,jdbcType=INTEGER})
+        plt_pltvideo(id,name,author,url,time,create_time,object_id,series_id,click_times,sequence,live_time,image,intro,status,is_recommend)
+        values (#{id},#{name,jdbcType=VARCHAR},#{author,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR},#{time,jdbcType=INTEGER},now(),#{objectid,jdbcType=VARCHAR},0,0,0,now(),0,#{intro,jdbcType=VARCHAR},#{status,jdbcType=INTEGER},#{isRecommend,jdbcType=INTEGER})
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
     </insert>
+
+
 
     <select id="getListName" resultType="java.lang.String">
         SELECT file_name from edu_video_url WHERE folder_name=#{fileName}
@@ -26,8 +31,23 @@
         UPDATE edu_video_url set url=#{url} WHERE id=#{id}
     </update>
 
-    <select id="getVideoName" parameterType="java.lang.String" resultType="java.lang.String">
-        SELECT 分集名称 from zzzz1 WHERE 分集编号=#{number}
+    <!--<select id="getVideoName" parameterType="java.lang.String" resultType="java.util.HashMap">-->
+        <!--SELECT-->
+            <!--z.`分集名称` videoName,-->
+            <!--z.`分集编号` sequence,-->
+            <!--rs.id-->
+        <!--FROM-->
+            <!--zzzz1 z-->
+            <!--JOIN re_series rs ON z.`系列名` = rs.NAME-->
+            <!--AND z.`分集编号` = #{number}-->
+    <!--</select>-->
+    <select id="getVideoName" parameterType="java.lang.String" resultType="java.util.HashMap">
+       SELECT
+            `直播名称` `name`,
+            `直播简介` intro,
+            CONCAT(`主讲人`,'  ',`主讲人身份属性`) author
+        FROM
+            zzz2 WHERE `直播名称`=#{number}
     </select>
 
     <select id="getNoPass" resultType="java.util.HashMap">
@@ -37,4 +57,8 @@
     <update id="updateVideo">
          UPDATE plt_pltvideo set url=#{url},time=#{time},status=#{status} WHERE id=#{id}
     </update>
+
+    <select id="addMiddleTable">
+        INSERT INTO plt_pltvideo_series_res(series_id,res_id,sequence) VALUES (#{seriesId},#{id},#{sequence})
+    </select>
 </mapper>
