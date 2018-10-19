@@ -61,4 +61,21 @@ public class FileUploadServiceImpl implements IFileUploadService {
     public void addMiddleTable(int id, int seriesId, int sequence) {
         fileUploadMapper.addMiddleTable(id, seriesId, sequence);
     }
+
+    @Override
+    public int addPltSeires(HashMap<String, Object> map) {
+        fileUploadMapper.addPltSeires(map);
+        return Integer.parseInt(map.get("id").toString());
+    }
+
+    @Override
+    public Map<String, Object> getVideoName10(String name) {
+        return fileUploadMapper.getVideoName10(name);
+    }
+
+    @Override
+    public int addPltVideo10(Map<String, Object> map) {
+        fileUploadMapper.addPltVideo10(map);
+        return Integer.parseInt(map.get("id").toString());
+    }
 }

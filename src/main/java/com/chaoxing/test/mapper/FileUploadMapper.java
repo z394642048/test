@@ -30,4 +30,10 @@ public interface FileUploadMapper {
     void updateVideo(HashMap<String, Object> map);
 
     void addMiddleTable(@Param("id") int id, @Param("seriesId") int seriesId, @Param("sequence") int sequence);
+
+    int addPltSeires(HashMap<String, Object> map);
+
+    Map<String,Object> getVideoName10(String name);
+
+    int addPltVideo10(Map<String, Object> map);
 }

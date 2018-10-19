@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chaoxing.test.mapper.ParseXmlFileMapper">
+
+    <insert id="parse2" parameterType="java.util.List">
+        insert into zz1(id,`order`,`name`,dynasty,pattern,intro) VALUES
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.id}, #{item.order}, #{item.name}, #{item.dynasty}, #{item.pattern}, #{item.intro})
+        </foreach>
+    </insert>
+
+    <insert id="parse3" parameterType="java.util.List">
+        insert into zz2(id,`order`,`name`,path) VALUES
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.id}, #{item.order}, #{item.name}, #{item.path})
+        </foreach>
+    </insert>
+
+    <insert id="parse4" parameterType="java.util.List">
+        insert into zz3(age,`order`,`name`,`type-ref-pattern`) VALUES
+        <foreach collection="list" index="index" item="item" separator=",">
+            (#{item.age}, #{item.order}, #{item.name}, #{item.type-ref-pattern})
+        </foreach>
+    </insert>
+
+</mapper>

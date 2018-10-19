@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<poem>
+    <resource-set>
+        <!-- 声律启蒙 -->
+        <!-- 上平声 -->
+        <resource order="1" id="shenglv-chapter001-001" name="一•东" path="poem/shenglv/001"/>
+        <resource order="2" id="shenglv-chapter001-002" name="二•冬" path="poem/shenglv/002"/>
+        <resource order="3" id="shenglv-chapter001-003" name="三•江" path="poem/shenglv/003"/>
+        <resource order="4" id="shenglv-chapter001-004" name="四•支" path="poem/shenglv/004"/>
+        <resource order="5" id="shenglv-chapter001-005" name="五•微" path="poem/shenglv/005"/>
+        <resource order="6" id="shenglv-chapter001-006" name="六•鱼" path="poem/shenglv/006"/>
+        <resource order="7" id="shenglv-chapter001-007" name="七•虞" path="poem/shenglv/007"/>
+        <resource order="8" id="shenglv-chapter001-008" name="八•齐" path="poem/shenglv/008"/>
+        <resource order="9" id="shenglv-chapter001-009" name="九•佳" path="poem/shenglv/009"/>
+        <resource order="10" id="shenglv-chapter001-010" name="十•灰" path="poem/shenglv/010"/>
+        <resource order="11" id="shenglv-chapter001-011" name="十一•真" path="poem/shenglv/011"/>
+        <resource order="12" id="shenglv-chapter001-012" name="十二•文" path="poem/shenglv/012"/>
+        <resource order="13" id="shenglv-chapter001-013" name="十三•元" path="poem/shenglv/013"/>
+        <resource order="14" id="shenglv-chapter001-014" name="十四•寒" path="poem/shenglv/014"/>
+        <resource order="15" id="shenglv-chapter001-015" name="十五•删" path="poem/shenglv/015"/>
+        <!-- 下平声 -->
+        <resource order="1" id="shenglv-chapter002-001" name="一•先" path="poem/shenglv/016"/>
+        <resource order="2" id="shenglv-chapter002-002" name="二•萧" path="poem/shenglv/017"/>
+        <resource order="3" id="shenglv-chapter002-003" name="三•肴" path="poem/shenglv/018"/>
+        <resource order="4" id="shenglv-chapter002-004" name="四•豪" path="poem/shenglv/019"/>
+        <resource order="5" id="shenglv-chapter002-005" name="五•歌" path="poem/shenglv/020"/>
+        <resource order="6" id="shenglv-chapter002-006" name="六•麻" path="poem/shenglv/021"/>
+        <resource order="7" id="shenglv-chapter002-007" name="七•阳" path="poem/shenglv/022"/>
+        <resource order="8" id="shenglv-chapter002-008" name="八•庚" path="poem/shenglv/023"/>
+        <resource order="9" id="shenglv-chapter002-009" name="九•青" path="poem/shenglv/024"/>
+        <resource order="10" id="shenglv-chapter002-010" name="十•蒸" path="poem/shenglv/025"/>
+        <resource order="11" id="shenglv-chapter002-011" name="十一•尤" path="poem/shenglv/026"/>
+        <resource order="12" id="shenglv-chapter002-012" name="十二•侵" path="poem/shenglv/027"/>
+        <resource order="13" id="shenglv-chapter002-013" name="十三•覃" path="poem/shenglv/028"/>
+        <resource order="14" id="shenglv-chapter002-014" name="十四•盐" path="poem/shenglv/029"/>
+        <resource order="15" id="shenglv-chapter002-015" name="十五•咸" path="poem/shenglv/030"/>
+        <!-- 笠翁对韵 -->
+        <!-- 上卷 -->
+        <resource order="1" id="liweng-chapter001-001" name="一•东" path="poem/liweng/001"/>
+        <resource order="2" id="liweng-chapter001-002" name="二•冬" path="poem/liweng/002"/>
+        <resource order="3" id="liweng-chapter001-003" name="三•江" path="poem/liweng/003"/>
+        <resource order="4" id="liweng-chapter001-004" name="四•支" path="poem/liweng/004"/>
+        <resource order="5" id="liweng-chapter001-005" name="五•微" path="poem/liweng/005"/>
+        <resource order="6" id="liweng-chapter001-006" name="六•鱼" path="poem/liweng/006"/>
+        <resource order="7" id="liweng-chapter001-007" name="七•虞" path="poem/liweng/007"/>
+        <resource order="8" id="liweng-chapter001-008" name="八•齐" path="poem/liweng/008"/>
+        <resource order="9" id="liweng-chapter001-009" name="九•佳" path="poem/liweng/009"/>
+        <resource order="10" id="liweng-chapter001-010" name="十•灰" path="poem/liweng/010"/>
+        <resource order="11" id="liweng-chapter001-011" name="十一•真" path="poem/liweng/011"/>
+        <resource order="12" id="liweng-chapter001-012" name="十二•文" path="poem/liweng/012"/>
+        <resource order="13" id="liweng-chapter001-013" name="十三•元" path="poem/liweng/013"/>
+        <resource order="14" id="liweng-chapter001-014" name="十四•寒" path="poem/liweng/014"/>
+        <resource order="15" id="liweng-chapter001-015" name="十五•删" path="poem/liweng/015"/>
+        <!-- 下卷 -->
+        <resource order="1" id="liweng-chapter002-001" name="一•先" path="poem/liweng/016"/>
+        <resource order="2" id="liweng-chapter002-002" name="二•萧" path="poem/liweng/017"/>
+        <resource order="3" id="liweng-chapter002-003" name="三•肴" path="poem/liweng/018"/>
+        <resource order="4" id="liweng-chapter002-004" name="四•豪" path="poem/liweng/019"/>
+        <resource order="5" id="liweng-chapter002-005" name="五•歌" path="poem/liweng/020"/>
+        <resource order="6" id="liweng-chapter002-006" name="六•麻" path="poem/liweng/021"/>
+        <resource order="7" id="liweng-chapter002-007" name="七•阳" path="poem/liweng/022"/>
+        <resource order="8" id="liweng-chapter002-008" name="八•庚" path="poem/liweng/023"/>
+        <resource order="9" id="liweng-chapter002-009" name="九•青" path="poem/liweng/024"/>
+        <resource order="10" id="liweng-chapter002-010" name="十•蒸" path="poem/liweng/025"/>
+        <resource order="11" id="liweng-chapter002-011" name="十一•尤" path="poem/liweng/026"/>
+        <resource order="12" id="liweng-chapter002-012" name="十二•侵" path="poem/liweng/027"/>
+        <resource order="13" id="liweng-chapter002-013" name="十三•覃" path="poem/liweng/028"/>
+        <resource order="14" id="liweng-chapter002-014" name="十四•盐" path="poem/liweng/029"/>
+        <resource order="15" id="liweng-chapter002-015" name="十五•咸" path="poem/liweng/030"/>
+        <!-- 幼学琼林 -->
+        <!-- 卷一 -->
+        <resource order="1" id="youxue-chapter001-001" name="天文" path="poem/youxue/001"/>
+        <resource order="2" id="youxue-chapter001-002" name="地舆" path="poem/youxue/002"/>
+        <resource order="3" id="youxue-chapter001-003" name="岁时" path="poem/youxue/003"/>
+        <resource order="4" id="youxue-chapter001-004" name="朝廷" path="poem/youxue/004"/>
+        <resource order="5" id="youxue-chapter001-005" name="文臣" path="poem/youxue/005"/>
+        <resource order="6" id="youxue-chapter001-006" name="武职" path="poem/youxue/006"/>
+        <!-- 卷二 -->
+        <resource order="1" id="youxue-chapter002-001" name="祖孙父子" path="poem/youxue/007"/>
+        <resource order="2" id="youxue-chapter002-002" name="兄弟" path="poem/youxue/008"/>
+        <resource order="3" id="youxue-chapter002-003" name="夫妇" path="poem/youxue/009"/>
+        <resource order="4" id="youxue-chapter002-004" name="叔侄" path="poem/youxue/010"/>
+        <resource order="5" id="youxue-chapter002-005" name="师生" path="poem/youxue/011"/>
+        <resource order="6" id="youxue-chapter002-006" name="朋友宾主" path="poem/youxue/012"/>
+        <resource order="7" id="youxue-chapter002-007" name="婚姻" path="poem/youxue/013"/>
+        <resource order="8" id="youxue-chapter002-008" name="女子" path="poem/youxue/014"/>
+        <resource order="9" id="youxue-chapter002-009" name="外戚" path="poem/youxue/015"/>
+        <resource order="10" id="youxue-chapter002-010" name="老幼寿诞" path="poem/youxue/016"/>
+        <resource order="11" id="youxue-chapter002-011" name="身体" path="poem/youxue/017"/>
+        <resource order="12" id="youxue-chapter002-012" name="衣服" path="poem/youxue/018"/>
+        <!-- 卷三 -->
+        <resource order="1" id="youxue-chapter003-001" name="人事" path="poem/youxue/019"/>
+        <resource order="2" id="youxue-chapter003-002" name="饮食" path="poem/youxue/020"/>
+        <resource order="3" id="youxue-chapter003-003" name="宫室" path="poem/youxue/021"/>
+        <resource order="4" id="youxue-chapter003-004" name="器用" path="poem/youxue/022"/>
+        <resource order="5" id="youxue-chapter003-005" name="珍宝" path="poem/youxue/023"/>
+        <resource order="6" id="youxue-chapter003-006" name="贫富" path="poem/youxue/024"/>
+        <resource order="7" id="youxue-chapter003-007" name="疾病死丧" path="poem/youxue/025"/>
+        <!-- 卷四 -->
+        <resource order="1" id="youxue-chapter004-001" name="文事" path="poem/youxue/026"/>
+        <resource order="2" id="youxue-chapter004-002" name="科第" path="poem/youxue/027"/>
+        <resource order="3" id="youxue-chapter004-003" name="制作" path="poem/youxue/028"/>
+        <resource order="4" id="youxue-chapter004-004" name="技艺" path="poem/youxue/029"/>
+        <resource order="5" id="youxue-chapter004-005" name="讼狱" path="poem/youxue/030"/>
+        <resource order="6" id="youxue-chapter004-006" name="释道鬼神" path="poem/youxue/031"/>
+        <resource order="7" id="youxue-chapter004-007" name="鸟兽" path="poem/youxue/032"/>
+        <resource order="8" id="youxue-chapter004-008" name="花木" path="poem/youxue/033"/>
+        <!--论语 -->
+        <!-- 卷一 -->
+        <resource order="1" id="lunyu-chapter001-001" name="学而第一" path="poem/lunyu/001"/>
+        <resource order="2" id="lunyu-chapter001-002" name="为政第二" path="poem/lunyu/002"/>
+        <!-- 卷二 -->
+        <resource order="1" id="lunyu-chapter002-001" name="八佾第三" path="poem/lunyu/003"/>
+        <resource order="2" id="lunyu-chapter002-002" name="里仁第四" path="poem/lunyu/004"/>
+        <!-- 卷三 -->
+        <resource order="1" id="lunyu-chapter003-001" name="公冶长第五" path="poem/lunyu/005"/>
+        <resource order="2" id="lunyu-chapter003-002" name="雍也第六" path="poem/lunyu/006"/>
+        <!-- 卷四 -->
+        <resource order="1" id="lunyu-chapter004-001" name="述而第七" path="poem/lunyu/007"/>
+        <resource order="2" id="lunyu-chapter004-002" name="泰伯第八" path="poem/lunyu/008"/>、
+        <!-- 卷五 -->
+        <resource order="1" id="lunyu-chapter005-001" name="子罕第九" path="poem/lunyu/009"/>
+        <resource order="2" id="lunyu-chapter005-002" name="乡党第十" path="poem/lunyu/010"/>
+        <!-- 卷六 -->
+        <resource order="1" id="lunyu-chapter006-001" name="先进第十一" path="poem/lunyu/011"/>
+        <resource order="2" id="lunyu-chapter006-002" name="颜渊第十二" path="poem/lunyu/012"/>
+        <!-- 卷七 -->
+        <resource order="1" id="lunyu-chapter007-001" name="子路第十三" path="poem/lunyu/013"/>
+        <resource order="2" id="lunyu-chapter007-002" name="宪问第十四" path="poem/lunyu/014"/>
+        <!-- 卷八 -->
+        <resource order="1" id="lunyu-chapter008-001" name="卫灵公第十五" path="poem/lunyu/015"/>
+        <resource order="2" id="lunyu-chapter008-002" name="季氏第十六" path="poem/lunyu/016"/>
+        <!-- 卷九 -->
+        <resource order="1" id="lunyu-chapter009-001" name="阳货第十七" path="poem/lunyu/017"/>
+        <resource order="2" id="lunyu-chapter009-002" name="微子第十八" path="poem/lunyu/018"/>
+        <!-- 卷十 -->
+        <resource order="1" id="lunyu-chapter010-001" name="子张第十九" path="poem/lunyu/019"/>
+        <resource order="2" id="lunyu-chapter010-002" name="尧曰第二十" path="poem/lunyu/020"/>
+        <!-- 诗经 -->
+        <!-- 十五国风·周南 -->
+        <resource order="1" id="shijing-chapter001-001" name="关雎" path="poem/shijing/001"/>
+        <resource order="2" id="shijing-chapter001-002" name="葛覃" path="poem/shijing/002"/>
+        <resource order="3" id="shijing-chapter001-003" name="卷耳" path="poem/shijing/003"/>
+        <resource order="4" id="shijing-chapter001-004" name="樛木" path="poem/shijing/004"/>
+        <resource order="5" id="shijing-chapter001-005" name="螽斯" path="poem/shijing/005"/>
+        <resource order="6" id="shijing-chapter001-006" name="桃天" path="poem/shijing/006"/>
+        <resource order="7" id="shijing-chapter001-007" name="兔罝" path="poem/shijing/007"/>
+        <resource order="8" id="shijing-chapter001-008" name="苤苣" path="poem/shijing/008"/>
+        <resource order="9" id="shijing-chapter001-009" name="汉广" path="poem/shijing/009"/>
+        <resource order="10" id="shijing-chapter001-010" name="汝坟" path="poem/shijing/010"/>
+        <resource order="11" id="shijing-chapter001-011" name="麟之趾" path="poem/shijing/011"/>
+        <!-- 十五国风·召南 -->
+        <resource order="1" id="shijing-chapter002-001" name="鹊巢" path="poem/shijing/012"/>
+        <resource order="2" id="shijing-chapter002-002" name="采蘩" path="poem/shijing/013"/>
+        <resource order="3" id="shijing-chapter002-003" name="草虫" path="poem/shijing/014"/>
+        <resource order="4" id="shijing-chapter002-004" name="采苹" path="poem/shijing/015"/>
+        <resource order="5" id="shijing-chapter002-005" name="甘棠" path="poem/shijing/016"/>
+        <resource order="6" id="shijing-chapter002-006" name="行露" path="poem/shijing/017"/>
+        <resource order="7" id="shijing-chapter002-007" name="羔羊" path="poem/shijing/018"/>
+        <resource order="8" id="shijing-chapter012-008" name="殷其靁" path="poem/shijing/019"/>
+        <resource order="9" id="shijing-chapter012-009" name="摽有梅" path="poem/shijing/020"/>
+        <resource order="10" id="shijing-chapter002-010" name="小星" path="poem/shijing/021"/>
+        <resource order="11" id="shijing-chapter002-011" name="江有汜" path="poem/shijing/022"/>
+        <resource order="12" id="shijing-chapter002-012" name="野有死麕" path="poem/shijing/023"/>
+        <resource order="13" id="shijing-chapter002-013" name="何彼襛矣" path="poem/shijing/024"/>
+        <resource order="14" id="shijing-chapter002-014" name="驺虞" path="poem/shijing/025"/>
+        <!-- 十五国风·邶风 -->
+        <resource order="1" id="shijing-chapter003-001" name="柏舟" path="poem/shijing/026"/>
+        <resource order="2" id="shijing-chapter003-002" name="绿衣" path="poem/shijing/027"/>
+        <resource order="3" id="shijing-chapter003-003" name="燕燕" path="poem/shijing/028"/>
+        <resource order="4" id="shijing-chapter003-004" name="日月" path="poem/shijing/029"/>
+        <resource order="5" id="shijing-chapter003-005" name="终风" path="poem/shijing/030"/>
+        <resource order="6" id="shijing-chapter003-006" name="击鼓" path="poem/shijing/031"/>
+        <resource order="7" id="shijing-chapter003-007" name="凯风" path="poem/shijing/032"/>
+        <resource order="8" id="shijing-chapter003-008" name="雄雉" path="poem/shijing/033"/>
+        <resource order="9" id="shijing-chapter003-009" name="匏有苦乐" path="poem/shijing/034"/>
+        <resource order="10" id="shijing-chapter003-010" name="谷风" path="poem/shijing/035"/>
+        <resource order="11" id="shijing-chapter003-011" name="式微" path="poem/shijing/036"/>
+        <resource order="12" id="shijing-chapter003-012" name="旄丘" path="poem/shijing/037"/>
+        <resource order="13" id="shijing-chapter003-013" name="简兮" path="poem/shijing/038"/>
+        <resource order="14" id="shijing-chapter003-014" name="泉水" path="poem/shijing/039"/>
+        <resource order="15" id="shijing-chapter003-015" name="北门" path="poem/shijing/040"/>
+        <resource order="16" id="shijing-chapter003-016" name="北风" path="poem/shijing/041"/>
+        <resource order="17" id="shijing-chapter003-017" name="静女" path="poem/shijing/042"/>
+        <resource order="18" id="shijing-chapter003-018" name="新台" path="poem/shijing/043"/>
+        <resource order="19" id="shijing-chapter003-019" name="二子乘舟" path="poem/shijing/044"/>
+        <!-- 十五国风·墉风 -->
+        <resource order="1" id="shijing-chapter004-001" name="柏舟" path="poem/shijing/045"/>
+        <resource order="2" id="shijing-chapter004-002" name="墙有茨" path="poem/shijing/046"/>
+        <resource order="3" id="shijing-chapter004-003" name="君子偕老" path="poem/shijing/047"/>
+        <resource order="4" id="shijing-chapter004-004" name="桑中" path="poem/shijing/048"/>
+        <resource order="5" id="shijing-chapter004-005" name="鹑之奔奔" path="poem/shijing/049"/>
+        <resource order="6" id="shijing-chapter004-006" name="定之方中" path="poem/shijing/050"/>
+        <resource order="7" id="shijing-chapter004-007" name="蝃蝀" path="poem/shijing/051"/>
+        <resource order="8" id="shijing-chapter004-008" name="相鼠" path="poem/shijing/052"/>
+        <resource order="9" id="shijing-chapter004-009" name="干旄" path="poem/shijing/053"/>
+        <resource order="10" id="shijing-chapter004-010" name="载驰" path="poem/shijing/054"/>
+        <!-- 十五国风·卫风 -->
+        <resource order="1" id="shijing-chapter005-001" name="淇奥" path="poem/shijing/055"/>
+        <resource order="2" id="shijing-chapter005-002" name="考槃" path="poem/shijing/056"/>
+        <resource order="3" id="shijing-chapter005-003" name="硕人" path="poem/shijing/057"/>
+        <resource order="4" id="shijing-chapter005-004" name="氓" path="poem/shijing/058"/>
+        <resource order="5" id="shijing-chapter005-005" name="竹竿" path="poem/shijing/059"/>
+        <resource order="6" id="shijing-chapter005-006" name="芄兰" path="poem/shijing/060"/>
+        <resource order="7" id="shijing-chapter005-007" name="河广" path="poem/shijing/061"/>
+        <resource order="8" id="shijing-chapter005-008" name="伯兮" path="poem/shijing/062"/>
+        <resource order="9" id="shijing-chapter005-009" name="有狐" path="poem/shijing/063"/>
+        <resource order="10" id="shijing-chapter005-010" name="木瓜" path="poem/shijing/064"/>
+        <!-- 十五国风·王风 -->
+        <resource order="1" id="shijing-chapter006-001" name="黍离" path="poem/shijing/065"/>
+        <resource order="2" id="shijing-chapter006-002" name="君子于役" path="poem/shijing/066"/>
+        <resource order="3" id="shijing-chapter006-003" name="君子阳阳" path="poem/shijing/067"/>
+        <resource order="4" id="shijing-chapter006-004" name="扬之水" path="poem/shijing/068"/>
+        <resource order="5" id="shijing-chapter006-005" name="中谷有蓷" path="poem/shijing/069"/>
+        <resource order="6" id="shijing-chapter006-006" name="兔爰" path="poem/shijing/070"/>
+        <resource order="7" id="shijing-chapter006-007" name="葛藟" path="poem/shijing/071"/>
+        <resource order="8" id="shijing-chapter006-008" name="采葛" path="poem/shijing/072"/>
+        <resource order="9" id="shijing-chapter006-009" name="大车" path="poem/shijing/073"/>
+        <resource order="10" id="shijing-chapter006-010" name="丘中有麻" path="poem/shijing/074"/>
+        <!-- 十五国风·郑风 -->
+        <resource order="1" id="shijing-chapter007-001" name="缁衣" path="poem/shijing/075"/>
+        <resource order="2" id="shijing-chapter007-002" name="将仲子" path="poem/shijing/076"/>
+        <resource order="3" id="shijing-chapter007-003" name="叔于田" path="poem/shijing/077"/>
+        <resource order="4" id="shijing-chapter007-004" name="大叔于田" path="poem/shijing/078"/>
+        <resource order="5" id="shijing-chapter007-005" name="清人" path="poem/shijing/079"/>
+        <resource order="6" id="shijing-chapter007-006" name="羔裘" path="poem/shijing/080"/>
+        <resource order="7" id="shijing-chapter007-007" name="遵大路" path="poem/shijing/081"/>
+        <resource order="8" id="shijing-chapter007-008" name="女曰鸡鸣" path="poem/shijing/082"/>
+        <resource order="9" id="shijing-chapter007-009" name="有女同车" path="poem/shijing/083"/>
+        <resource order="10" id="shijing-chapter007-010" name="山有扶苏" path="poem/shijing/084"/>
+        <resource order="11" id="shijing-chapter007-011" name="萚兮" path="poem/shijing/085"/>
+        <resource order="12" id="shijing-chapter007-012" name="狡童" path="poem/shijing/086"/>
+        <resource order="13" id="shijing-chapter007-013" name="褰裳" path="poem/shijing/087"/>
+        <resource order="14" id="shijing-chapter007-014" name="丰" path="poem/shijing/088"/>
+        <resource order="15" id="shijing-chapter007-015" name="东门之墠" path="poem/shijing/089"/>
+        <resource order="16" id="shijing-chapter007-016" name="风雨" path="poem/shijing/090"/>
+        <resource order="17" id="shijing-chapter007-017" name="子衿" path="poem/shijing/091"/>
+        <resource order="18" id="shijing-chapter007-018" name="扬之水" path="poem/shijing/092"/>
+        <resource order="19" id="shijing-chapter007-019" name="出其东门" path="poem/shijing/093"/>
+        <resource order="20" id="shijing-chapter007-020" name="野有蔓草" path="poem/shijing/094"/>
+        <resource order="21" id="shijing-chapter007-021" name="溱洧" path="poem/shijing/095"/>
+        <!-- 十五国风·齐风 -->
+        <resource order="1" id="shijing-chapter008-001" name="鸡鸣" path="poem/shijing/096"/>
+        <resource order="2" id="shijing-chapter008-002" name="还" path="poem/shijing/097"/>
+        <resource order="3" id="shijing-chapter008-003" name="著" path="poem/shijing/098"/>
+        <resource order="4" id="shijing-chapter008-004" name="东方之日" path="poem/shijing/099"/>
+        <resource order="5" id="shijing-chapter008-005" name="东方未明" path="poem/shijing/100"/>
+        <resource order="6" id="shijing-chapter008-006" name="南山" path="poem/shijing/101"/>
+        <resource order="7" id="shijing-chapter008-007" name="甫田" path="poem/shijing/102"/>
+        <resource order="8" id="shijing-chapter008-008" name="卢令" path="poem/shijing/103"/>
+        <resource order="9" id="shijing-chapter008-009" name="敝笱" path="poem/shijing/104"/>
+        <resource order="10" id="shijing-chapter008-010" name="载驱" path="poem/shijing/105"/>
+        <resource order="11" id="shijing-chapter008-011" name="猗嗟" path="poem/shijing/106"/>
+        <!-- 十五国风·魏风 -->
+        <resource order="1" id="shijing-chapter009-001" name="葛屦" path="poem/shijing/107"/>
+        <resource order="2" id="shijing-chapter009-002" name="汾沮洳" path="poem/shijing/108"/>
+        <resource order="3" id="shijing-chapter009-003" name="园有桃" path="poem/shijing/109"/>
+        <resource order="4" id="shijing-chapter009-004" name="陟岵" path="poem/shijing/110"/>
+        <resource order="5" id="shijing-chapter009-005" name="十亩之间" path="poem/shijing/111"/>
+        <resource order="6" id="shijing-chapter009-006" name="伐檀" path="poem/shijing/112"/>
+        <resource order="7" id="shijing-chapter009-007" name="硕鼠" path="poem/shijing/113"/>
+        <!-- 十五国风·唐风 -->
+        <resource order="1" id="shijing-chapter010-001" name="蟋蟀" path="poem/shijing/114"/>
+        <resource order="2" id="shijing-chapter010-002" name="山有枢" path="poem/shijing/115"/>
+        <resource order="3" id="shijing-chapter010-003" name="扬之水" path="poem/shijing/116"/>
+        <resource order="4" id="shijing-chapter010-004" name="椒聊" path="poem/shijing/117"/>
+        <resource order="5" id="shijing-chapter010-005" name="绸缪" path="poem/shijing/118"/>
+        <resource order="6" id="shijing-chapter010-006" name="杕杜" path="poem/shijing/119"/>
+        <resource order="7" id="shijing-chapter010-007" name="羔裘" path="poem/shijing/120"/>
+        <resource order="8" id="shijing-chapter010-008" name="鸨羽" path="poem/shijing/121"/>
+        <resource order="9" id="shijing-chapter010-009" name="无衣" path="poem/shijing/122"/>
+        <resource order="10" id="shijing-chapter010-010" name="有杕之杜" path="poem/shijing/123"/>
+        <resource order="11" id="shijing-chapter010-011" name="葛生" path="poem/shijing/124"/>
+        <resource order="12" id="shijing-chapter010-012" name="采苓" path="poem/shijing/125"/>
+        <!-- 十五国风·秦风 -->
+        <resource order="1" id="shijing-chapter011-001" name="车邻" path="poem/shijing/126"/>
+        <resource order="2" id="shijing-chapter011-002" name="驷驖" path="poem/shijing/127"/>
+        <resource order="3" id="shijing-chapter011-003" name="小戎" path="poem/shijing/128"/>
+        <resource order="4" id="shijing-chapter011-004" name="蒹葭" path="poem/shijing/129"/>
+        <resource order="5" id="shijing-chapter011-005" name="终南" path="poem/shijing/130"/>
+        <resource order="6" id="shijing-chapter011-006" name="黄鸟" path="poem/shijing/131"/>
+        <resource order="7" id="shijing-chapter011-007" name="晨风" path="poem/shijing/132"/>
+        <resource order="8" id="shijing-chapter011-008" name="无衣" path="poem/shijing/133"/>
+        <resource order="9" id="shijing-chapter011-009" name="渭阳" path="poem/shijing/134"/>
+        <resource order="10" id="shijing-chapter011-010" name="权舆" path="poem/shijing/135"/>
+        <!-- 十五国风·陈风 -->
+        <resource order="1" id="shijing-chapter012-001" name="宛丘" path="poem/shijing/136"/>
+        <resource order="2" id="shijing-chapter012-002" name="东门之枌" path="poem/shijing/137"/>
+        <resource order="3" id="shijing-chapter012-003" name="衡门" path="poem/shijing/138"/>
+        <resource order="4" id="shijing-chapter012-004" name="东门之池" path="poem/shijing/139"/>
+        <resource order="5" id="shijing-chapter012-005" name="东门之杨" path="poem/shijing/140"/>
+        <resource order="6" id="shijing-chapter012-006" name="墓门" path="poem/shijing/141"/>
+        <resource order="7" id="shijing-chapter012-007" name="防有鹊巢" path="poem/shijing/142"/>
+        <resource order="8" id="shijing-chapter012-008" name="月出" path="poem/shijing/143"/>
+        <resource order="9" id="shijing-chapter012-009" name="株林" path="poem/shijing/144"/>
+        <resource order="10" id="shijing-chapter012-010" name="泽陂" path="poem/shijing/145"/>
+        <!-- 十五国风·桧风 -->
+        <resource order="1" id="shijing-chapter013-001" name="素冠" path="poem/shijing/146"/>
+        <resource order="2" id="shijing-chapter013-002" name="隰有苌楚" path="poem/shijing/147"/>
+        <resource order="3" id="shijing-chapter013-003" name="羔裘" path="poem/shijing/148"/>
+        <resource order="4" id="shijing-chapter013-004" name="匪风" path="poem/shijing/149"/>
+        <!-- 十五国风·曹风 -->
+        <resource order="1" id="shijing-chapter014-001" name="蜉蝣" path="poem/shijing/150"/>
+        <resource order="2" id="shijing-chapter014-002" name="候人" path="poem/shijing/151"/>
+        <resource order="3" id="shijing-chapter014-003" name="鸤鸠" path="poem/shijing/152"/>
+        <resource order="4" id="shijing-chapter014-004" name="下泉" path="poem/shijing/153"/>
+        <!-- 十五国风·豳风 -->
+        <resource order="1" id="shijing-chapter015-001" name="七月" path="poem/shijing/154"/>
+        <resource order="2" id="shijing-chapter015-002" name="鸱鸮" path="poem/shijing/155"/>
+        <resource order="3" id="shijing-chapter015-003" name="东山" path="poem/shijing/156"/>
+        <resource order="4" id="shijing-chapter015-004" name="破斧" path="poem/shijing/157"/>
+        <resource order="5" id="shijing-chapter015-005" name="伐柯" path="poem/shijing/158"/>
+        <resource order="6" id="shijing-chapter015-006" name="九罭" path="poem/shijing/159"/>
+        <resource order="7" id="shijing-chapter015-007" name="狼跋" path="poem/shijing/160"/>
+        <!-- 小雅·鹿鸣之什 -->
+        <resource order="1" id="shijing-chapter016-001" name="鹿鸣" path="poem/shijing/161"/>
+        <resource order="2" id="shijing-chapter016-002" name="四牡" path="poem/shijing/162"/>
+        <resource order="3" id="shijing-chapter016-003" name="皇皇者华" path="poem/shijing/163"/>
+        <resource order="4" id="shijing-chapter016-004" name="常棣" path="poem/shijing/164"/>
+        <resource order="5" id="shijing-chapter016-005" name="伐木" path="poem/shijing/165"/>
+        <resource order="6" id="shijing-chapter016-006" name="天保" path="poem/shijing/166"/>
+        <resource order="7" id="shijing-chapter016-007" name="采薇" path="poem/shijing/167"/>
+        <resource order="8" id="shijing-chapter016-008" name="出车" path="poem/shijing/168"/>
+        <resource order="9" id="shijing-chapter016-009" name="杕杜" path="poem/shijing/169"/>
+        <resource order="10" id="shijing-chapter016-010" name="鱼丽" path="poem/shijing/170"/>
+        <!-- 小雅·南有嘉鱼之什 -->
+        <resource order="1" id="shijing-chapter017-001" name="南有嘉鱼" path="poem/shijing/171"/>
+        <resource order="2" id="shijing-chapter017-002" name="南山有台" path="poem/shijing/172"/>
+        <resource order="3" id="shijing-chapter017-003" name="蓼萧" path="poem/shijing/173"/>
+        <resource order="4" id="shijing-chapter017-004" name="湛露" path="poem/shijing/174"/>
+        <resource order="5" id="shijing-chapter017-005" name="彤弓" path="poem/shijing/175"/>
+        <resource order="6" id="shijing-chapter017-006" name="菁菁者莪" path="poem/shijing/176"/>
+        <resource order="7" id="shijing-chapter017-007" name="六月" path="poem/shijing/177"/>
+        <resource order="8" id="shijing-chapter017-008" name="采芑" path="poem/shijing/178"/>
+        <resource order="9" id="shijing-chapter017-009" name="车攻" path="poem/shijing/179"/>
+        <resource order="10" id="shijing-chapter017-010" name="吉日" path="poem/shijing/180"/>
+        <!-- 小雅·鸿雁之什 -->
+        <resource order="1" id="shijing-chapter018-001" name="鸿雁" path="poem/shijing/181"/>
+        <resource order="2" id="shijing-chapter018-002" name="庭燎" path="poem/shijing/182"/>
+        <resource order="3" id="shijing-chapter018-003" name="沔水" path="poem/shijing/183"/>
+        <resource order="4" id="shijing-chapter018-004" name="鹤鸣" path="poem/shijing/184"/>
+        <resource order="5" id="shijing-chapter018-005" name="祈父" path="poem/shijing/185"/>
+        <resource order="6" id="shijing-chapter018-006" name="白驹" path="poem/shijing/186"/>
+        <resource order="7" id="shijing-chapter018-007" name="黄鸟" path="poem/shijing/187"/>
+        <resource order="8" id="shijing-chapter018-008" name="我行其野" path="poem/shijing/188"/>
+        <resource order="9" id="shijing-chapter018-009" name="斯干" path="poem/shijing/189"/>
+        <resource order="10" id="shijing-chapter018-010" name="无羊" path="poem/shijing/190"/>
+        <!-- 小雅·节南山之什 -->
+        <resource order="1" id="shijing-chapter019-001" name="节南山" path="poem/shijing/191"/>
+        <resource order="2" id="shijing-chapter019-002" name="正月" path="poem/shijing/192"/>
+        <resource order="3" id="shijing-chapter019-003" name="十月之交" path="poem/shijing/193"/>
+        <resource order="4" id="shijing-chapter019-004" name="雨无正" path="poem/shijing/194"/>
+        <resource order="5" id="shijing-chapter019-005" name="小旻" path="poem/shijing/195"/>
+        <resource order="6" id="shijing-chapter019-006" name="小宛" path="poem/shijing/196"/>
+        <resource order="7" id="shijing-chapter019-007" name="小弁" path="poem/shijing/197"/>
+        <resource order="8" id="shijing-chapter019-008" name="巧言" path="poem/shijing/198"/>
+        <resource order="9" id="shijing-chapter019-009" name="何人斯" path="poem/shijing/199"/>
+        <resource order="10" id="shijing-chapter019-010" name="巷伯" path="poem/shijing/200"/>
+        <!-- 小雅·谷风之什 -->
+        <resource order="1" id="shijing-chapter020-001" name="谷风" path="poem/shijing/201"/>
+        <resource order="2" id="shijing-chapter020-002" name="蓼莪" path="poem/shijing/202"/>
+        <resource order="3" id="shijing-chapter020-003" name="大东" path="poem/shijing/203"/>
+        <resource order="4" id="shijing-chapter020-004" name="四月" path="poem/shijing/204"/>
+        <resource order="5" id="shijing-chapter020-005" name="北山" path="poem/shijing/205"/>
+        <resource order="6" id="shijing-chapter020-006" name="无将大车" path="poem/shijing/206"/>
+        <resource order="7" id="shijing-chapter020-007" name="小明" path="poem/shijing/207"/>
+        <resource order="8" id="shijing-chapter020-008" name="鼓钟" path="poem/shijing/208"/>
+        <resource order="9" id="shijing-chapter020-009" name="楚茨" path="poem/shijing/209"/>
+        <resource order="10" id="shijing-chapter020-010" name="信南山" path="poem/shijing/210"/>
+        <!-- 小雅·甫田之什 -->
+        <resource order="1" id="shijing-chapter021-001" name="甫田" path="poem/shijing/211"/>
+        <resource order="2" id="shijing-chapter021-002" name="大田" path="poem/shijing/212"/>
+        <resource order="3" id="shijing-chapter021-003" name="瞻彼洛矣" path="poem/shijing/213"/>
+        <resource order="4" id="shijing-chapter021-004" name="裳裳者华" path="poem/shijing/214"/>
+        <resource order="5" id="shijing-chapter021-005" name="桑扈" path="poem/shijing/215"/>
+        <resource order="6" id="shijing-chapter021-006" name="鸳鸯" path="poem/shijing/216"/>
+        <resource order="7" id="shijing-chapter021-007" name="頍弁" path="poem/shijing/217"/>
+        <resource order="8" id="shijing-chapter021-008" name="车舝" path="poem/shijing/218"/>
+        <resource order="9" id="shijing-chapter021-009" name="青蝇" path="poem/shijing/219"/>
+        <resource order="10" id="shijing-chapter021-010" name="宾之初筵" path="poem/shijing/220"/>
+        <!-- 小雅·鱼藻之什 -->
+        <resource order="1" id="shijing-chapter022-001" name="鱼藻" path="poem/shijing/221"/>
+        <resource order="2" id="shijing-chapter022-002" name="采菽" path="poem/shijing/222"/>
+        <resource order="3" id="shijing-chapter022-003" name="角弓" path="poem/shijing/223"/>
+        <resource order="4" id="shijing-chapter022-004" name="菀柳" path="poem/shijing/224"/>
+        <resource order="5" id="shijing-chapter022-005" name="都人士" path="poem/shijing/225"/>
+        <resource order="6" id="shijing-chapter022-006" name="采绿" path="poem/shijing/226"/>
+        <resource order="7" id="shijing-chapter022-007" name="黍苗" path="poem/shijing/227"/>
+        <resource order="8" id="shijing-chapter022-008" name="隰桑" path="poem/shijing/228"/>
+        <resource order="9" id="shijing-chapter022-009" name="白华" path="poem/shijing/229"/>
+        <resource order="10" id="shijing-chapter022-010" name="緜蛮" path="poem/shijing/230"/>
+        <resource order="11" id="shijing-chapter022-011" name="瓠叶" path="poem/shijing/231"/>
+        <resource order="12" id="shijing-chapter022-012" name="渐渐之石" path="poem/shijing/232"/>
+        <resource order="13" id="shijing-chapter022-013" name="苕之华" path="poem/shijing/233"/>
+        <resource order="14" id="shijing-chapter022-014" name="何草不黄" path="poem/shijing/234"/>
+        <!-- 大雅·文王之什 -->
+        <resource order="1" id="shijing-chapter023-001" name="文王" path="poem/shijing/235"/>
+        <resource order="2" id="shijing-chapter023-002" name="大明" path="poem/shijing/236"/>
+        <resource order="3" id="shijing-chapter023-003" name="绵" path="poem/shijing/237"/>
+        <resource order="4" id="shijing-chapter023-004" name="棫朴" path="poem/shijing/238"/>
+        <resource order="5" id="shijing-chapter023-005" name="旱麓" path="poem/shijing/239"/>
+        <resource order="6" id="shijing-chapter023-006" name="思齐" path="poem/shijing/240"/>
+        <resource order="7" id="shijing-chapter023-007" name="皇矣" path="poem/shijing/241"/>
+        <resource order="8" id="shijing-chapter023-008" name="灵台" path="poem/shijing/242"/>
+        <resource order="9" id="shijing-chapter023-009" name="下武" path="poem/shijing/243"/>
+        <resource order="10" id="shijing-chapter023-010" name="文王有声" path="poem/shijing/244"/>
+        <!-- 大雅·生民之什 -->
+        <resource order="1" id="shijing-chapter024-001" name="生民" path="poem/shijing/245"/>
+        <resource order="2" id="shijing-chapter024-002" name="行苇" path="poem/shijing/246"/>
+        <resource order="3" id="shijing-chapter024-003" name="既醉" path="poem/shijing/247"/>
+        <resource order="4" id="shijing-chapter024-004" name="凫鹥" path="poem/shijing/248"/>
+        <resource order="5" id="shijing-chapter024-005" name="假乐" path="poem/shijing/249"/>
+        <resource order="6" id="shijing-chapter024-006" name="公刘" path="poem/shijing/250"/>
+        <resource order="7" id="shijing-chapter024-007" name="迥酌" path="poem/shijing/251"/>
+        <resource order="8" id="shijing-chapter024-008" name="卷阿" path="poem/shijing/252"/>
+        <resource order="9" id="shijing-chapter024-009" name="民劳" path="poem/shijing/253"/>
+        <resource order="10" id="shijing-chapter024-010" name="板" path="poem/shijing/254"/>
+        <!-- 大雅·荡之什 -->
+        <resource order="1" id="shijing-chapter025-001" name="荡" path="poem/shijing/255"/>
+        <resource order="2" id="shijing-chapter025-002" name="抑" path="poem/shijing/256"/>
+        <resource order="3" id="shijing-chapter025-003" name="桑柔" path="poem/shijing/257"/>
+        <resource order="4" id="shijing-chapter025-004" name="云汉" path="poem/shijing/258"/>
+        <resource order="5" id="shijing-chapter025-005" name="崧高" path="poem/shijing/259"/>
+        <resource order="6" id="shijing-chapter025-006" name="烝民" path="poem/shijing/260"/>
+        <resource order="7" id="shijing-chapter025-007" name="韩奕" path="poem/shijing/261"/>
+        <resource order="8" id="shijing-chapter025-008" name="江汉" path="poem/shijing/262"/>
+        <resource order="9" id="shijing-chapter025-009" name="常武" path="poem/shijing/263"/>
+        <resource order="10" id="shijing-chapter025-010" name="瞻昂" path="poem/shijing/264"/>
+        <resource order="11" id="shijing-chapter025-011" name="召旻" path="poem/shijing/265"/>
+        <!-- 周颂·清庙之什 -->
+        <resource order="1" id="shijing-chapter026-001" name="清庙" path="poem/shijing/266"/>
+        <resource order="2" id="shijing-chapter026-002" name="维天之命" path="poem/shijing/267"/>
+        <resource order="3" id="shijing-chapter026-003" name="维清" path="poem/shijing/268"/>
+        <resource order="4" id="shijing-chapter026-004" name="烈文" path="poem/shijing/269"/>
+        <resource order="5" id="shijing-chapter026-005" name="天作" path="poem/shijing/270"/>
+        <resource order="6" id="shijing-chapter026-006" name="昊天有成命" path="poem/shijing/271"/>
+        <resource order="7" id="shijing-chapter026-007" name="我将" path="poem/shijing/272"/>
+        <resource order="8" id="shijing-chapter026-008" name="时迈" path="poem/shijing/273"/>
+        <resource order="9" id="shijing-chapter026-009" name="执竞" path="poem/shijing/274"/>
+        <resource order="10" id="shijing-chapter026-010" name="思文" path="poem/shijing/275"/>
+        <!-- 周颂·臣工之什 -->
+        <resource order="1" id="shijing-chapter027-001" name="臣工" path="poem/shijing/276"/>
+        <resource order="2" id="shijing-chapter027-002" name="噫嘻" path="poem/shijing/277"/>
+        <resource order="3" id="shijing-chapter027-003" name="振鹭" path="poem/shijing/278"/>
+        <resource order="4" id="shijing-chapter027-004" name="丰年" path="poem/shijing/279"/>
+        <resource order="5" id="shijing-chapter027-005" name="有瞽" path="poem/shijing/280"/>
+        <resource order="6" id="shijing-chapter027-006" name="潜" path="poem/shijing/281"/>
+        <resource order="7" id="shijing-chapter027-007" name="雍" path="poem/shijing/282"/>
+        <resource order="8" id="shijing-chapter027-008" name="载见" path="poem/shijing/283"/>
+        <resource order="9" id="shijing-chapter027-009" name="有客" path="poem/shijing/284"/>
+        <resource order="10" id="shijing-chapter027-010" name="武" path="poem/shijing/285"/>
+        <!-- 周颂·闵予小子之什 -->
+        <resource order="1" id="shijing-chapter028-001" name="闵予小子" path="poem/shijing/286"/>
+        <resource order="2" id="shijing-chapter028-002" name="访落" path="poem/shijing/287"/>
+        <resource order="3" id="shijing-chapter028-003" name="敬之" path="poem/shijing/288"/>
+        <resource order="4" id="shijing-chapter028-004" name="小毖" path="poem/shijing/289"/>
+        <resource order="5" id="shijing-chapter028-005" name="载芟" path="poem/shijing/290"/>
+        <resource order="6" id="shijing-chapter028-006" name="良耜" path="poem/shijing/291"/>
+        <resource order="7" id="shijing-chapter028-007" name="丝衣" path="poem/shijing/292"/>
+        <resource order="8" id="shijing-chapter028-008" name="酌" path="poem/shijing/293"/>
+        <resource order="9" id="shijing-chapter028-009" name="桓" path="poem/shijing/294"/>
+        <resource order="10" id="shijing-chapter028-010" name="赉" path="poem/shijing/295"/>
+        <resource order="11" id="shijing-chapter028-011" name="般" path="poem/shijing/296"/>
+        <!-- 鲁颂 -->
+        <resource order="1" id="shijing-chapter029-001" name="駉" path="poem/shijing/297"/>
+        <resource order="2" id="shijing-chapter029-002" name="有駜" path="poem/shijing/298"/>
+        <resource order="3" id="shijing-chapter029-003" name="泮水" path="poem/shijing/299"/>
+        <resource order="4" id="shijing-chapter029-004" name="閟宫" path="poem/shijing/300"/>
+        <!-- 商颂 -->
+        <resource order="1" id="shijing-chapter030-001" name="那" path="poem/shijing/301"/>
+        <resource order="2" id="shijing-chapter030-002" name="烈祖" path="poem/shijing/302"/>
+        <resource order="3" id="shijing-chapter030-003" name="玄鸟" path="poem/shijing/303"/>
+        <resource order="4" id="shijing-chapter030-004" name="长发" path="poem/shijing/304"/>
+        <resource order="5" id="shijing-chapter030-005" name="殷武" path="poem/shijing/305"/>
+
+        <!-- 楚辞 -->
+        <!-- 离骚 -->
+        <resource order="1" id="chuci-chapter001-001" name="离骚" path="poem/chuci/001"/>
+        <!-- 九歌 -->
+        <resource order="1" id="chuci-chapter002-001" name="东皇太一" path="poem/chuci/002"/>
+        <resource order="2" id="chuci-chapter002-002" name="云中君" path="poem/chuci/003"/>
+        <resource order="3" id="chuci-chapter002-003" name="湘君" path="poem/chuci/004"/>
+        <resource order="4" id="chuci-chapter002-004" name="湘夫人" path="poem/chuci/005"/>
+        <resource order="5" id="chuci-chapter002-005" name="大司命" path="poem/chuci/006"/>
+        <resource order="6" id="chuci-chapter002-006" name="少司命" path="poem/chuci/007"/>
+        <resource order="7" id="chuci-chapter002-007" name="东君" path="poem/chuci/008"/>
+        <resource order="8" id="chuci-chapter002-008" name="河伯" path="poem/chuci/009"/>
+        <resource order="9" id="chuci-chapter002-009" name="山鬼" path="poem/chuci/010"/>
+        <resource order="10" id="chuci-chapter002-010" name="国殇" path="poem/chuci/011"/>
+        <resource order="11" id="chuci-chapter002-011" name="礼魂" path="poem/chuci/012"/>
+        <!-- 天问 -->
+        <resource order="1" id="chuci-chapter003-001" name="天问" path="poem/chuci/013"/>
+        <!-- 九章 -->
+        <resource order="1" id="chuci-chapter004-001" name="惜诵" path="poem/chuci/014"/>
+        <resource order="2" id="chuci-chapter004-002" name="涉江" path="poem/chuci/015"/>
+        <resource order="3" id="chuci-chapter004-003" name="哀郢" path="poem/chuci/016"/>
+        <resource order="4" id="chuci-chapter004-004" name="抽思" path="poem/chuci/017"/>
+        <resource order="5" id="chuci-chapter004-005" name="怀沙" path="poem/chuci/018"/>
+        <resource order="6" id="chuci-chapter004-006" name="思美人" path="poem/chuci/019"/>
+        <resource order="7" id="chuci-chapter004-007" name="惜往日" path="poem/chuci/020"/>
+        <resource order="8" id="chuci-chapter004-008" name="橘颂" path="poem/chuci/021"/>
+        <resource order="9" id="chuci-chapter004-009" name="悲回风" path="poem/chuci/022"/>
+        <!-- 远游 -->
+        <resource order="1" id="chuci-chapter005-001" name="远游" path="poem/chuci/023"/>
+        <!-- 卜远 -->
+        <resource order="1" id="chuci-chapter006-001" name="卜居" path="poem/chuci/024"/>
+        <!-- 渔父 -->
+        <resource order="1" id="chuci-chapter007-001" name="渔父" path="poem/chuci/025"/>
+        <!-- 九辩 -->
+        <resource order="1" id="chuci-chapter008-001" name="九辩" path="poem/chuci/026"/>
+        <!-- 招魂 -->
+        <resource order="1" id="chuci-chapter009-001" name="招魂" path="poem/chuci/027"/>
+        <!-- 大招 -->
+        <resource order="1" id="chuci-chapter010-001" name="大招" path="poem/chuci/028"/>
+        <!-- 惜誓 -->
+        <resource order="1" id="chuci-chapter011-001" name="惜誓" path="poem/chuci/029"/>
+        <!-- 招隐士 -->
+        <resource order="1" id="chuci-chapter012-001" name="招隐士" path="poem/chuci/030"/>
+        <!-- 七谏 -->
+        <resource order="1" id="chuci-chapter013-001" name="初放" path="poem/chuci/031"/>
+        <resource order="2" id="chuci-chapter013-002" name="沉江" path="poem/chuci/032"/>
+        <resource order="3" id="chuci-chapter013-003" name="怨世" path="poem/chuci/033"/>
+        <resource order="4" id="chuci-chapter013-004" name="怨思" path="poem/chuci/034"/>
+        <resource order="5" id="chuci-chapter013-005" name="自悲" path="poem/chuci/035"/>
+        <resource order="6" id="chuci-chapter013-006" name="哀命" path="poem/chuci/036"/>
+        <resource order="7" id="chuci-chapter013-007" name="谬谏" path="poem/chuci/037"/>
+        <!-- 哀时命 -->
+        <resource order="1" id="chuci-chapter014-001" name="哀时命" path="poem/chuci/038"/>
+        <!-- 九怀 -->
+        <resource order="1" id="chuci-chapter015-001" name="匡机" path="poem/chuci/039"/>
+        <resource order="2" id="chuci-chapter015-002" name="通路" path="poem/chuci/040"/>
+        <resource order="3" id="chuci-chapter015-003" name="危俊" path="poem/chuci/041"/>
+        <resource order="4" id="chuci-chapter015-004" name="昭世" path="poem/chuci/042"/>
+        <resource order="5" id="chuci-chapter015-005" name="尊嘉" path="poem/chuci/043"/>
+        <resource order="6" id="chuci-chapter015-006" name="蓄英" path="poem/chuci/044"/>
+        <resource order="7" id="chuci-chapter015-007" name="思忠" path="poem/chuci/045"/>
+        <resource order="8" id="chuci-chapter015-008" name="陶壅" path="poem/chuci/046"/>
+        <resource order="9" id="chuci-chapter015-009" name="株昭" path="poem/chuci/047"/>
+        <!-- 九叹 -->
+        <resource order="1" id="chuci-chapter016-001" name="逢纷" path="poem/chuci/048"/>
+        <resource order="2" id="chuci-chapter016-002" name="离世" path="poem/chuci/049"/>
+        <resource order="3" id="chuci-chapter016-003" name="怨思" path="poem/chuci/050"/>
+        <resource order="4" id="chuci-chapter016-004" name="远逝" path="poem/chuci/051"/>
+        <resource order="5" id="chuci-chapter016-005" name="惜贤" path="poem/chuci/052"/>
+        <resource order="6" id="chuci-chapter016-006" name="忧苦" path="poem/chuci/053"/>
+        <resource order="7" id="chuci-chapter016-007" name="愍命" path="poem/chuci/054"/>
+        <resource order="8" id="chuci-chapter016-008" name="思古" path="poem/chuci/055"/>
+        <resource order="9" id="chuci-chapter016-009" name="远游" path="poem/chuci/056"/>
+        <!-- 九思 -->
+        <resource order="1" id="chuci-chapter017-001" name="逢尤" path="poem/chuci/057"/>
+        <resource order="2" id="chuci-chapter017-002" name="怨上" path="poem/chuci/058"/>
+        <resource order="3" id="chuci-chapter017-003" name="疾世" path="poem/chuci/059"/>
+        <resource order="4" id="chuci-chapter017-004" name="悯上" path="poem/chuci/060"/>
+        <resource order="5" id="chuci-chapter017-005" name="遭厄" path="poem/chuci/061"/>
+        <resource order="6" id="chuci-chapter017-006" name="悼乱" path="poem/chuci/062"/>
+        <resource order="7" id="chuci-chapter017-007" name="伤时" path="poem/chuci/063"/>
+        <resource order="8" id="chuci-chapter017-008" name="哀岁" path="poem/chuci/064"/>
+        <resource order="9" id="chuci-chapter017-009" name="守志" path="poem/chuci/065"/>
+
+        <!-- 高中古诗文朗读 -->
+        <!-- 第一册 -->
+        <resource order="1" id="gaozhong-chapter001-001" name="烛之武退秦师" path="poem/gaozhong/001"/>
+        <resource order="2" id="gaozhong-chapter001-002" name="荆轲刺秦王" path="poem/gaozhong/002"/>
+        <resource order="3" id="gaozhong-chapter001-003" name="鸿门宴" path="poem/gaozhong/003"/>
+
+        <!-- 第二册 -->
+        <resource order="1" id="gaozhong-chapter002-001" name="卫风·氓" path="poem/gaozhong/004"/>
+        <resource order="2" id="gaozhong-chapter002-002" name="采薇" path="poem/gaozhong/005"/>
+        <resource order="3" id="gaozhong-chapter002-003" name="离骚" path="poem/gaozhong/006"/>
+        <resource order="4" id="gaozhong-chapter002-004" name="孔雀东南飞 并序" path="poem/gaozhong/007"/>
+        <resource order="5" id="gaozhong-chapter002-005" name="涉江采芙蓉" path="poem/gaozhong/008"/>
+        <resource order="6" id="gaozhong-chapter002-006" name="短歌行" path="poem/gaozhong/009"/>
+        <resource order="7" id="gaozhong-chapter002-007" name="归园田居（其一）" path="poem/gaozhong/010"/>
+        <resource order="8" id="gaozhong-chapter002-008" name="兰亭集序" path="poem/gaozhong/011"/>
+        <resource order="9" id="gaozhong-chapter002-009" name="赤壁赋" path="poem/gaozhong/012"/>
+        <resource order="10" id="gaozhong-chapter002-010" name="游褒禅山记" path="poem/gaozhong/013"/>
+
+        <!-- 第三册 -->
+        <resource order="1" id="gaozhong-chapter003-001" name="蜀道难" path="poem/gaozhong/014"/>
+        <resource order="2" id="gaozhong-chapter003-002" name="秋兴八首 其一" path="poem/gaozhong/015"/>
+        <resource order="3" id="gaozhong-chapter003-003" name="咏怀古迹 其三" path="poem/gaozhong/016"/>
+        <resource order="4" id="gaozhong-chapter003-004" name="登高" path="poem/gaozhong/017"/>
+        <resource order="5" id="gaozhong-chapter003-005" name="琵琶行 并序" path="poem/gaozhong/018"/>
+        <resource order="6" id="gaozhong-chapter003-006" name="锦瑟" path="poem/gaozhong/019"/>
+        <resource order="7" id="gaozhong-chapter003-007" name="马嵬 其二" path="poem/gaozhong/020"/>
+        <resource order="8" id="gaozhong-chapter003-008" name="寡人之于国也" path="poem/gaozhong/021"/>
+        <resource order="9" id="gaozhong-chapter003-009" name="劝学" path="poem/gaozhong/022"/>
+        <resource order="10" id="gaozhong-chapter003-010" name="过秦论" path="poem/gaozhong/023"/>
+        <resource order="11" id="gaozhong-chapter003-011" name="师说" path="poem/gaozhong/024"/>
+
+        <!-- 第四册 -->
+        <resource order="1" id="gaozhong-chapter004-001" name="望海潮" path="poem/gaozhong/025"/>
+        <resource order="2" id="gaozhong-chapter004-002" name="雨霖铃" path="poem/gaozhong/026"/>
+        <resource order="3" id="gaozhong-chapter004-003" name="念奴娇·赤壁怀古" path="poem/gaozhong/027"/>
+        <resource order="4" id="gaozhong-chapter004-004" name="定风波" path="poem/gaozhong/028"/>
+        <resource order="5" id="gaozhong-chapter004-005" name="水龙吟·登建康赏心亭" path="poem/gaozhong/029"/>
+        <resource order="6" id="gaozhong-chapter004-006" name="永遇乐·京口北固亭怀古" path="poem/gaozhong/030"/>
+        <resource order="7" id="gaozhong-chapter004-007" name="醉花阴" path="poem/gaozhong/031"/>
+        <resource order="8" id="gaozhong-chapter004-008" name="声声慢" path="poem/gaozhong/032"/>
+        <resource order="9" id="gaozhong-chapter004-009" name="廉颇蔺相如列传 节选" path="poem/gaozhong/033"/>
+        <resource order="10" id="gaozhong-chapter004-010" name="苏武传" path="poem/gaozhong/034"/>
+        <resource order="11" id="gaozhong-chapter004-011" name="张衡传" path="poem/gaozhong/035"/>
+
+        <!-- 第五册 -->
+        <resource order="1" id="gaozhong-chapter005-001" name="归去来兮辞并序" path="poem/gaozhong/036"/>
+        <resource order="2" id="gaozhong-chapter005-002" name="滕王阁序" path="poem/gaozhong/037"/>
+        <resource order="3" id="gaozhong-chapter005-003" name="逍遥游" path="poem/gaozhong/038"/>
+        <resource order="4" id="gaozhong-chapter005-004" name="陈情表" path="poem/gaozhong/039"/>
+
+        <!-- 大学 -->
+        <!-- 曾子  -->
+        <resource order="1" id="daxue-chapter001-001" name="大学" path="poem/daxue/001"/>
+
+        <!-- 中庸 -->
+        <!-- 孔伋   -->
+        <resource order="1" id="zhongyong-chapter001-001" name="中庸" path="poem/zhongyong/001"/>
+
+        <!-- 孟子 -->
+        <!-- 篇一 -->
+        <resource order="1" id="mengzi-chapter001-001" name="梁惠王上" path="poem/mengzi/001"/>
+        <resource order="2" id="mengzi-chapter001-002" name="梁惠王下" path="poem/mengzi/002"/>
+        <!-- 篇二 -->
+        <resource order="1" id="mengzi-chapter002-001" name="公孙丑上" path="poem/mengzi/003"/>
+        <resource order="2" id="mengzi-chapter002-002" name="公孙丑下" path="poem/mengzi/004"/>
+        <!-- 篇三 -->
+        <resource order="1" id="mengzi-chapter003-001" name="滕文公上" path="poem/mengzi/005"/>
+        <resource order="2" id="mengzi-chapter003-002" name="滕文公下" path="poem/mengzi/006"/>
+        <!-- 篇四 -->
+        <resource order="1" id="mengzi-chapter004-001" name="离娄上" path="poem/mengzi/007"/>
+        <resource order="2" id="mengzi-chapter004-002" name="离娄下" path="poem/mengzi/008"/>
+        <!-- 篇五 -->
+        <resource order="1" id="mengzi-chapter005-001" name="万章上" path="poem/mengzi/009"/>
+        <resource order="2" id="mengzi-chapter005-002" name="万章下" path="poem/mengzi/010"/>
+        <!-- 篇六 -->
+        <resource order="1" id="mengzi-chapter006-001" name="告子上" path="poem/mengzi/011"/>
+        <resource order="2" id="mengzi-chapter006-002" name="告子下" path="poem/mengzi/012"/>
+        <!-- 篇七 -->
+        <resource order="1" id="mengzi-chapter007-001" name="尽心上" path="poem/mengzi/013"/>
+        <resource order="2" id="mengzi-chapter007-002" name="尽心下" path="poem/mengzi/014"/>
+
+        <!-- 初中古诗文朗读 -->
+        <!-- 七年级（上） -->
+        <resource order="1" id="chuzhong-chapter001-001" name="童趣" path="poem/chuzhong/001"/>
+        <resource order="2" id="chuzhong-chapter001-002" name="论语十则" path="poem/chuzhong/002"/>
+        <resource order="3" id="chuzhong-chapter001-003" name="观沧海" path="poem/chuzhong/003"/>
+        <resource order="4" id="chuzhong-chapter001-004" name="次北固山下" path="poem/chuzhong/004"/>
+        <resource order="5" id="chuzhong-chapter001-005" name="钱塘湖春行" path="poem/chuzhong/005"/>
+        <resource order="6" id="chuzhong-chapter001-006" name="天净沙·秋思" path="poem/chuzhong/006"/>
+        <resource order="7" id="chuzhong-chapter001-007" name="山市" path="poem/chuzhong/007"/>
+        <resource order="8" id="chuzhong-chapter001-008" name="咏雪" path="poem/chuzhong/008"/>
+        <resource order="9" id="chuzhong-chapter001-009" name="陈太丘与友期" path="poem/chuzhong/009"/>
+        <resource order="10" id="chuzhong-chapter001-010" name="智子疑邻" path="poem/chuzhong/010"/>
+        <resource order="11" id="chuzhong-chapter001-011" name="塞翁失马" path="poem/chuzhong/011"/>
+        <resource order="12" id="chuzhong-chapter001-012" name="龟虽寿" path="poem/chuzhong/012"/>
+        <resource order="13" id="chuzhong-chapter001-013" name="过故人庄" path="poem/chuzhong/013"/>
+        <resource order="14" id="chuzhong-chapter001-014" name="题破山寺后禅院" path="poem/chuzhong/014"/>
+        <resource order="15" id="chuzhong-chapter001-015" name="闻王昌龄左迁龙标遥有此寄" path="poem/chuzhong/015"/>
+        <resource order="16" id="chuzhong-chapter001-016" name="夜雨寄北" path="poem/chuzhong/016"/>
+        <resource order="17" id="chuzhong-chapter001-017" name="泊秦淮" path="poem/chuzhong/017"/>
+        <resource order="18" id="chuzhong-chapter001-018" name="浣溪沙" path="poem/chuzhong/018"/>
+        <resource order="19" id="chuzhong-chapter001-019" name="过松源晨炊漆公店" path="poem/chuzhong/019"/>
+        <resource order="20" id="chuzhong-chapter001-020" name="如梦令" path="poem/chuzhong/020"/>
+        <resource order="21" id="chuzhong-chapter001-021" name="观书有感" path="poem/chuzhong/021"/>
+        <!-- 七年级（下） -->
+        <resource order="1" id="chuzhong-chapter002-001" name="伤仲永" path="poem/chuzhong/022"/>
+        <resource order="2" id="chuzhong-chapter002-002" name="木兰诗" path="poem/chuzhong/023"/>
+        <resource order="3" id="chuzhong-chapter002-003" name="孙权劝学" path="poem/chuzhong/024"/>
+        <resource order="4" id="chuzhong-chapter002-004" name="口技" path="poem/chuzhong/025"/>
+        <resource order="5" id="chuzhong-chapter002-005" name="夸父逐日" path="poem/chuzhong/026"/>
+        <resource order="6" id="chuzhong-chapter002-006" name="共工怒触不周山" path="poem/chuzhong/027"/>
+        <resource order="7" id="chuzhong-chapter002-007" name="狼" path="poem/chuzhong/028"/>
+        <resource order="8" id="chuzhong-chapter002-008" name="山中杂诗" path="poem/chuzhong/029"/>
+        <resource order="9" id="chuzhong-chapter002-009" name="竹里馆" path="poem/chuzhong/030"/>
+        <resource order="10" id="chuzhong-chapter002-010" name="峨眉山月歌" path="poem/chuzhong/031"/>
+        <resource order="11" id="chuzhong-chapter002-011" name="春夜洛城闻笛" path="poem/chuzhong/032"/>
+        <resource order="12" id="chuzhong-chapter002-012" name="逢入京使" path="poem/chuzhong/033"/>
+        <resource order="13" id="chuzhong-chapter002-013" name="滁州西涧" path="poem/chuzhong/034"/>
+        <resource order="14" id="chuzhong-chapter002-014" name="江南逢李龟年" path="poem/chuzhong/035"/>
+        <resource order="15" id="chuzhong-chapter002-015" name="送灵澈上人" path="poem/chuzhong/036"/>
+        <resource order="16" id="chuzhong-chapter002-016" name="约客" path="poem/chuzhong/037"/>
+        <resource order="17" id="chuzhong-chapter002-017" name="论诗" path="poem/chuzhong/038"/>
+        <!-- 八年级（上） -->
+        <resource order="1" id="chuzhong-chapter003-001" name="桃花源记" path="poem/chuzhong/039"/>
+        <resource order="2" id="chuzhong-chapter003-002" name="陋室铭" path="poem/chuzhong/040"/>
+        <resource order="3" id="chuzhong-chapter003-003" name="爱莲说" path="poem/chuzhong/041"/>
+        <resource order="4" id="chuzhong-chapter003-004" name="核舟记" path="poem/chuzhong/042"/>
+        <resource order="5" id="chuzhong-chapter003-005" name="大道之行也" path="poem/chuzhong/043"/>
+        <resource order="6" id="chuzhong-chapter003-006" name="望岳" path="poem/chuzhong/044"/>
+        <resource order="7" id="chuzhong-chapter003-007" name="春望" path="poem/chuzhong/045"/>
+        <resource order="8" id="chuzhong-chapter003-008" name="石壕吏" path="poem/chuzhong/046"/>
+        <resource order="9" id="chuzhong-chapter003-009" name="三峡" path="poem/chuzhong/047"/>
+        <resource order="10" id="chuzhong-chapter003-010" name="答谢中书书" path="poem/chuzhong/048"/>
+        <resource order="11" id="chuzhong-chapter003-011" name="记承天寺夜游" path="poem/chuzhong/049"/>
+        <resource order="12" id="chuzhong-chapter003-012" name="观潮" path="poem/chuzhong/050"/>
+        <resource order="13" id="chuzhong-chapter003-013" name="湖心亭看雪" path="poem/chuzhong/051"/>
+        <resource order="14" id="chuzhong-chapter003-014" name="归园田居（其三）" path="poem/chuzhong/052"/>
+        <resource order="15" id="chuzhong-chapter003-015" name="使至塞上" path="poem/chuzhong/053"/>
+        <resource order="16" id="chuzhong-chapter003-016" name="渡荆门送别" path="poem/chuzhong/054"/>
+        <resource order="17" id="chuzhong-chapter003-017" name="登岳阳楼（其一）" path="poem/chuzhong/055"/>
+        <resource order="18" id="chuzhong-chapter003-018" name="长歌行" path="poem/chuzhong/056"/>
+        <resource order="19" id="chuzhong-chapter003-019" name="野望" path="poem/chuzhong/057"/>
+        <resource order="20" id="chuzhong-chapter003-020" name="早寒江上有怀" path="poem/chuzhong/058"/>
+        <resource order="21" id="chuzhong-chapter003-021" name="望洞庭湖赠张丞相" path="poem/chuzhong/059"/>
+        <resource order="22" id="chuzhong-chapter003-022" name="黄鹤楼" path="poem/chuzhong/060"/>
+        <resource order="23" id="chuzhong-chapter003-023" name="送友人" path="poem/chuzhong/061"/>
+        <resource order="24" id="chuzhong-chapter003-024" name="秋词" path="poem/chuzhong/062"/>
+        <resource order="25" id="chuzhong-chapter003-025" name="鲁山山行" path="poem/chuzhong/063"/>
+        <resource order="26" id="chuzhong-chapter003-026" name="浣溪沙" path="poem/chuzhong/064"/>
+        <resource order="27" id="chuzhong-chapter003-027" name="十一月四日风雨大作" path="poem/chuzhong/065"/>
+        <!-- 八年级（下） -->
+        <resource order="1" id="chuzhong-chapter004-001" name="与朱元思书" path="poem/chuzhong/066"/>
+        <resource order="2" id="chuzhong-chapter004-002" name="五柳先生传" path="poem/chuzhong/067"/>
+        <resource order="3" id="chuzhong-chapter004-003" name="马说" path="poem/chuzhong/068"/>
+        <resource order="4" id="chuzhong-chapter004-004" name="送东阳马生序（节选）" path="poem/chuzhong/069"/>
+        <resource order="5" id="chuzhong-chapter004-005" name="酬乐天扬州初逢席上见赠" path="poem/chuzhong/070"/>
+        <resource order="6" id="chuzhong-chapter004-006" name="赤壁" path="poem/chuzhong/071"/>
+        <resource order="7" id="chuzhong-chapter004-007" name="过零丁洋" path="poem/chuzhong/072"/>
+        <resource order="8" id="chuzhong-chapter004-008" name="水调歌头" path="poem/chuzhong/073"/>
+        <resource order="9" id="chuzhong-chapter004-009" name="山坡羊·潼关怀古" path="poem/chuzhong/074"/>
+        <resource order="10" id="chuzhong-chapter004-010" name="小石潭记" path="poem/chuzhong/075"/>
+        <resource order="11" id="chuzhong-chapter004-011" name="岳阳楼记" path="poem/chuzhong/076"/>
+        <resource order="12" id="chuzhong-chapter004-012" name="醉翁亭记" path="poem/chuzhong/077"/>
+        <resource order="13" id="chuzhong-chapter004-013" name="满井游记" path="poem/chuzhong/078"/>
+        <resource order="14" id="chuzhong-chapter004-014" name="饮酒（其五）" path="poem/chuzhong/079"/>
+        <resource order="15" id="chuzhong-chapter004-015" name="行路难（其一）" path="poem/chuzhong/080"/>
+        <resource order="16" id="chuzhong-chapter004-016" name="茅屋为秋风所破歌" path="poem/chuzhong/081"/>
+        <resource order="17" id="chuzhong-chapter004-017" name="白雪歌送武判官归京" path="poem/chuzhong/082"/>
+        <resource order="18" id="chuzhong-chapter004-018" name="己亥杂诗" path="poem/chuzhong/083"/>
+        <resource order="19" id="chuzhong-chapter004-019" name="赠从弟（其二）" path="poem/chuzhong/084"/>
+        <resource order="20" id="chuzhong-chapter004-020" name="送杜少府之任蜀州" path="poem/chuzhong/085"/>
+        <resource order="21" id="chuzhong-chapter004-021" name="登幽州台歌" path="poem/chuzhong/086"/>
+        <resource order="22" id="chuzhong-chapter004-022" name="终南别业" path="poem/chuzhong/087"/>
+        <resource order="23" id="chuzhong-chapter004-023" name="宣州谢朓楼饯别校书叔云" path="poem/chuzhong/088"/>
+        <resource order="24" id="chuzhong-chapter004-024" name="早春呈水部张十八员外" path="poem/chuzhong/089"/>
+        <resource order="25" id="chuzhong-chapter004-025" name="无题" path="poem/chuzhong/090"/>
+        <resource order="26" id="chuzhong-chapter004-026" name="相见欢" path="poem/chuzhong/091"/>
+        <resource order="27" id="chuzhong-chapter004-027" name="登飞来峰" path="poem/chuzhong/092"/>
+        <resource order="28" id="chuzhong-chapter004-028" name="苏幕遮" path="poem/chuzhong/093"/>
+        <!-- 九年级（上） -->
+        <resource order="1" id="chuzhong-chapter005-001" name="陈涉世家" path="poem/chuzhong/094"/>
+        <resource order="2" id="chuzhong-chapter005-002" name="唐雎不辱使命" path="poem/chuzhong/095"/>
+        <resource order="3" id="chuzhong-chapter005-003" name="隆中对" path="poem/chuzhong/096"/>
+        <resource order="4" id="chuzhong-chapter005-004" name="出师表" path="poem/chuzhong/097"/>
+        <resource order="5" id="chuzhong-chapter005-005" name="望江南" path="poem/chuzhong/098"/>
+        <resource order="6" id="chuzhong-chapter005-006" name="渔家傲·秋思" path="poem/chuzhong/099"/>
+        <resource order="7" id="chuzhong-chapter005-007" name="江城子·密州出猎" path="poem/chuzhong/100"/>
+        <resource order="8" id="chuzhong-chapter005-008" name="武陵春" path="poem/chuzhong/101"/>
+        <resource order="9" id="chuzhong-chapter005-009" name="破阵子·为陈同甫赋壮词以寄之" path="poem/chuzhong/102"/>
+        <resource order="10" id="chuzhong-chapter005-010" name="观刈麦" path="poem/chuzhong/103"/>
+        <resource order="11" id="chuzhong-chapter005-011" name="月夜" path="poem/chuzhong/104"/>
+        <resource order="12" id="chuzhong-chapter005-012" name="商山早行" path="poem/chuzhong/105"/>
+        <resource order="13" id="chuzhong-chapter005-013" name="卜算子·咏梅" path="poem/chuzhong/106"/>
+        <resource order="14" id="chuzhong-chapter005-014" name="破阵子" path="poem/chuzhong/107"/>
+        <resource order="15" id="chuzhong-chapter005-015" name="浣溪沙" path="poem/chuzhong/108"/>
+        <resource order="16" id="chuzhong-chapter005-016" name="醉花阴" path="poem/chuzhong/109"/>
+        <resource order="17" id="chuzhong-chapter005-017" name="南乡子·登京口北固亭怀古" path="poem/chuzhong/110"/>
+        <resource order="18" id="chuzhong-chapter005-018" name="山坡羊·骊山怀古" path="poem/chuzhong/111"/>
+        <resource order="19" id="chuzhong-chapter005-019" name="朝天子·咏喇叭" path="poem/chuzhong/112"/>
+        <!-- 九年级（下） -->
+        <resource order="1" id="chuzhong-chapter006-001" name="公输" path="poem/chuzhong/113"/>
+        <resource order="2" id="chuzhong-chapter006-002" name="得道多助，失道寡助" path="poem/chuzhong/114"/>
+        <resource order="3" id="chuzhong-chapter006-003" name="生于忧患，死于安乐" path="poem/chuzhong/115"/>
+        <resource order="4" id="chuzhong-chapter006-004" name="鱼我所欲也" path="poem/chuzhong/116"/>
+        <resource order="5" id="chuzhong-chapter006-005" name="惠子相梁" path="poem/chuzhong/117"/>
+        <resource order="6" id="chuzhong-chapter006-006" name="庄子与惠子游于濠梁" path="poem/chuzhong/118"/>
+        <resource order="7" id="chuzhong-chapter006-007" name="曹刿论战" path="poem/chuzhong/119"/>
+        <resource order="8" id="chuzhong-chapter006-008" name="皱忌讽齐王纳谏" path="poem/chuzhong/120"/>
+        <resource order="9" id="chuzhong-chapter006-009" name="愚公移山" path="poem/chuzhong/121"/>
+        <resource order="10" id="chuzhong-chapter006-010" name="关雎" path="poem/chuzhong/122"/>
+        <resource order="11" id="chuzhong-chapter006-011" name="蒹葭" path="poem/chuzhong/123"/>
+        <resource order="12" id="chuzhong-chapter006-012" name="从军行" path="poem/chuzhong/124"/>
+        <resource order="13" id="chuzhong-chapter006-013" name="月下独酌" path="poem/chuzhong/125"/>
+        <resource order="14" id="chuzhong-chapter006-014" name="羌村三首之三" path="poem/chuzhong/126"/>
+        <resource order="15" id="chuzhong-chapter006-015" name="登楼" path="poem/chuzhong/127"/>
+        <resource order="16" id="chuzhong-chapter006-016" name="走马川行奉送封大夫出师西行" path="poem/chuzhong/128"/>
+        <resource order="17" id="chuzhong-chapter006-017" name="左迁至蓝关示侄孙湘" path="poem/chuzhong/129"/>
+        <resource order="18" id="chuzhong-chapter006-018" name="望月有感" path="poem/chuzhong/130"/>
+        <resource order="19" id="chuzhong-chapter006-019" name="雁门太守行" path="poem/chuzhong/131"/>
+        <resource order="20" id="chuzhong-chapter006-020" name="卜算子·送鲍浩然之浙东" path="poem/chuzhong/132"/>
+        <resource order="21" id="chuzhong-chapter006-021" name="别云间" path="poem/chuzhong/133"/>
+
+        <!-- 三字经 -->
+        <!-- 王应麟 -->
+        <resource order="1" id="sanzi-chapter001-001" name="三字经" path="poem/sanzi/001"/>
+
+        <!-- 百家姓 -->
+        <!-- 佚名 -->
+        <resource order="1" id="baijia-chapter001-001" name="百家姓" path="poem/baijia/001"/>
+
+        <!-- 千字文 -->
+        <!-- 周兴嗣 -->
+        <resource order="1" id="qianzi-chapter001-001" name="千字文" path="poem/qianzi/001"/>
+
+    </resource-set>
+
+    <type-set>
+        <!-- 二级分类: 排序, 名称, 朝代, 资源匹配模式 -->
+
+        <!-- 声律启蒙 -->
+        <type id="shenglv-001" order="1" name="上平声" dynasty="" pattern="shenglv-chapter001-[0-9]*">
+            <description>
+                <![CDATA[云对雨，雪对风，晚照对晴空。来鸿对去燕，宿鸟对鸣虫。三尺剑，六钧弓，岭北对江东。]]>
+            </description>
+        </type>
+        <type id="shenglv-002" order="2" name="下平声" dynasty="" pattern="shenglv-chapter002-[0-9]*">
+            <description>
+                <![CDATA[晴对雨，地对天，天地对山川。山川对草木，赤壁对青田。郏鄏鼎，武城弦，木笔对苔钱。]]>
+            </description>
+        </type>
+
+        <!-- 笠翁对韵 -->
+        <type id="liweng-001" order="1" name="上卷" dynasty="" pattern="liweng-chapter001-[0-9]*">
+            <description>
+                <![CDATA[天对地，雨对风。大陆对长空。山花对海树，赤日对苍穹。雷隐隐，雾蒙蒙。日下对天中。]]>
+            </description>
+        </type>
+        <type id="liweng-002" order="2" name="下卷" dynasty="" pattern="liweng-chapter002-[0-9]*">
+            <description>
+                <![CDATA[寒对暑，日对年。蹴踘对秋千。丹山对碧水，淡雨对覃烟。歌宛转，貌婵娟。雪鼓对云笺。]]>
+            </description>
+        </type>
+
+        <!-- 幼学琼林 -->
+        <type id="youxue-001" order="1" name="卷一" dynasty="" pattern="youxue-chapter001-[0-9]*">
+            <description>
+                <![CDATA[混沌初开，乾坤始奠。气之轻清上浮者为夭，气之重浊下凝者为地。日月五星，谓之七政；天地与人，谓之三才。日为众阳之宗，月乃太阴之象。]]>
+            </description>
+        </type>
+        <type id="youxue-002" order="2" name="卷二" dynasty="" pattern="youxue-chapter002-[0-9]*">
+            <description>
+                <![CDATA[何谓五伦？君臣、父子、兄弟、夫妇、朋友；何谓九族？高、曾、祖、考、已身、子、孙、曾、玄。始祖曰鼻祖，远孙曰耳孙。父子创造，曰肯构肯堂；父子俱贤，曰是父是子。]]>
+            </description>
+        </type>
+        <type id="youxue-003" order="3" name="卷三" dynasty="" pattern="youxue-chapter003-[0-9]*">
+            <description>
+                <![CDATA[《大学》首重夫明新，小于莫先于应对。其容固宜有度，出言尤贵有章。智欲圆而行欲方，胆欲大而心欲小。阁下足下，并称人之辞；不佞鲰生，皆自谦之语。]]>
+            </description>
+        </type>
+        <type id="youxue-004" order="4" name="卷四" dynasty="" pattern="youxue-chapter004-[0-9]*">
+            <description>
+                <![CDATA[多才之士，才储八斗博学之德，学富五车。《三坟》《五典》，乃三皇五帝之书；《八索》《九丘》，是八泽九州之志。《书经》载上古唐虞三代之事，故曰尚书；《易经》乃姬周文王周公所系，故曰《周易》。]]>
+            </description>
+        </type>
+
+        <!-- 论语 -->
+        <type id="lunyu-001" order="1" name="卷一" dynasty="" pattern="lunyu-chapter001-[0-9]*">
+            <description>
+                <![CDATA[子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”有子曰：“其为人也孝弟，而好犯上者，鲜矣；不好犯上而好作乱者，未之有也。]]>
+            </description>
+        </type>
+        <type id="lunyu-002" order="2" name="卷二" dynasty="" pattern="lunyu-chapter002-[0-9]*">
+            <description>
+                <![CDATA[孔子谓季氏:“八佾舞于庭，是可忍也，孰不可忍也?”三家者以《雍》彻,子曰：“‘相维辟公，天子穆穆’，奚取于三家之堂？”子曰：“人而不仁，如礼何？人而不仁，如乐何？”]]>
+            </description>
+        </type>
+        <type id="lunyu-003" order="3" name="卷三" dynasty="" pattern="lunyu-chapter003-[0-9]*">
+            <description>
+                <![CDATA[子谓公冶长：“可妻也，虽在缧绁之中，非其罪也！”以其子妻之。子谓南容：“邦有道不废；邦无道免于刑戮。”以其兄之子妻之。]]>
+            </description>
+        </type>
+        <type id="lunyu-004" order="4" name="卷四" dynasty="" pattern="lunyu-chapter004-[0-9]*">
+            <description>
+                <![CDATA[子曰：“述而不作，信而好古，窃比于我老彭。”子曰：“默而识之，学而不厌，诲人不倦，何有于我哉？”子曰：“德之不修，学之不讲，闻义不能徙，不善不能改，是吾忧也。”]]>
+            </description>
+        </type>
+        <type id="lunyu-005" order="5" name="卷五" dynasty="" pattern="lunyu-chapter005-[0-9]*">
+            <description>
+                <![CDATA[子罕言利与命与仁。达巷党人曰：“大哉孔子！博学而无所成名。”子闻之，谓门弟子曰：“吾何执？执御乎，执射乎？吾执御矣。”子曰：“麻冕，礼也；今也纯，俭，吾从众。]]>
+            </description>
+        </type>
+        <type id="lunyu-006" order="6" name="卷六" dynasty="" pattern="lunyu-chapter006-[0-9]*">
+            <description>
+                <![CDATA[子曰：“先进于礼乐，野人也；后进于礼乐，君子也。如用之，则吾从先进。”子曰：“从我于陈、蔡者，皆不及门也。”德行：颜渊，闵子骞，冉伯牛，仲弓。言语：宰我，子贡。政事：冉有，季路。文学：子游，子夏。]]>
+            </description>
+        </type>
+        <type id="lunyu-007" order="7" name="卷七" dynasty="" pattern="lunyu-chapter007-[0-9]*">
+            <description>
+                <![CDATA[子路问政，子曰：“先之，劳之。”请益，曰：“无倦。”仲弓为季氏宰，问政，子曰：“先有司，赦小过，举贤才。”曰：“焉知贤才而举之？”]]>
+            </description>
+        </type>
+        <type id="lunyu-008" order="8" name="卷八" dynasty="" pattern="lunyu-chapter008-[0-9]*">
+            <description>
+                <![CDATA[卫灵公问陈于孔子，孔子对曰：“俎豆之事，则尝闻之矣；军旅之事，未之学也。”明日遂行。在陈绝粮，从者病莫能兴。子路愠见曰：“君子亦有穷乎？”]]>
+            </description>
+        </type>
+        <type id="lunyu-009" order="9" name="卷九" dynasty="" pattern="lunyu-chapter009-[0-9]*">
+            <description>
+                <![CDATA[阳货欲见孔子，孔子不见，归孔子豚。孔子时其亡也而往拜之，遇诸涂。谓孔子曰：“来，予与尔言。”曰：“怀其宝而迷其邦，可谓仁乎？曰：不可。好从事而亟失时，可谓知乎？]]>
+            </description>
+        </type>
+        <type id="lunyu-010" order="10" name="卷十" dynasty="" pattern="lunyu-chapter010-[0-9]*">
+            <description>
+                <![CDATA[子张曰：“士见危致命，见得思义，祭思敬，丧思哀，其可已矣。”子张曰：“执德不弘，信道不笃，焉能为有？焉能为亡？”子夏之门人问交于子张，子张曰：“子夏云何？”]]>
+            </description>
+        </type>
+
+        <!-- 诗经 -->
+        <type id="shijing-001" order="1" name="十五国风·周南" dynasty="" pattern="shijing-chapter001-[0-9]*">
+            <description>
+                <![CDATA[关关雎鸠，在河之洲，窈窕淑女,君子好逑。参差荇菜，左右流之。窈窕淑女，寤寐求之。]]>
+            </description>
+        </type>
+        <type id="shijing-002" order="2" name="十五国风·召南" dynasty="" pattern="shijing-chapter002-[0-9]*">
+            <description>
+                <![CDATA[维鹊有巢，维鸠居之。之子于归，百两御之。维鹊有巢，维鸠方之。之子于归，百两将之。]]>
+            </description>
+        </type>
+        <type id="shijing-003" order="3" name="十五国风·邶风" dynasty="" pattern="shijing-chapter003-[0-9]*">
+            <description>
+                <![CDATA[泛彼柏舟，亦泛其流。耿耿不寐，如有隐忧。微我无酒，以敖以游。我心匪鉴，不可以茹。]]>
+            </description>
+        </type>
+        <type id="shijing-004" order="4" name="十五国风·墉风" dynasty="" pattern="shijing-chapter004-[0-9]*">
+            <description>
+                <![CDATA[泛彼柏舟，在彼中河。髧彼两髦，实维我仪。之死矢靡它。母也天只，不谅人只！]]>
+            </description>
+        </type>
+        <type id="shijing-005" order="5" name="十五国风·卫风" dynasty="" pattern="shijing-chapter005-[0-9]*">
+            <description>
+                <![CDATA[瞻彼淇奥，绿竹猗猗。有匪君子，如切如磋，如琢如磨，瑟兮僴兮，赫兮咺兮。]]>
+            </description>
+        </type>
+        <type id="shijing-006" order="6" name="十五国风·王风" dynasty="" pattern="shijing-chapter006-[0-9]*">
+            <description>
+                <![CDATA[彼黍离离，彼稷之苗。行迈靡靡，中心摇摇。知我者，谓我心忧；不知我者，谓我何求。]]>
+            </description>
+        </type>
+        <type id="shijing-007" order="7" name="十五国风·郑风" dynasty="" pattern="shijing-chapter007-[0-9]*">
+            <description>
+                <![CDATA[缁衣之宜兮，敝予又改为兮。适子之馆兮。还予授子之粲兮。]]>
+            </description>
+        </type>
+        <type id="shijing-008" order="8" name="十五国风·齐风" dynasty="" pattern="shijing-chapter008-[0-9]*">
+            <description>
+                <![CDATA[鸡既鸣矣，朝既盈矣。匪鸡则鸣，苍蝇之声。东方明矣，朝既昌矣。匪东方则明，月出之光。]]>
+            </description>
+        </type>
+        <type id="shijing-009" order="9" name="十五国风·魏风" dynasty="" pattern="shijing-chapter009-[0-9]*">
+            <description>
+                <![CDATA[纠纠葛屦，可以履霜？掺掺女手，可以缝裳？要之襋之，好人服之。好人提提，宛然左辟。]]>
+            </description>
+        </type>
+        <type id="shijing-010" order="10" name="十五国风·唐风" dynasty="" pattern="shijing-chapter010-[0-9]*">
+            <description>
+                <![CDATA[蟋蟀在堂，岁聿其莫。今我不乐，日月其除。无已大康，职思其居。好乐无荒，良士瞿瞿。]]>
+            </description>
+        </type>
+        <type id="shijing-011" order="11" name="十五国风·秦风" dynasty="" pattern="shijing-chapter011-[0-9]*">
+            <description>
+                <![CDATA[有车邻邻，有马白颠。未见君子，寺人之令。阪有漆，隰有栗。既见君子，并坐鼓瑟。]]>
+            </description>
+        </type>
+        <type id="shijing-012" order="12" name="十五国风·陈风" dynasty="" pattern="shijing-chapter012-[0-9]*">
+            <description>
+                <![CDATA[子之汤兮，宛丘之上兮。洵有情兮，而无望兮。坎其击鼓，宛丘之下。无冬无夏，值其鹭羽。]]>
+            </description>
+        </type>
+        <type id="shijing-013" order="13" name="十五国风·桧风" dynasty="" pattern="shijing-chapter013-[0-9]*">
+            <description>
+                <![CDATA[羔裘逍遥，狐裘以朝。岂不尔思？劳心忉忉。羔裘翱翔，狐裘在堂。岂不尔思？我心忧伤。]]>
+            </description>
+        </type>
+        <type id="shijing-014" order="14" name="十五国风·曹风" dynasty="" pattern="shijing-chapter014-[0-9]*">
+            <description>
+                <![CDATA[蜉蝣之羽，衣裳楚楚。心之忧矣，于我归处。蜉蝣之翼，采采衣服。心之忧矣，于我归息。]]>
+            </description>
+        </type>
+        <type id="shijing-015" order="15" name="十五国风·豳风" dynasty="" pattern="shijing-chapter015-[0-9]*">
+            <description>
+                <![CDATA[七月流火，九月授衣。一之日觱发，二之日栗烈。无衣无褐，何以卒岁？]]>
+            </description>
+        </type>
+        <type id="shijing-016" order="16" name="小雅·鹿鸣之什" dynasty="" pattern="shijing-chapter016-[0-9]*">
+            <description>
+                <![CDATA[呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。吹笙鼓簧，承筐是将。人之好我，示我周行。]]>
+            </description>
+        </type>
+        <type id="shijing-017" order="17" name="小雅·南有嘉鱼之什" dynasty="" pattern="shijing-chapter017-[0-9]*">
+            <description>
+                <![CDATA[南有嘉鱼，烝然罩罩。君子有酒，嘉宾式燕以乐。南有嘉鱼，烝然汕汕。君子有酒，嘉宾式燕以衎。]]>
+            </description>
+        </type>
+        <type id="shijing-018" order="18" name="小雅·鸿雁之什" dynasty="" pattern="shijing-chapter018-[0-9]*">
+            <description>
+                <![CDATA[鸿雁于飞，肃肃其羽。之子于征，劬劳于野。爰及矜人，哀此鳏寡。鸿雁于飞，集于中泽。]]>
+            </description>
+        </type>
+        <type id="shijing-019" order="19" name="小雅·节南山之什" dynasty="" pattern="shijing-chapter019-[0-9]*">
+            <description>
+                <![CDATA[节彼南山，维石岩岩。赫赫师尹，民具尔瞻。忧心如惔，不敢戏谈。国既卒斩，何用不监！]]>
+            </description>
+        </type>
+        <type id="shijing-020" order="20" name="小雅·谷风之什" dynasty="" pattern="shijing-chapter020-[0-9]*">
+            <description>
+                <![CDATA[习习谷风，维风及雨。将恐将惧，维予与女。将安将乐，女转弃予。习习谷风，维风及颓。]]>
+            </description>
+        </type>
+        <type id="shijing-021" order="21" name="小雅·甫田之什" dynasty="" pattern="shijing-chapter021-[0-9]*">
+            <description>
+                <![CDATA[倬彼甫田，岁取十千。我取其陈，食我农人。自古有年。今适南亩，或耘或耔。]]>
+            </description>
+        </type>
+        <type id="shijing-022" order="22" name="小雅·鱼藻之什" dynasty="" pattern="shijing-chapter022-[0-9]*">
+            <description>
+                <![CDATA[鱼在在藻，有颁其首。王在在镐，岂乐饮酒。鱼在在藻，有莘其尾。王在在镐，饮酒乐岂。]]>
+            </description>
+        </type>
+        <type id="shijing-023" order="23" name="大雅·文王之什" dynasty="" pattern="shijing-chapter023-[0-9]*">
+            <description>
+                <![CDATA[文王在上，于昭于天。周虽旧邦，其命维新。有周不显，帝命不时。文王陟降，在帝左右。]]>
+            </description>
+        </type>
+        <type id="shijing-024" order="24" name="大雅·生民之什" dynasty="" pattern="shijing-chapter024-[0-9]*">
+            <description>
+                <![CDATA[厥初生民，时维姜嫄。生民如何？克禋克祀，以弗无子。]]>
+            </description>
+        </type>
+        <type id="shijing-025" order="25" name="大雅·荡之什" dynasty="" pattern="shijing-chapter025-[0-9]*">
+            <description>
+                <![CDATA[荡荡上帝，下民之辟。疾威上帝，其命多辟。天生烝民，其命匪谌。靡不有初，鲜克有终。]]>
+            </description>
+        </type>
+        <type id="shijing-026" order="26" name="周颂·清庙之什" dynasty="" pattern="shijing-chapter026-[0-9]*">
+            <description>
+                <![CDATA[于穆清庙，肃雍显相。济济多士，秉文之德。对越在天，骏奔走在庙。不显不承，无射于人斯。]]>
+            </description>
+        </type>
+        <type id="shijing-027" order="27" name="周颂·臣工之什" dynasty="" pattern="shijing-chapter027-[0-9]*">
+            <description>
+                <![CDATA[嗟嗟臣工，敬尔在公。王厘尔成，来咨来茹。嗟嗟保介，维莫之春，亦又何求？]]>
+            </description>
+        </type>
+        <type id="shijing-028" order="28" name="周颂·闵予小子之什" dynasty="" pattern="shijing-chapter028-[0-9]*">
+            <description>
+                <![CDATA[闵予小子，遭家不造，嬛嬛在疚。于乎皇考，永世克孝。念兹皇祖，陟降庭止。]]>
+            </description>
+        </type>
+        <type id="shijing-029" order="29" name="鲁颂" dynasty="" pattern="shijing-chapter029-[0-9]*">
+            <description>
+                <![CDATA[駉駉牡马，在坰之野。薄言駉者，有驈有皇，有骊有黄，以车彭彭。]]>
+            </description>
+        </type>
+        <type id="shijing-030" order="30" name="商颂" dynasty="" pattern="shijing-chapter030-[0-9]*">
+            <description>
+                <![CDATA[猗与那与！置我鞉鼓。奏鼓简简，衎我烈祖。汤孙奏假，绥我思成。鞉鼓渊渊，嘒嘒管声。]]>
+            </description>
+        </type>
+
+        <!-- 楚辞 -->
+        <type id="chuci-001" order="1" name="离骚" dynasty="" pattern="chuci-chapter001-[0-9]*">
+            <description>
+                <![CDATA[帝高阳之苗裔兮，朕皇考曰伯庸。摄提贞于孟陬兮，惟庚寅吾以降。皇览揆余初度兮，肇锡余以嘉名：名余曰正则兮，字余曰灵均。]]>
+            </description>
+        </type>
+        <type id="chuci-002" order="2" name="九歌" dynasty="" pattern="chuci-chapter002-[0-9]*">
+            <description>
+                <![CDATA[日兮辰良，穆将愉兮上皇；抚长剑兮玉珥，璆锵鸣兮琳琅；瑶席兮玉瑱，盍将把兮琼芳；蕙肴蒸兮兰藉，奠桂酒兮椒浆]]>
+            </description>
+        </type>
+        <type id="chuci-003" order="3" name="天问" dynasty="" pattern="chuci-chapter003-[0-9]*">
+            <description>
+                <![CDATA[遂古之初，谁传道之？上下未形，何由考之？冥昭瞢暗，谁能极之？冯翼惟象，何以识之？明明暗暗，惟时何为？]]>
+            </description>
+        </type>
+        <type id="chuci-004" order="4" name="九章" dynasty="" pattern="chuci-chapter004-[0-9]*">
+            <description>
+                <![CDATA[惜诵以致愍兮，发愤以抒情。所作忠而言之兮，指苍天以为正。令五帝使折中兮，戒六神与向服。俾山川以备御兮，命咎繇使听直。]]>
+            </description>
+        </type>
+        <type id="chuci-005" order="5" name="远游" dynasty="" pattern="chuci-chapter005-[0-9]*">
+            <description>
+                <![CDATA[悲时俗之迫阨兮，愿轻举而远游。质菲薄而无因兮，焉讬乘而上浮？遭沈浊而污秽兮，独郁结其谁语！夜耿耿而不寐兮，魂营营而至曙。惟天地之无穷兮，哀人生之长勤。]]>
+            </description>
+        </type>
+        <type id="chuci-006" order="6" name="卜居" dynasty="" pattern="chuci-chapter006-[0-9]*">
+            <description>
+                <![CDATA[屈原既放，三年不得复见。竭知尽忠而蔽障于谗。心烦虑乱，不知所从。乃往见太卜郑詹尹曰：“余有所疑，愿因先生决之。”]]>
+            </description>
+        </type>
+        <type id="chuci-007" order="7" name="渔父" dynasty="" pattern="chuci-chapter007-[0-9]*">
+            <description>
+                <![CDATA[屈原既放，游于江潭，行吟泽畔，颜色憔悴，形容枯槁。渔父见而问之曰：“子非三闾大夫与？何故至于斯？”屈原曰：“举世皆浊我独清，众人皆醉我独醒，是以见放。”]]>
+            </description>
+        </type>
+        <type id="chuci-008" order="8" name="九辩" dynasty="" pattern="chuci-chapter008-[0-9]*">
+            <description>
+                <![CDATA[悲哉，秋之为气也！萧瑟兮草木摇落而变衰。憭栗兮若在远行，登山临水兮送将归。泬漻兮天高而气清，寂寥兮收潦而水清。憯悽增欷兮，薄寒之中人，怆怳懭悢兮，去故而就新。]]>
+            </description>
+        </type>
+        <type id="chuci-009" order="9" name="招魂" dynasty="" pattern="chuci-chapter009-[0-9]*">
+            <description>
+                <![CDATA[朕幼清以廉洁兮，身服义而未沫。主此盛德兮，牵于俗而芜秽。上无所考此盛德兮，长离殃而愁苦。帝告巫阳曰：“有人在下，我欲辅之。魂魄离散，汝筮予之。”]]>
+            </description>
+        </type>
+        <type id="chuci-010" order="10" name="大招" dynasty="" pattern="chuci-chapter010-[0-9]*">
+            <description>
+                <![CDATA[青春受谢，白日昭只。春气奋发，万物遽只。冥凌浃行，魂无逃只。魂魄归来！无远遥只。魂乎归来！无东无西，无南无北只。东有大海，溺水浟浟只。]]>
+            </description>
+        </type>
+        <type id="chuci-011" order="11" name="惜誓" dynasty="" pattern="chuci-chapter011-[0-9]*">
+            <description>
+                <![CDATA[惜余年老而日衰兮，岁忽忽而不反。登苍天而高举兮，历众山而日远。观江河之纡曲兮，离四海之霑濡。攀北极而一息兮，吸沆瀣以充虚。飞朱鸟使先驱兮，驾太一之象舆。]]>
+            </description>
+        </type>
+        <type id="chuci-012" order="12" name="招隐士" dynasty="" pattern="chuci-chapter012-[0-9]*">
+            <description>
+                <![CDATA[桂树丛生兮山之幽，偃蹇连蜷兮枝相缭。山气巄嵷兮石嵯峨，溪谷崭岩兮水曾波。猿狖群啸兮虎豹嗥，攀援桂枝兮聊淹留。王孙游兮不归，春草生兮萋萋。]]>
+            </description>
+        </type>
+        <type id="chuci-013" order="13" name="七谏" dynasty="" pattern="chuci-chapter013-[0-9]*">
+            <description>
+                <![CDATA[平生于国兮，长于原野。言语讷譅兮，又无彊辅。浅智褊能兮，闻见又寡。数言便事兮，见怨门下。王不察其长利兮，卒见弃乎原野。]]>
+            </description>
+        </type>
+        <type id="chuci-014" order="14" name="哀时命" dynasty="" pattern="chuci-chapter014-[0-9]*">
+            <description>
+                <![CDATA[哀时命之不及古人兮，夫何予生之不遘时！往者不可扳援兮，徠者不可与期。志憾恨而不逞兮，杼中情而属诗。夜炯炯而不寐兮，怀隐忧而历兹。心郁郁而无告兮，众孰可与深谋！]]>
+            </description>
+        </type>
+        <type id="chuci-015" order="15" name="九怀" dynasty="" pattern="chuci-chapter015-[0-9]*">
+            <description>
+                <![CDATA[极运兮不中，来将屈兮困穷。余深愍兮惨怛，愿一列兮无从。乘日月兮上征，顾游心兮鄗酆。弥览兮九隅，彷徨兮兰宫。芷闾兮药房，奋摇兮众芳。]]>
+            </description>
+        </type>
+        <type id="chuci-016" order="16" name="九叹" dynasty="" pattern="chuci-chapter016-[0-9]*">
+            <description>
+                <![CDATA[伊伯庸之末胄兮，谅皇直之屈原。云余肇祖于高阳兮，惟楚怀之婵连。原生受命于贞节兮，鸿永路有嘉名。齐名字于天地兮，并光明于列星。吸精粹而吐氛浊兮，横邪世而不取容。]]>
+            </description>
+        </type>
+        <type id="chuci-017" order="17" name="九思" dynasty="" pattern="chuci-chapter017-[0-9]*">
+            <description>
+                <![CDATA[悲兮愁，哀兮忧！天生我兮当闇时，被诼谮兮虚获尤。心烦憒兮意无聊，严载驾兮出戏游。周八极兮历九州，求轩辕兮索重华。世既卓兮远眇眇，握佩玖兮中路躇。]]>
+            </description>
+        </type>
+
+        <!-- 高中古诗文朗读 -->
+        <type id="gaozhong-001" order="1" name="第一册" dynasty="" pattern="gaozhong-chapter001-[0-9]*">
+            <description>
+                <![CDATA[晋侯、秦伯围郑，以其无礼于晋，且贰于楚也。晋军函陵，秦军氾南。佚之狐言于郑伯曰：“国危矣，若使烛之武见秦君，师必退。”公从之。]]>
+            </description>
+        </type>
+        <type id="gaozhong-002" order="2" name="第二册" dynasty="" pattern="gaozhong-chapter002-[0-9]*">
+            <description>
+                <![CDATA[氓之蚩蚩，抱布贸丝。匪来贸丝，来即我谋。送子涉淇，至于顿丘。匪我愆期，子无良媒。将子无怒，秋以为期。乘彼垝垣，以望复关。]]>
+            </description>
+        </type>
+        <type id="gaozhong-003" order="3" name="第三册" dynasty="" pattern="gaozhong-chapter003-[0-9]*">
+            <description>
+                <![CDATA[噫吁嚱!危乎高哉!蜀道之难，难于上青天。蚕丛及鱼凫，开国何茫然!尔来四万八千岁，不与秦塞通人烟。]]>
+            </description>
+        </type>
+        <type id="gaozhong-004" order="4" name="第四册" dynasty="" pattern="gaozhong-chapter004-[0-9]*">
+            <description>
+                <![CDATA[东南形胜，三吴都会，钱塘自古繁华。烟柳画桥，风帘翠幕，参差十万人家。云树绕堤沙。怒涛卷霜雪，天堑无涯。]]>
+            </description>
+        </type>
+        <type id="gaozhong-005" order="5" name="第五册" dynasty="" pattern="gaozhong-chapter005-[0-9]*">
+            <description>
+                <![CDATA[余家贫，耕植不足以自给。幼稚盈室，瓶无储粟，生生所资，未见其术。亲故多劝余为长吏，脱然有怀，求之靡途。]]>
+            </description>
+        </type>
+
+
+        <!-- 大学 -->
+        <type id="daxue-001" order="1" name="曾子" dynasty="春秋末期" pattern="daxue-chapter001-[0-9]*">
+            <description>
+                <![CDATA[名参，字子舆，中国著名的思想家，孔子的早期弟子之一，与其父曾点同师孔子，是儒家学派的重要代表人物。]]>
+            </description>
+        </type>
+
+        <!-- 中庸 -->
+        <type id="zhongyong-001" order="1" name="孔伋 " dynasty="战国初期 " pattern="zhongyong-chapter001-[0-9]*">
+            <description>
+                <![CDATA[鲁国人，字子思，孔子之孙、孔鲤之子。中国战国时期著名的思想家，儒家的主要代表人物之一。]]>
+            </description>
+        </type>
+
+        <!-- 孟子 -->
+        <type id="mengzi-001" order="1" name="篇一 " dynasty=" " pattern="mengzi-chapter001-[0-9]*">
+            <description>
+                <![CDATA[孟子见梁惠王。王曰：“叟不远千里而来，亦将有以利吾国乎？”孟子对曰：“王何必曰利？亦有仁义而已矣。王曰‘何以利吾国’？]]>
+            </description>
+        </type>
+        <type id="mengzi-002" order="2" name="篇二 " dynasty=" " pattern="mengzi-chapter002-[0-9]*">
+            <description>
+                <![CDATA[公孙丑问曰：“夫子当路于齐，管仲、晏子之功，可复许乎？”孟子曰：“子诚齐人也，知管仲、晏子而已矣。或问乎曾西曰：‘吾子与子路孰贤？’]]>
+            </description>
+        </type>
+        <type id="mengzi-003" order="3" name="篇三 " dynasty="" pattern="mengzi-chapter003-[0-9]*">
+            <description>
+                <![CDATA[滕文公为世子，将之楚，过宋而见孟子。孟子道性善，言必称尧舜。世子自楚反，复见孟子。孟子曰：“世子疑吾言乎？夫道一而已矣。]]>
+            </description>
+        </type>
+        <type id="mengzi-004" order="4" name="篇四 " dynasty="" pattern="mengzi-chapter004-[0-9]*">
+            <description>
+                <![CDATA[孟子曰：“离娄之明，公输子之巧，不以规矩，不能成方员：师旷之聪，不以六律，不能正五音；尧舜之道，不以仁政，不能平治天下。]]>
+            </description>
+        </type>
+        <type id="mengzi-005" order="5" name="篇五" dynasty=" " pattern="mengzi-chapter005-[0-9]*">
+            <description>
+                <![CDATA[万章问曰：“舜往于田，号泣于旻天，何为其号泣也？”孟子曰：“怨慕也。”]]>
+            </description>
+        </type>
+        <type id="mengzi-006" order="6" name="篇六" dynasty="" pattern="mengzi-chapter006-[0-9]*">
+            <description>
+                <![CDATA[告子曰：“性，犹杞柳也；义，犹桮桊也。以人性为仁义，犹以杞柳为桮桊。”孟子曰：“子能顺杞柳之性而以为桮桊乎？]]>
+            </description>
+        </type>
+        <type id="mengzi-007" order="7" name="篇七" dynasty=" " pattern="mengzi-chapter007-[0-9]*">
+            <description>
+                <![CDATA[孟子曰：“尽其心者，知其性也。知其性，则知天矣。存其心，养其性，所以事天也。殀寿不贰，修身以俟之，所以立命也。”]]>
+            </description>
+        </type>
+
+        <!-- 初中古诗文朗读 -->
+        <type id="chuzhong-001" order="1" name="七年级（上）" dynasty=" " pattern="chuzhong-chapter001-[0-9]*">
+            <description>
+                <![CDATA[余忆童稚时，能张目对日，明察秋毫，见藐小之物必细察其纹理，故时有物外之趣。夏蚊成雷，私拟作群鹤舞于空中，心之所向，则或千或百，果然鹤也；]]>
+            </description>
+        </type>
+        <type id="chuzhong-002" order="2" name="七年级（下）" dynasty=" " pattern="chuzhong-chapter002-[0-9]*">
+            <description>
+                <![CDATA[金溪民方仲永，世隶耕。仲永生五年，未尝识书具，忽啼求之。父异焉，借旁近与之，即书诗四句，并自为其名。]]>
+            </description>
+        </type>
+        <type id="chuzhong-003" order="3" name="八年级（上）" dynasty="" pattern="chuzhong-chapter003-[0-9]*">
+            <description>
+                <![CDATA[晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷。]]>
+            </description>
+        </type>
+        <type id="chuzhong-004" order="4" name="八年级（下）" dynasty="" pattern="chuzhong-chapter004-[0-9]*">
+            <description>
+                <![CDATA[风烟俱净，天山共色。从流飘荡，任意东西。自富阳至桐庐，一百许里，奇山异水，天下独绝。水皆缥碧，千丈见底。游鱼细石，直视无碍。]]>
+            </description>
+        </type>
+        <type id="chuzhong-005" order="5" name="九年级（上）" dynasty=" " pattern="chuzhong-chapter005-[0-9]*">
+            <description>
+                <![CDATA[陈胜者，阳城人也，字涉。吴广者，阳夏人也，字叔。陈涉少时，尝与人佣耕，辍耕上垄上，怅恨久之，曰：“苟富贵，无相忘。”]]>
+            </description>
+        </type>
+        <type id="chuzhong-006" order="6" name="九年级（下）" dynasty="" pattern="chuzhong-chapter006-[0-9]*">
+            <description>
+                <![CDATA[公输盘为楚造云梯之械，成，将以攻宋。子墨子闻之，起于齐，行十日十夜而至于郢，见公输盘。公输盘曰：“夫子何命焉为？”]]>
+            </description>
+        </type>
+
+        <!-- 三字经 -->
+        <type id="sanzi-001" order="1" name="王应麟 " dynasty="南宋 " pattern="sanzi-chapter001-[0-9]*">
+            <description>
+                <![CDATA[南宋官员、经史学者。字伯厚，号深宁居士，又号厚斋。一生著述颇富，计有二十余种、六百多卷。]]>
+            </description>
+        </type>
+
+        <!-- 百家姓 -->
+        <type id="baijia-001" order="1" name="佚名 " dynasty="北宋 " pattern="baijia-chapter001-[0-9]*">
+            <description>
+                <![CDATA[《百家姓》是一篇关于中文姓氏的文章。按文献记载，成文于北宋初。原收集姓氏411个，后增补到568个，其中单姓444个，复姓124个。]]>
+            </description>
+        </type>
+
+        <!-- 千字文 -->
+        <type id="qianzi-001" order="1" name="周兴嗣  " dynasty="南北朝 " pattern="qianzi-chapter001-[0-9]*">
+            <description>
+                <![CDATA[字思纂，南朝大臣，史学家。博学，善于属文。梁武帝继位，拜安成王国侍郎。]]>
+            </description>
+        </type>
+
+    </type-set>
+
+    <display>
+        <!-- 小学 -->
+        <type name="三字经" order="1" age="1" type-ref-pattern="sanzi-[0-9]*"/>
+        <type name="百家姓" order="2" age="1" type-ref-pattern="baijia-[0-9]*"/>
+        <type name="千字文" order="3" age="1" type-ref-pattern="qianzi-[0-9]*"/>
+        <type name="声律启蒙" order="4" age="1" type-ref-pattern="shenglv-[0-9]*"/>
+        <type name="笠翁对韵" order="5" age="1" type-ref-pattern="liweng-[0-9]*"/>
+        <type name="幼学琼林" order="6" age="1" type-ref-pattern="youxue-[0-9]*"/>
+        <type name="论语" order="7" age="1" type-ref-pattern="lunyu-[0-9]*"/>
+        <type name="诗经" order="8" age="1" type-ref-pattern="shijing-[0-9]*"/>
+
+        <!-- 初中 -->
+        <type name="初中古诗文朗读" order="1" age="2" type-ref-pattern="chuzhong-[0-9]*"/>
+        <type name="诗经" order="2" age="2" type-ref-pattern="shijing-[0-9]*"/>
+        <type name="楚辞" order="3" age="2" type-ref-pattern="chuci-[0-9]*"/>
+        <type name="论语" order="4" age="2" type-ref-pattern="lunyu-[0-9]*"/>
+        <type name="大学" order="5" age="2" type-ref-pattern="daxue-[0-9]*"/>
+        <type name="中庸" order="6" age="2" type-ref-pattern="zhongyong-[0-9]*"/>
+
+        <!-- 高中 -->
+        <type name="高中古诗文朗读" order="1" age="3" type-ref-pattern="gaozhong-[0-9]*"/>
+        <type name="诗经" order="2" age="3" type-ref-pattern="shijing-[0-9]*"/>
+        <type name="楚辞" order="3" age="3" type-ref-pattern="chuci-[0-9]*"/>
+        <type name="论语" order="4" age="3" type-ref-pattern="lunyu-[0-9]*"/>
+        <type name="大学" order="5" age="3" type-ref-pattern="daxue-[0-9]*"/>
+        <type name="中庸" order="6" age="3" type-ref-pattern="zhongyong-[0-9]*"/>
+        <type name="孟子" order="7" age="3" type-ref-pattern="mengzi-[0-9]*"/>
+
+    </display>
+</poem>
+

@@ -94,7 +94,11 @@
 			<version>3.11.0</version>
 		<!--<okhttp.version>3.11.0<http.version>-->
 		</dependency>
-
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

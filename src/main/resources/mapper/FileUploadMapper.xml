@@ -8,17 +8,6 @@
         values (#{folderName,jdbcType=VARCHAR},#{fileName,jdbcType=VARCHAR},#{objectid,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR})
     </insert>
 
-    <insert id="addPltVideo" parameterType="java.util.HashMap">
-        insert into
-        plt_pltvideo(id,name,author,url,time,create_time,object_id,series_id,click_times,sequence,live_time,image,intro,status,is_recommend)
-        values (#{id},#{name,jdbcType=VARCHAR},#{author,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR},#{time,jdbcType=INTEGER},now(),#{objectid,jdbcType=VARCHAR},0,0,0,now(),0,#{intro,jdbcType=VARCHAR},#{status,jdbcType=INTEGER},#{isRecommend,jdbcType=INTEGER})
-        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
-            select LAST_INSERT_ID()
-        </selectKey>
-    </insert>
-
-
-
     <select id="getListName" resultType="java.lang.String">
         SELECT file_name from edu_video_url WHERE folder_name=#{fileName}
     </select>
@@ -61,4 +50,43 @@
     <select id="addMiddleTable">
         INSERT INTO plt_pltvideo_series_res(series_id,res_id,sequence) VALUES (#{seriesId},#{id},#{sequence})
     </select>
+
+
+    <insert id="addPltVideo" parameterType="java.util.HashMap">
+        insert into
+        plt_pltvideo(id,`name`,author,url,`time`,create_time,object_id,series_id,click_times,sequence,live_time,image,intro,status,is_recommend)
+        values (#{id},#{name,jdbcType=VARCHAR},#{author,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR},#{time,jdbcType=INTEGER},now(),#{objectid,jdbcType=VARCHAR},#{seriesId,jdbcType=VARCHAR},0,#{sequence},NULL,#{image},#{intro,jdbcType=VARCHAR},#{status,jdbcType=INTEGER},#{isRecommend,jdbcType=INTEGER})
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <insert id="addPltSeires" parameterType="java.util.HashMap">
+        insert into
+        plt_pltvideo_series(id,`name`,`number`,intro,author,episode,cover_img,create_time,click_times,group_name,group_id,sequence)
+        values (#{id},#{name},#{number},#{intro},#{author},#{episode},#{coverImg},now(),0,#{groupName},#{groupId},#{sequence})
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+    </insert>
+
+    <select id="getVideoName10" parameterType="java.lang.String" resultType="java.util.HashMap">
+       SELECT
+            y.授课人 author,
+            y.课程名称 `name`,
+            y.图片名 image
+        FROM
+            yyy y
+            JOIN plt_pltvideo_series pps ON y.拍摄地点 = pps.`name`
+            AND y.课程名称 = #{name}
+    </select>
+
+    <insert id="addPltVideo10" parameterType="java.util.HashMap">
+        insert into
+        plt_pltvideo(id,`name`,author,url,`time`,create_time,object_id,series_id,click_times,sequence,live_time,image,intro,status,is_recommend)
+        values (#{id},#{name,jdbcType=VARCHAR},#{author,jdbcType=VARCHAR},#{url,jdbcType=VARCHAR},#{time,jdbcType=INTEGER},now(),#{objectid,jdbcType=VARCHAR},#{seriesId,jdbcType=VARCHAR},0,#{sequence},NULL,#{image},#{intro,jdbcType=VARCHAR},#{status,jdbcType=INTEGER},#{isRecommend,jdbcType=INTEGER})
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            select LAST_INSERT_ID()
+        </selectKey>
+    </insert>
 </mapper>

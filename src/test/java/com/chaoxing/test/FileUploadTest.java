@@ -3,6 +3,8 @@ package com.chaoxing.test;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.chaoxing.test.service.IFileUploadService;
+import com.chaoxing.test.service.IParseXmlFileService;
+import com.chaoxing.test.util.ParseXmlUtil;
 import com.fileupload.util.HttpClientUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
@@ -37,6 +40,8 @@ public class FileUploadTest {
 
     @Autowired
     private IFileUploadService fileUploadService;
+    @Autowired
+    private IParseXmlFileService parseXmlFileService;
 
     /**
      * 上传视频并将视频返回的url地址、objectId存到服务器中
@@ -320,7 +325,7 @@ public class FileUploadTest {
                                     e.printStackTrace();
                                 }
                                 JSONObject json = JSON.parseObject(resultStr);
-                                String url = json.getString("httphd");
+                                String url = json.getString("http");
                                 map.put("url", url);
                                 String duration = json.getString("duration");
                                 map.put("time", duration);
@@ -351,6 +356,112 @@ public class FileUploadTest {
         }
         System.out.println("没得到名字的数量：" + count);
         System.out.println("成功上传视频数量：" + integer);
+        System.out.println("上传视频总时间：" + (System.currentTimeMillis() - begin) / 1000);
+    }
+
+    /**
+     * 解析xml文件并上传
+     */
+    @Test
+    public void test9() {
+        List<HashMap<String, Object>> list = ParseXmlUtil.parse("classpath:xmlfile/poem.xml");
+        for (HashMap<String, Object> map : list) {
+            System.out.println(map);
+            int id = fileUploadService.addPltSeires(map);
+            LinkedList<HashMap<String, Object>> linkedList = (LinkedList<HashMap<String, Object>>) map.get("children");
+            for (HashMap<String, Object> hashMap : linkedList) {
+                hashMap.put("seriesId", id);
+                hashMap.put("status", 1);
+                fileUploadService.addPltVideo(hashMap);
+            }
+        }
+    }
+
+    /**
+     * 解析xml文件并上传
+     */
+    @Test
+    public void test10() {
+//        List<HashMap<String, Object>> list2 = ParseXmlUtil.parse2("classpath:xmlfile/poem.xml");
+//        parseXmlFileService.parse2(list2);
+
+        List<HashMap<String, Object>> list3 = ParseXmlUtil.parse3("classpath:xmlfile/poem.xml");
+        parseXmlFileService.parse3(list3);
+
+//        List<HashMap<String, Object>> list4 = ParseXmlUtil.parse4("classpath:xmlfile/poem.xml");
+//        parseXmlFileService.parse4(list4);
+    }
+
+    /**
+     * 上传系列视频
+     *
+     * @throws IOException
+     */
+    @Test
+    public void test11() throws IOException {
+        ExecutorService pool = Executors.newFixedThreadPool(4);
+//        上传部分
+        final File folder = new File("C:\\Users\\Administrator\\Desktop\\超星工作相关\\定制\\温州市校外基地精品视频定制页面开发\\成品视频");
+        System.out.println(folder.getName());
+        long begin = System.currentTimeMillis();
+        File[] files = folder.listFiles();
+        for (File file : files) {
+            if (file.isDirectory()) {
+                File[] files1 = file.listFiles();
+                for (File file1 : files1)
+                    pool.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            String name = file1.getName();
+                            if (name.contains("mp4")) {
+                                name = name.split("\\.")[0];
+                                Map<String, Object> map = fileUploadService.getVideoName10(name);
+                                String result = null;
+                                try {
+                                    result = HttpClientUtils.upload(CLOUD_UPLOAD_URL, null, true, new HashMap<String, File>() {{
+                                        put("file", file1);
+                                    }}).getResult();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                JSONObject jsonObject = JSON.parseObject(result);
+                                String objectid = jsonObject.getString("objectid");
+                                map.put("objectid", objectid);
+                                String resultStr = null;
+                                try {
+                                    resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + objectid, true, null).getResult();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                JSONObject json = JSON.parseObject(resultStr);
+                                String url = json.getString("http");
+                                map.put("url", url);
+                                String duration = json.getString("duration");
+                                map.put("time", duration);
+                                map.put("isRecommend", 0);
+                                String status = json.getString("status");
+                                if ("success".equals(status)) {
+                                    map.put("status", 1);
+                                } else {
+                                    map.put("status", 0);
+                                }
+                                System.out.println(url);
+                                fileUploadService.addPltVideo10(map);
+                            }
+                        }
+                    });
+            }
+        }
+        //防止程序提前结束
+        //关闭线程池
+        pool.shutdown();
+        while (true) {
+            //判断线程池是否关闭
+            if (pool.isTerminated()) {
+                System.out.println("所有的子线程都结束了！");
+                break;
+            }
+        }
         System.out.println("上传视频总时间：" + (System.currentTimeMillis() - begin) / 1000);
     }
 

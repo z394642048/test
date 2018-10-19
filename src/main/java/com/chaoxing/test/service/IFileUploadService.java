@@ -23,4 +23,10 @@ public interface IFileUploadService {
     void updateVideo(HashMap<String, Object> map);
 
     void addMiddleTable(int id, int seriesId, int sequence);
+
+    int addPltSeires(HashMap<String, Object> map);
+
+    Map<String,Object> getVideoName10(String name);
+
+    int addPltVideo10(Map<String, Object> map);
 }
