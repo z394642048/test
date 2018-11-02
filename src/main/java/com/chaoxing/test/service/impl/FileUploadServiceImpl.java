@@ -78,4 +78,25 @@ public class FileUploadServiceImpl implements IFileUploadService {
         fileUploadMapper.addPltVideo10(map);
         return Integer.parseInt(map.get("id").toString());
     }
+
+    @Override
+    public void addPltVideo11(LinkedList<HashMap<String, Object>> list) {
+        fileUploadMapper.addPltVideo11(list);
+    }
+
+    @Override
+    public Integer addClassify(HashMap<Object, Object> map) {
+        fileUploadMapper.addClassify(map);
+        return Integer.parseInt(map.get("id").toString());
+    }
+
+    @Override
+    public void addIntoTempTable(LinkedList<HashMap<String, Object>> list) {
+        fileUploadMapper.addIntoTempTable(list);
+    }
+
+    @Override
+    public void addIntoTempTable2(LinkedList<HashMap<String, Object>> list) {
+        fileUploadMapper.addIntoTempTable2(list);
+    }
 }

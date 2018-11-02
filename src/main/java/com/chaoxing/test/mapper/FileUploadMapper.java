@@ -36,4 +36,12 @@ public interface FileUploadMapper {
     Map<String,Object> getVideoName10(String name);
 
     int addPltVideo10(Map<String, Object> map);
+
+    void addPltVideo11(LinkedList<HashMap<String,Object>> list);
+
+    int addClassify(HashMap<Object, Object> map);
+
+    void addIntoTempTable(LinkedList<HashMap<String,Object>> list);
+
+    void addIntoTempTable2(LinkedList<HashMap<String, Object>> list);
 }

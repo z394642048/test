@@ -1,19 +1,25 @@
 package com.chaoxing.test;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.chaoxing.test.service.IFileUploadService;
 import com.chaoxing.test.service.IParseXmlFileService;
 import com.chaoxing.test.util.ParseXmlUtil;
 import com.fileupload.util.HttpClientUtils;
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.ResourceUtils;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -270,15 +276,16 @@ public class FileUploadTest {
 
     @Test
     public void test7() {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("name", "23434");
-        map.put("url", "333333333");
-        map.put("time", 5654);
-        map.put("status", 1);
-        map.put("objectid", "234234234");
-        map.put("id", null);
-        int id = fileUploadService.addPltVideo(map);
-        System.out.println(id);
+        String objectid = "df4799c8157d6387124f9f1412504940";
+        String resultStr = null;
+        try {
+            resultStr = HttpClientUtils.get(CLOUD_QUERY_STATUS_URL + objectid, true, null).getResult();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        JSONObject json = JSON.parseObject(resultStr);
+        String url = json.getString("httphd");
+        System.out.println(url);
     }
 
     /**
@@ -358,6 +365,7 @@ public class FileUploadTest {
         System.out.println("成功上传视频数量：" + integer);
         System.out.println("上传视频总时间：" + (System.currentTimeMillis() - begin) / 1000);
     }
+
 
     /**
      * 解析xml文件并上传
@@ -465,6 +473,118 @@ public class FileUploadTest {
         System.out.println("上传视频总时间：" + (System.currentTimeMillis() - begin) / 1000);
     }
 
+
+    /**
+     * 动画绘本
+     * 解析json文件并上传
+     */
+    @Test
+    public void test12() throws IOException {
+        File file = ResourceUtils.getFile("classpath:jsonfile/cartoon.json");
+        String jsonData = FileUtils.readFileToString(file, Charset.forName("UTF-8"));
+        JSONArray jsonArray = JSON.parseArray(jsonData);
+        LinkedList<HashMap<String, Object>> list = new LinkedList<>();
+        Integer i = 0;
+        for (Object o : jsonArray) {
+            JSONObject jsonObject = (JSONObject) o;
+            HashMap<String, Object> map = new HashMap<>();
+            String url = jsonObject.getString("appId") + "/" + jsonObject.getString("app") + "/assets/www/index.html";
+            String image = jsonObject.getString("appId") + "/cover/" + jsonObject.getString("cover");
+            map.put("url", url);
+            map.put("image", image);
+            map.put("name", jsonObject.getString("appName"));
+            map.put("author", jsonObject.getString("author"));
+            map.put("intro", jsonObject.getString("intro"));
+            map.put("type", 5);
+            map.put("sequence", i++);
+            list.add(map);
+        }
+        fileUploadService.addPltVideo11(list);
+        System.out.println(list);
+    }
+
+    /**
+     * 古诗词
+     * 解析json文件并上传
+     */
+    @Test
+    public void test13() throws IOException {
+        File file = ResourceUtils.getFile("classpath:jsonfile/gushigain.json");
+        String jsonData = FileUtils.readFileToString(file, Charset.forName("UTF-8"));
+        JSONArray jsonArray = JSON.parseArray(jsonData);
+        HashMap<String, LinkedList<HashMap<String, Object>>> hashMap = new HashMap<>();
+        Integer i = 0;
+        for (Object o : jsonArray) {
+            JSONObject jsonObject = (JSONObject) o;
+            String chaodai = jsonObject.getString("chaodai");
+            HashMap<String, Object> map = new HashMap<>();
+            String url = jsonObject.getString("id") + ".swf?gedecache=2";
+            String image = jsonObject.getString("id") + ".jpg?gedecache=1";
+            map.put("url", url);
+            map.put("image", image);
+            map.put("name", jsonObject.getString("title"));
+            map.put("author", jsonObject.getString("author"));
+            map.put("dynasty", jsonObject.getString("chaodai"));
+            map.put("type", 7);
+            map.put("sequence", i++);
+            LinkedList<HashMap<String, Object>> linkedList = hashMap.get(chaodai);
+            if (linkedList == null) {
+                LinkedList<HashMap<String, Object>> list = new LinkedList<>();
+                list.add(map);
+                hashMap.put(chaodai, list);
+            } else {
+                linkedList.add(map);
+            }
+        }
+        int j = 0;
+        for (String s : hashMap.keySet()) {
+            LinkedList<HashMap<String, Object>> list = hashMap.get(s);
+//            fileUploadService.addPltSeires()
+//            HashMap<Object, Object> map = new HashMap<>();
+//            map.put("id", null);
+//            map.put("name", s);
+//            map.put("modulesId", 9102);
+//            map.put("parentId", 0);
+//            map.put("resType", "video");
+//            map.put("sequence", j++);
+//            Integer id = fileUploadService.addClassify(map);
+            fileUploadService.addIntoTempTable(list);
+        }
+        System.out.println(hashMap);
+    }
+
+
+    /**
+     * 汉字拼写
+     * 解析json文件并上传
+     */
+    @Test
+    public void test14() throws IOException {
+        File file = ResourceUtils.getFile("classpath:jsonfile/hanzigain.json");
+        String jsonData = FileUtils.readFileToString(file, Charset.forName("UTF-8"));
+        JSONArray jsonArray = JSON.parseArray(jsonData);
+        LinkedList<HashMap<String, Object>> list = new LinkedList<>();
+        Integer i = 0;
+        for (Object o : jsonArray) {
+            JSONObject jsonObject = (JSONObject) o;
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("url", jsonObject.getString("id") + ".swf?gedecache=3");
+            map.put("grade", jsonObject.getString("grade"));
+            map.put("gradeNum", jsonObject.getString("gradeNum"));
+            map.put("hanzi", jsonObject.getString("hanzi"));
+            map.put("fanwei", jsonObject.getString("fanwei"));
+            map.put("fanweiNum", jsonObject.getString("fanweiNum"));
+            map.put("shouzimuFW", jsonObject.getString("shouzimuFW"));
+            map.put("zhangjie", jsonObject.getString("zhangjie"));
+            map.put("zhangjie", jsonObject.getString("zhangjie"));
+            map.put("type", 8);
+            map.put("id", null);
+            map.put("sequence", i++);
+            list.add(map);
+        }
+        fileUploadService.addIntoTempTable2(list);
+        System.out.println(list);
+    }
 }
 
 

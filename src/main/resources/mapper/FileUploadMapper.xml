@@ -89,4 +89,38 @@
             select LAST_INSERT_ID()
         </selectKey>
     </insert>
+
+    <insert id="addPltVideo11" parameterType="java.util.HashMap">
+        insert into
+            plt_pltvideo(id,`name`,author,url,`time`,create_time,object_id,series_id,click_times,sequence,live_time,image,intro,status,is_recommend,`type`)
+        values
+        <foreach collection="list" index="index" item="item"  separator="," >
+            (#{item.id},#{item.name},#{item.author},#{item.url},#{item.time},now(),#{item.objectid},#{item.seriesId},0,#{item.sequence},NULL,#{item.image},#{item.intro},#{item.status},#{item.isRecommend},#{item.type})
+        </foreach>
+    </insert>
+
+    <insert id="addClassify"  parameterType="java.util.HashMap">
+        INSERT INTO `plt_pltres_classify` ( `id`, `name`, `modules_id`, `parent_id`, `res_type`, `sequence`, `level_index`, `remark`, `status`, `create_time` )
+        VALUES
+            ( #{id}, #{name}, #{modulesId}, #{parentId}, #{resType}, #{sequence}, NULL, NULL, 1, now( ) );
+    </insert>
+
+    <insert id="addIntoTempTable" parameterType="java.util.HashMap">
+        insert into
+        temp_table(id,`name`,dynasty,author,url,`time`,sequence,image,intro,`type`)
+        values
+        <foreach collection="list" index="index" item="item"  separator="," >
+            (#{item.id},#{item.name},#{item.dynasty},#{item.author},#{item.url},#{item.time},#{item.sequence},#{item.image},#{item.intro},#{item.type})
+        </foreach>
+    </insert>
+
+    <insert id="addIntoTempTable2" parameterType="java.util.HashMap">
+        insert into
+        temp_table2(id,grade,gradeNum,hanzi,url,fanwei,fanweiNum,shouzimuFW,`type`,sequence,zhangjie)
+        values
+        <foreach collection="list" index="index" item="item"  separator="," >
+            (#{item.id},#{item.grade},#{item.gradeNum},#{item.hanzi},#{item.url},#{item.fanwei},#{item.fanweiNum},#{item.shouzimuFW},#{item.type},#{item.sequence},#{item.zhangjie})
+        </foreach>
+    </insert>
+
 </mapper>
