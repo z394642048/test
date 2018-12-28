@@ -20,10 +20,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -337,6 +334,7 @@ public class FileUploadTest {
                                 String duration = json.getString("duration");
                                 map.put("time", duration);
                                 map.put("isRecommend", 0);
+                                map.put("type", 3);
                                 String status = json.getString("status");
                                 if ("success".equals(status)) {
                                     map.put("status", 1);
@@ -584,6 +582,7 @@ public class FileUploadTest {
         }
         fileUploadService.addIntoTempTable2(list);
         System.out.println(list);
+
     }
 }
 
