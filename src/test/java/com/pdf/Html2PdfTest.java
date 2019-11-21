@@ -11,7 +11,7 @@ import java.io.ByteArrayInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class PdfTest {
+public class Html2PdfTest {
 
 
     public static void main(String[] args) throws Exception {

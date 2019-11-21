@@ -38,7 +38,7 @@ public class NormalTest {
             @Override
             public void run() {
                 try {
-//                    synTest.test1();//不影响普通方法
+//                    synTest.Html2PdfTest();//不影响普通方法
 //                    synTest.test2();//不影响普通方法
 //                    synTest.test3();//不影响普通方法
                     synTest.test4();//不影响普通方法
@@ -60,7 +60,7 @@ public class NormalTest {
             public void run() {
                 try {
 //                    synTest.test();
-//                    synTest.test1();
+//                    synTest.Html2PdfTest();
 //                    synTest.test2();
                     synTest.test3();
 //                    synTest.test4();
