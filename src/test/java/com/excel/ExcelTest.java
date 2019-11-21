@@ -1,15 +1,11 @@
 package com.excel;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
@@ -22,70 +18,13 @@ import java.util.*;
 
 public class ExcelTest {
 
-    @Test
-    public void test2() {
-        long l = System.currentTimeMillis();
-        File file = new File("E:\\usr\\excel\\test.xlsx");
-        FileInputStream fileInputStream = null;
-        try {
-            fileInputStream = new FileInputStream(file);
-            XSSFWorkbook wb = new XSSFWorkbook(fileInputStream);
-            XSSFSheet sheet = wb.getSheetAt(0);
-            Iterator<Row> rows = sheet.rowIterator();
-            short maxColumnNum = 0;
-            int maxRowNum = sheet.getLastRowNum();
-            while (rows.hasNext()) {
-                Row row = rows.next();
-                short lastCellNum = row.getLastCellNum();
-                if (lastCellNum > maxColumnNum) {
-                    maxColumnNum = lastCellNum;
-                }
-            }
-            System.out.println(maxRowNum);
-            System.out.println(maxColumnNum);
-            //行数据
-            List rowList = new LinkedList<>();
-            for (int i = 0; i < maxRowNum; i++) {
-                //列数据
-                List<Map> columnList = new LinkedList<>();
-                XSSFRow row = sheet.getRow(i);
-                for (int j = 0; j < maxColumnNum; j++) {
-                    //单元格值
-                    Map<String, Object> cellMap = new HashMap<>();
-                    XSSFCell cell = row.getCell(j);
-                    if (Objects.nonNull(cell)) {
-                        int rowIndex = cell.getRowIndex();
-                        int columnIndex = cell.getColumnIndex();
-                        //判断是否合并单元格
-                        boolean mergedRegion = isMergedRegion(sheet, rowIndex, columnIndex);
-                        int mergeRowNum = 1;
-                        int mergeColumNum = 1;
-                        if (mergedRegion) {
-                            mergeRowNum = getMergeRowNum(cell, sheet);
-                            mergeColumNum = getMergeColumNum(cell, sheet);
-                        }
-                        cellMap.put("value", getValue(cell));
-                        cellMap.put("row", rowIndex);
-                        cellMap.put("col", columnIndex);
-                        cellMap.put("rowSpan", mergeRowNum);
-                        cellMap.put("colSpan", mergeColumNum);
-                    }
-                    columnList.add(cellMap);
-                }
-                rowList.add(columnList);
-            }
-            System.out.println(JSON.toJSONString(rowList));
-            System.out.println((System.currentTimeMillis() - l) / 1000);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
+    /**
+     * 解析excel成json数据
+     */
     @Test
     public void test1() {
-        File file = new File("E:\\usr\\excel\\xxx.xlsx");
+        long l = System.currentTimeMillis();
+        File file = new File("E:\\usr\\excel\\test.xlsx");
         FileInputStream fileInputStream = null;
         try {
             fileInputStream = new FileInputStream(file);
@@ -131,7 +70,9 @@ public class ExcelTest {
                 }
                 rowList.add(columnList);
             }
-            System.out.println(JSON.toJSON(rowList));
+            long l1 = (System.currentTimeMillis() - l) / 1000;
+            System.out.println("时间：" + l1 + " 秒");
+//            System.out.println(JSON.toJSON(rowList));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -139,6 +80,12 @@ public class ExcelTest {
         }
     }
 
+    /**
+     * 得到单元格中的值
+     *
+     * @param cell
+     * @return
+     */
     private Object getValue(Cell cell) {
         CellType cellTypeEnum = cell.getCellTypeEnum();
         Object value = null;
