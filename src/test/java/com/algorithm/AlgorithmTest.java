@@ -3,14 +3,12 @@ package com.algorithm;
 import com.chaoxing.test.model.Employee;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 public class AlgorithmTest {
 
     @Test
-    public void test1(){
+    public void test1() {
         ArrayList<Employee> list1 = new ArrayList<>();
         Employee e1 = new Employee();
         e1.setId(1L);
@@ -32,9 +30,6 @@ public class AlgorithmTest {
         list1.add(e2);
         list1.add(e3);
         list1.add(e4);
-
-
-
 
 
         ArrayList<Employee> list2 = new ArrayList<>();
@@ -64,7 +59,7 @@ public class AlgorithmTest {
         list2.add(e8);
         list2.add(e9);
         for (Employee employee : list1) {
-            if (list2.contains(employee)){
+            if (list2.contains(employee)) {
                 System.out.println(list2.get(list2.indexOf(employee)));
                 System.out.println(employee);
             }
@@ -72,7 +67,7 @@ public class AlgorithmTest {
     }
 
     @Test
-    public void test2(){
+    public void test2() {
         long time = System.currentTimeMillis();
         System.out.println(time);
         Date d = new Date(time);
@@ -82,6 +77,35 @@ public class AlgorithmTest {
         c.add(Calendar.DAY_OF_MONTH, 1);
 
         System.out.println(c.getTimeInMillis());
+
+    }
+
+    @Test
+    public void test3() {
+        HashSet<Object> set = new HashSet<>();
+        set.add("1111111111");
+        set.add("1111111116");
+    }
+
+
+    @Test
+    public void test4() {
+        HashMap<Object, Object> map = new HashMap<>();
+        for (int i = 0; i < 1000; i++) {
+            map.put(i * 16, "value" + i);
+        }
+    }
+
+
+    @Test
+    public void test5() {
+        LinkedList<Object> list = new LinkedList<>();
+        Collection<Object> objects = Collections.unmodifiableCollection(list);
+    }
+
+
+    @Test
+    public void test6() {
 
     }
 }
