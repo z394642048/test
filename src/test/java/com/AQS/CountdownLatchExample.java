@@ -1,4 +1,4 @@
-package com.test;
+package com.AQS;
 
 import java.util.concurrent.*;
 
