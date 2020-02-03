@@ -1,17 +1,18 @@
 package com.base;
 
+import com.chaoxing.test.model.User;
 import org.junit.Test;
+import org.springframework.beans.BeanUtils;
 
 public class BaseTest {
 
     @Test
     public void test1(){
-        StringBuilder sb=new StringBuilder();
-        for (int i = 0; i < 100000; i++) {
-            for (int j = 0; j < 100000; j++) {
-                sb.append("地方规范");
-            }
-        }
-
+        User user = new User();
+        user.setName("2323");
+        user.setPassword("666666666");
+        user.setId(1);
+        User user1 = new User();
+        BeanUtils.copyProperties(user,user1);
     }
 }
