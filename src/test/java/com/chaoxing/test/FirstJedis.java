@@ -1,8 +1,8 @@
 package com.chaoxing.test;
 
+import com.chaoxing.test.config.RedisLock;
 import com.chaoxing.test.model.Student;
 import com.chaoxing.test.service.IStudentService;
-import com.chaoxing.test.util.RedisLock;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

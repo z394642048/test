@@ -21,6 +21,7 @@ public class SemaphoreExample {
                     e.printStackTrace();
                 } finally {
                     semaphore.release();
+                    System.out.println("----------");
                 }
             } );
         }
