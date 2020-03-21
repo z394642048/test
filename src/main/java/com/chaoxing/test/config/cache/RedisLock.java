@@ -1,4 +1,4 @@
-package com.chaoxing.test.config;
+package com.chaoxing.test.config.cache;
 
 import io.lettuce.core.RedisFuture;
 import io.lettuce.core.ScriptOutputType;
