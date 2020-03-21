@@ -1,6 +1,6 @@
 package com.chaoxing.test;
 
-import com.chaoxing.test.config.RedisLock;
+import com.chaoxing.test.config.cache.RedisLock;
 import com.chaoxing.test.model.Student;
 import com.chaoxing.test.service.IStudentService;
 import org.junit.Test;
