@@ -1,4 +1,4 @@
-package com.chaoxing.MutiThread;
+package com.AQS;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
