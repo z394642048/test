@@ -2,7 +2,9 @@ package com.test;
 
 import org.junit.Test;
 
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class SimpleTest {
 
@@ -15,5 +17,11 @@ public class SimpleTest {
         map.put("xx4","yyy");
         System.out.println(map);
         String xx = map.get("xx");
+    }
+    @Test
+    public void test1() {
+        Hashtable<Object, Object> objectObjectHashtable = new Hashtable<>();
+        ConcurrentHashMap<Object, Object> objectObjectConcurrentHashMap = new ConcurrentHashMap<>();
+
     }
 }

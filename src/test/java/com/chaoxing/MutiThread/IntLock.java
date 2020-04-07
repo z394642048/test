@@ -14,37 +14,31 @@ public class IntLock {
 
         ReentrantLock r1 = new ReentrantLock();
         Condition c1 = r1.newCondition();
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                r1.lock();
-                for (int i = 0; i < x; i++) {
-                    System.out.println(i);
-                    if (i == 50) {
-                        try {
-                            System.out.println("等一下");
-                            c1.await();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+        Thread thread = new Thread(() -> {
+            r1.lock();
+            for (int i = 0; i < x; i++) {
+                System.out.println(i);
+                if (i == 50) {
+                    try {
+                        System.out.println("等一下");
+                        c1.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
                 }
-                System.out.println("0000000000000000");
-                r1.unlock();
             }
+            System.out.println("0000000000000000");
+            r1.unlock();
         });
         thread.start();
 
-        Thread thread1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                r1.lock();
-                for (int i = 0; i < x; i++) {
-                    System.out.println(i+"---"+Thread.currentThread().getName());
-                }
-                System.out.println("over");
-                r1.unlock();
+        Thread thread1 = new Thread(() -> {
+            r1.lock();
+            for (int i = 0; i < x; i++) {
+                System.out.println(i + "---" + Thread.currentThread().getName());
             }
+            System.out.println("over");
+            r1.unlock();
         });
         thread1.start();
 
@@ -55,8 +49,13 @@ public class IntLock {
         System.out.println("-----------");
     }
 
-    public void test2(){
-
+    @Test
+    public void test2() {
+        System.out.println("返回值：" + Thread.interrupted());
+        Thread.currentThread().interrupt();
+        System.out.println("返回值：" + Thread.interrupted());
+        System.out.println("返回值：" + Thread.interrupted());
+        System.out.println("返回值：" + Thread.interrupted());
     }
 
 }

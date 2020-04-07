@@ -7,7 +7,9 @@ public class TestThread1 implements  Runnable {
     }
 
     public static void main(String[] args) {
-        Thread thread = new Thread(new TestThread1());
+        TestThread1 testThread1 = new TestThread1();
+        testThread1.run();
+        Thread thread = new Thread(testThread1);
         thread.start();
         try {
             thread.join();
