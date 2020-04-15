@@ -157,7 +157,7 @@ public class SynchronizedLockTest {
 //            System.out.println(ClassLayout.parseInstance(o).toPrintable());
 //        }
         System.out.println(ClassLayout.parseInstance(o).toPrintable());
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             Thread t = new Thread(() -> {
                 synchronized (o) {
                     System.out.println(Thread.currentThread().getId());

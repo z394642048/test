@@ -7,7 +7,7 @@ public class MyThreadLocal {
 
 
     static ThreadLocal<String> tl = new ThreadLocal<>();
-    static int x = 0;
+    static volatile int x = 0;
 
     public static class ParseDate implements Runnable {
 
@@ -22,25 +22,30 @@ public class MyThreadLocal {
         public void run() {
 
             try {
-                Thread.sleep(111);
+                Thread.sleep(11);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
             if (tl.get() == null) {
-                tl.set(Thread.currentThread().getId() +"==============="+ Thread.currentThread().getName());
                 x++;
-                System.out.println("-----------------------------------" + x + "----------------------------------");
+                System.out.println(i + "-----------------------------------" + x + "----------------------------------");
             }
+            tl.set(Thread.currentThread().getId() + "===============" + Thread.currentThread().getName());
 
-            System.out.println(i + "===============" + tl.get());
-            tl.remove();
+            System.out.println(tl.get());
+            if (i == 9) {
+                tl.get();
+                tl.set(Thread.currentThread().getId() + "=======1111========" + Thread.currentThread().getName());
+                tl.get();
+                tl.remove();
+            }
         }
     }
 
     public static void main(String[] args) {
-        ExecutorService es = Executors.newFixedThreadPool(10);
-        for (int i = 0; i < 10000; i++) {
+        ExecutorService es = Executors.newFixedThreadPool(2);
+        for (int i = 0; i < 10; i++) {
             es.execute(new ParseDate(i));
         }
         es.shutdown();
