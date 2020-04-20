@@ -4,6 +4,10 @@ import com.chaoxing.test.model.User;
 import org.junit.Test;
 import org.openjdk.jol.info.ClassLayout;
 
+import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 测试锁synchronized锁的升降级别(只能用run模式，不能用debug模式)
  * OFFSET  SIZE   TYPE DESCRIPTION                               VALUE
@@ -167,5 +171,134 @@ public class SynchronizedLockTest {
             t.start();
             Thread.sleep(5000);
         }
+    }
+
+
+    @Test
+    public void test6() throws Exception {   //延时产生可偏向对象
+        Thread.sleep(5000);
+
+        //创造100个偏向线程t1的偏向锁
+        List<A> listA = new ArrayList<>();
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                A a = new A();
+                synchronized (a) {
+                    listA.add(a);
+                }
+            }
+            try {
+                //为了防止JVM线程复用，在创建完对象后，保持线程t1状态为存活
+                Thread.sleep(100000000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        t1.start();
+
+        //睡眠3s钟保证线程t1创建对象完成
+        Thread.sleep(3000);
+        PrintStream out = System.out;
+        out.println("t1的线程id：" + t1.getId());
+        out.println("打印t1线程，list中第20个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(19)).toPrintable()));
+
+        //创建线程t2竞争线程t1中已经退出同步块的锁
+        Thread t2 = new Thread(() -> {
+            //这里面只循环了30次！！！
+            for (int i = 0; i < 30; i++) {
+                A a = listA.get(i);
+                synchronized (a) {
+                    //分别打印第19次和第20次偏向锁重偏向结果
+                    if (i == 18 || i == 19) {
+                        out.println("第" + (i + 1) + "次偏向结果");
+                        out.println((ClassLayout.parseInstance(a).toPrintable()));
+                    }
+                }
+            }
+            try {
+                Thread.sleep(10000000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        t2.start();
+        out.println("t1的线程id：" + t2.getId());
+
+        Thread.sleep(3000);
+        out.println("打印list中第11个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(10)).toPrintable()));
+        out.println("打印list中第26个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(25)).toPrintable()));
+        out.println("打印list中第41个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(40)).toPrintable()));
+
+    }
+
+    @Test
+    public void test7() throws Exception {
+
+        Thread.sleep(5000);
+        List<A> listA = new ArrayList<>();
+
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 100; i++) {
+                A a = new A();
+                synchronized (a) {
+                    listA.add(a);
+                }
+            }
+            try {
+                Thread.sleep(100000000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        t1.start();
+        Thread.sleep(3000);
+
+        Thread t2 = new Thread(() -> {
+            //这里循环了40次。达到了批量撤销的阈值
+            for (int i = 0; i < 40; i++) {
+                A a = listA.get(i);
+                synchronized (a) {
+                }
+            }
+            try {
+                Thread.sleep(10000000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        t2.start();
+
+        //———————————分割线，前面代码不再赘述——————————————————————————————————————————
+        PrintStream out = System.out;
+        Thread.sleep(3000);
+        out.println("打印list中第11个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(10)).toPrintable()));
+        out.println("打印list中第26个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(25)).toPrintable()));
+        out.println("打印list中第90个对象的对象头：");
+        out.println((ClassLayout.parseInstance(listA.get(89)).toPrintable()));
+
+
+        Thread t3 = new Thread(() -> {
+            for (int i = 20; i < 40; i++) {
+                A a = listA.get(i);
+                synchronized (a) {
+                    if (i == 20 || i == 22) {
+                        out.println("thread3 第" + i + "次");
+                        out.println((ClassLayout.parseInstance(a).toPrintable()));
+                    }
+                }
+            }
+        });
+        t3.start();
+
+
+        Thread.sleep(10000);
+        out.println("重新输出新实例A");
+        out.println((ClassLayout.parseInstance(new A()).toPrintable()));
     }
 }
