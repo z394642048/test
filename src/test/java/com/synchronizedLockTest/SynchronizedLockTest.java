@@ -231,6 +231,7 @@ public class SynchronizedLockTest {
         out.println("打印list中第26个对象的对象头：");
         out.println((ClassLayout.parseInstance(listA.get(25)).toPrintable()));
         out.println("打印list中第41个对象的对象头：");
+
         out.println((ClassLayout.parseInstance(listA.get(40)).toPrintable()));
 
     }
