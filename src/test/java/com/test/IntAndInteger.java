@@ -3,9 +3,7 @@ package com.test;
 import com.alibaba.fastjson.JSONArray;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 验证int和Integer区别
@@ -43,12 +41,49 @@ public class IntAndInteger {
 
     @Test
     public void test2() {
-        int count = 0;
-        count++;
-        System.out.println(count);
-
-
+        System.out.println(singleNumber(new int[]{2, 1, 2, 1, 5}));
     }
+
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        LinkedList<Integer> list = new LinkedList<>();
+        while (l1 != null) {
+            list.add(l1.val);
+            l1 = l1.next;
+        }
+
+        while (l2 != null) {
+            list.add(l2.val);
+            l2 = l2.next;
+        }
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+
+        }
+
+
+        return null;
+    }
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
+    public int singleNumber(int[] nums) {
+        int ans = nums[0];
+        if (nums.length > 1) {
+            for (int i = 1; i < nums.length; i++) {
+                ans = ans ^ nums[i];
+                System.out.println(ans);
+            }
+        }
+        return ans;
+    }
+
 
     @Test
     public void test3() {

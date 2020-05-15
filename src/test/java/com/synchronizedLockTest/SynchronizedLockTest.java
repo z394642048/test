@@ -301,5 +301,11 @@ public class SynchronizedLockTest {
         Thread.sleep(10000);
         out.println("重新输出新实例A");
         out.println((ClassLayout.parseInstance(new A()).toPrintable()));
+
+
+//        anticipated_bias_locking_value = (((uintptr_t) lockee -> klass()->prototype_header() | thread_ident) ^
+//        (uintptr_t) mark) &~((uintptr_t) markOopDesc::age_mask_in_place);
+
+
     }
 }
