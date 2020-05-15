@@ -1,8 +1,6 @@
 package com.test;
 
-import org.junit.Test;
-
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * 算法练习题
@@ -10,30 +8,23 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        int sum = 0;
-        int max = 0;
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            sum += b - a;
-            if (max < sum) {
-                max = sum;
+        Scanner scanner = new Scanner(System.in);
+        int member = scanner.nextInt();
+        for (int i = 0; i < member; i++) {
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            int c = scanner.nextInt();
+            int d = scanner.nextInt();
+            if (a >= 60 && b >= 60 && c >= 90 && d >= 90 && a + b + c + d >= 310) {
+                if (a + b + c + d >= 350) {
+                    System.out.println("Gongfei");
+                } else {
+                    System.out.println("Zifei");
+                }
+            } else {
+                System.out.println("Fail");
             }
         }
-        System.out.println(max);
     }
 
-    @Test
-    public void test2() {
-        int sum1 = 1;
-        int sum2 = 1;
-        int b = 5;
-        int a = 8;
-        System.out.println(sum1 += b);
-        System.out.println(sum2 += -a + b);
-        System.out.println(sum1);
-        System.out.println(sum2);
-    }
 }
