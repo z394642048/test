@@ -155,7 +155,7 @@ public class RedisLock {
      * @return
      */
     public boolean tryLock() {
-        // 生成随机key
+        // 生成随机key，保证每个锁都是唯一的，防止因为超时原因，导致把下一个锁解除
         lockValue = UUID.randomUUID().toString();
         // 请求锁超时时间，纳秒
         long timeout = timeOut * 1000000;
@@ -227,6 +227,7 @@ public class RedisLock {
                 Object[] keys = new Object[]{lockKey.getBytes(StandardCharsets.UTF_8)};
                 if (nativeConnection instanceof RedisAsyncCommands) {
                     RedisAsyncCommands<Object, byte[]> commands = ((RedisAsyncCommands) nativeConnection).getStatefulConnection().async();
+                    //通过lua脚本的方式，保证解锁的原子性；lockValue保证每把锁只能解自己的锁
                     RedisFuture future = commands.eval(UNLOCK_LUA, ScriptOutputType.INTEGER, keys, lockValue.getBytes(StandardCharsets.UTF_8));
                     try {
                         result = (Long) future.get();
