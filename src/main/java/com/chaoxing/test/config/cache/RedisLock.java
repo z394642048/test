@@ -4,6 +4,7 @@ import io.lettuce.core.RedisFuture;
 import io.lettuce.core.ScriptOutputType;
 import io.lettuce.core.SetArgs;
 import io.lettuce.core.api.async.RedisAsyncCommands;
+import io.lettuce.core.cluster.api.async.RedisAdvancedClusterAsyncCommands;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -225,8 +226,20 @@ public class RedisLock {
                 Object nativeConnection = connection.getNativeConnection();
                 Long result = 0L;
                 Object[] keys = new Object[]{lockKey.getBytes(StandardCharsets.UTF_8)};
+                //单机模式
                 if (nativeConnection instanceof RedisAsyncCommands) {
                     RedisAsyncCommands<Object, byte[]> commands = ((RedisAsyncCommands) nativeConnection).getStatefulConnection().async();
+                    //通过lua脚本的方式，保证解锁的原子性；lockValue保证每把锁只能解自己的锁
+                    RedisFuture future = commands.eval(UNLOCK_LUA, ScriptOutputType.INTEGER, keys, lockValue.getBytes(StandardCharsets.UTF_8));
+                    try {
+                        result = (Long) future.get();
+                    } catch (InterruptedException | ExecutionException e) {
+                        e.printStackTrace();
+                    }
+                }
+                //集群模式，ex为秒，px为毫秒
+                if (nativeConnection instanceof RedisAdvancedClusterAsyncCommands) {
+                    RedisAdvancedClusterAsyncCommands<Object, byte[]> commands = ((RedisAdvancedClusterAsyncCommands) nativeConnection).getStatefulConnection().async();
                     //通过lua脚本的方式，保证解锁的原子性；lockValue保证每把锁只能解自己的锁
                     RedisFuture future = commands.eval(UNLOCK_LUA, ScriptOutputType.INTEGER, keys, lockValue.getBytes(StandardCharsets.UTF_8));
                     try {
@@ -268,6 +281,7 @@ public class RedisLock {
         return redisTemplate.execute((RedisCallback<String>) connection -> {
             Object nativeConnection = connection.getNativeConnection();
             String result = null;
+            //针对单机模式，set方法中ex为秒，px为毫秒，nx表示存在若给定的 key 已经存在，则 SETNX 不做任何动作
             if (nativeConnection instanceof RedisAsyncCommands) {
                 RedisAsyncCommands commands = (RedisAsyncCommands) nativeConnection;
                 RedisFuture future = commands
@@ -280,6 +294,25 @@ public class RedisLock {
                     e.printStackTrace();
                 }
             }
+
+            //集群模式，ex为秒，px为毫秒
+            if (nativeConnection instanceof RedisAdvancedClusterAsyncCommands) {
+                RedisAdvancedClusterAsyncCommands commands = (RedisAdvancedClusterAsyncCommands) nativeConnection;
+                RedisFuture future = commands
+                        .getStatefulConnection()
+                        .async()
+                        .set(key.getBytes(StandardCharsets.UTF_8), value.getBytes(StandardCharsets.UTF_8), SetArgs.Builder.nx().ex(30));
+                try {
+                    result = String.valueOf(future.get());
+                } catch (InterruptedException | ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+            //针对哨兵模式
+
+
+
+
             if (result.equalsIgnoreCase("ok")) {
                 result = "ok";
                 log.info("获取锁{}的时间：{}", key, System.currentTimeMillis());
