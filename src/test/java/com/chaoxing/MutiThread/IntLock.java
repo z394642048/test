@@ -51,8 +51,11 @@ public class IntLock {
 
     @Test
     public void test2() {
+        //查看当前线程的中断状态，并将中断状态设置成false
         System.out.println("返回值：" + Thread.interrupted());
+        //中断当前线程，即将当前中断状态设置成true
         Thread.currentThread().interrupt();
+        //查看当前线程的中断状态，并将中断状态设置成false
         System.out.println("返回值：" + Thread.interrupted());
         System.out.println("返回值：" + Thread.interrupted());
         System.out.println("返回值：" + Thread.interrupted());
